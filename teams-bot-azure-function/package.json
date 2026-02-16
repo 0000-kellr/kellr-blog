@@ -9,6 +9,8 @@
     "lint": "node -c src/functions/teamsMessages/index.js"
   },
   "dependencies": {
-    "botbuilder": "^4.23.0"
+    "botbuilder": "^4.23.0",
+    "@azure/storage-queue": "^12.19.0",
+    "@azure/data-tables": "^13.3.0"
   }
 }

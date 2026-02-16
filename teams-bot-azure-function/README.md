@@ -48,6 +48,17 @@ func azure functionapp publish fa-openclaw-teams-<unique>
 ```
 
 ## Bot behavior
-Currently this bot is an **echo bot** and a small command router stub.
+The bot:
+- stores a conversation reference (Azure Table) so it can send proactive replies later
+- enqueues inbound messages (Azure Queue) for OpenClaw to pull
 
-You can extend `src/bot.js` to forward messages into OpenClaw (HTTP call / websocket / whatever we decide).
+### Env vars (Azure Function App settings)
+- `MicrosoftAppId`
+- `MicrosoftAppPassword`
+- `OPENCLAW_SHARED_SECRET` (for /api/openclaw/* endpoints)
+- optional: `OPENCLAW_IN_QUEUE` (default: `openclaw-in`)
+- optional: `OPENCLAW_CONV_TABLE` (default: `OpenClawConversations`)
+
+### OpenClaw pull/reply endpoints
+- `POST /api/openclaw/pull` (header `x-openclaw-secret`) → returns and deletes queued messages
+- `POST /api/openclaw/reply` (header `x-openclaw-secret`) with `{ conversationId, text }` → sends message back into Teams
