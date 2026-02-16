@@ -1,0 +1,14 @@
+{
+  "name": "openclaw-teams-bot-function",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "src/functions/teamsMessages/index.js",
+  "scripts": {
+    "start": "func start",
+    "lint": "node -c src/functions/teamsMessages/index.js"
+  },
+  "dependencies": {
+    "botbuilder": "^4.23.0"
+  }
+}
