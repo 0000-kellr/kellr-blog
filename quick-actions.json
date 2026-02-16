@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.openclaw.ai/schemas/quick-actions.v1.json",
+  "notion": {
+    "doneAliases": {
+      "cloudlizenz": {
+        "pageId": "30836200-8e86-816e-9575-e57d25bce9d5",
+        "title": "Cloud Lizenz klären"
+      }
+    }
+  },
+  "homeassistant": {
+    "lightAliases": {
+      "buero": {
+        "areaName": "Büro (EG)",
+        "note": "Turns on all light.* entities in that area (including device-area fallbacks)."
+      }
+    }
+  }
+}
