@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.16",
+  "version": "0.0.2",
+  "id": "5f3a7d40-4f1a-4f6c-9a9f-4b9d6dffb5dd",
+  "packageName": "com.au2mator.openclawchat",
+  "developer": {
+    "name": "Michael Seidl",
+    "websiteUrl": "https://au2mator.com",
+    "privacyUrl": "https://au2mator.com/privacy",
+    "termsOfUseUrl": "https://au2mator.com/terms"
+  },
+  "name": {
+    "short": "OpenClaw Chat",
+    "full": "OpenClaw Chat"
+  },
+  "description": {
+    "short": "1:1 Chat Bot für OpenClaw.",
+    "full": "1:1 Chat Bot für OpenClaw (Azure Bot + Azure Function Endpoint)."
+  },
+  "accentColor": "#2B8A3E",
+  "icons": {
+    "color": "icon-color.png",
+    "outline": "icon-outline.png"
+  },
+  "bots": [
+    {
+      "botId": "590bc8d1-abc3-4c35-9c3c-d20be75eb60b",
+      "scopes": ["personal"],
+      "supportsFiles": false,
+      "isNotificationOnly": false
+    }
+  ],
+  "validDomains": [
+    "openclawteamschat-gke4ateaheafh8be.westeurope-01.azurewebsites.net"
+  ]
+}
