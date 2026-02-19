@@ -1,0 +1,754 @@
+{
+    "manufacturers": [
+        {
+            "manufacturer": "Apple Inc.",
+            "short_name": "Apple",
+            "categories": [
+                {
+                    "category": "Smartphone",
+                    "models": [
+                        {
+                            "model_name": "iPhone 15 Pro Max",
+                            "key_model_intune": "iPhone 15 Pro Max",
+                            "key_model_apple": "MU773ZD/A",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "MQ9Y3NF/A",
+                            "Description_EN": "iPhone 15 Pro Max with A17 Pro chip, 6.7-inch Super Retina XDR display, Pro camera system, and 5G connectivity.",
+                            "release_year": "2023",
+                            "Description_DE": "",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPhone 15",
+                            "key_model_intune": "iPhone 15",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "iPhone 15",
+                            "Description_EN": "",
+                            "Description_DE": "",
+                            "release_year": "2023",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPhone SE (3rd generation)",
+                            "key_model_intune": "iPhone SE (3rd generation)",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "",
+                            "Description_EN": "iPhone SE (3rd generation)",
+                            "Description_DE": "",
+                            "release_year": "2022",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPhone 13",
+                            "key_model_intune": "iPhone 13",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "iPhone 13",
+                            "Description_EN": "",
+                            "release_year": "2021",
+                            "icon": "Apple_Smartphone_iPhone 13.jpg",
+                            "Description_DE": ""
+                        },
+                        {
+                            "model_name": "iPhone 16e",
+                            "key_model_intune": "iPhone 16e",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "iPhone 16e",
+                            "Description_EN": "",
+                            "Description_DE": "",
+                            "release_year": "2025",
+                            "icon": "Apple_Smartphone_iPhone 16e.png"
+                        },
+                        {
+                            "model_name": "iPhone 14",
+                            "key_model_intune": "iPhone 14",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "iPhone 14",
+                            "Description_EN": "",
+                            "release_year": "2022",
+                            "Description_DE": "",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPhone SE (2nd generation)",
+                            "key_model_intune": "iPhone SE (2nd generation)",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "iPhone SE (2nd generation)",
+                            "Description_EN": "",
+                            "Description_DE": "",
+                            "release_year": "2020",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPhone 7",
+                            "key_model_intune": "iPhone 7",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "iPhone 7",
+                            "Description_EN": "",
+                            "Description_DE": "",
+                            "release_year": "2016",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPhone 11",
+                            "key_model_intune": "iPhone 11",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "iPhone 11",
+                            "Description_EN": "",
+                            "Description_DE": "",
+                            "release_year": "2019",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPhone 12",
+                            "key_model_intune": "iPhone 12",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "iPhone 12",
+                            "Description_EN": "",
+                            "Description_DE": "",
+                            "release_year": "2020",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPhone 14 Pro",
+                            "key_model_intune": "iPhone 14 Pro",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "iPhone 14 Pro",
+                            "Description_EN": "",
+                            "Description_DE": "",
+                            "release_year": "2022",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPhone 15 Pro",
+                            "key_model_intune": "iPhone 15 Pro",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "iPhone 15 Pro",
+                            "Description_EN": "",
+                            "Description_DE": "",
+                            "release_year": "2023",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPhone 13 mini",
+                            "key_model_intune": "iPhone 13 mini",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "iPhone 13 mini",
+                            "Description_EN": "",
+                            "Description_DE": "",
+                            "release_year": "2021",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                    "category": "Tablet",
+                    "models": [
+                        {
+                            "model_name": "iPad Air 13-inch (M2)",
+                            "key_model_intune": "iPad Air 13-inch (M2)",
+                            "key_model_apple": "PV2D3NF/A",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "PV2D3NF/A",
+                            "Description_EN": "iPad Air 13-inch with M2 chip, Liquid Retina display, 5G connectivity, and support for Apple Pencil (2nd generation).",
+                            "release_year": "2024",
+                            "Description_DE": "",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPad Pro 12.9-inch (M2)",
+                            "key_model_intune": "iPad Pro 12.9-inch (M2)",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "MHQR3NF/A",
+                            "Description_EN": "iPad Pro 12.9-inch with M2 chip, Liquid Retina XDR display, 5G connectivity, and advanced camera system.",
+                            "release_year": "2022",
+                            "Description_DE": "",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPad Pro 11-inch (M2)",
+                            "key_model_intune": "iPad Pro 11-inch (M2)",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "MHQT3NF/A",
+                            "Description_EN": "iPad Pro 11-inch with M2 chip, Liquid Retina display, 5G connectivity, and advanced camera system.",
+                            "release_year": "2022",
+                            "Description_DE": "",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPad 10th Generation",
+                            "key_model_intune": "iPad 10th Generation",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "MK2K3NF/A",
+                            "Description_EN": "iPad 10th Generation with A14 Bionic chip, 10.9-inch Liquid Retina display, and support for Apple Pencil (1st generation).",
+                            "release_year": "2022",
+                            "Description_DE": "",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPad Mini 6th Generation",
+                            "key_model_intune": "iPad Mini 6th Generation",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "MK7W3NF/A",
+                            "Description_EN": "iPad Mini 6th Generation with A15 Bionic chip, 8.3-inch Liquid Retina display, and support for Apple Pencil (2nd generation).",
+                            "release_year": "2021",
+                            "Description_DE": "",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "iPad Pro 11-inch (M1)",
+                            "key_model_intune": "iPad Pro 11-inch (M1)",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "MHXQ3NF/A",
+                            "Description_EN": "iPad Pro 11-inch with M1 chip, Liquid Retina display, 5G connectivity, and advanced camera system.",
+                            "release_year": "2021",
+                            "Description_DE": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "manufacturer": "Fujitsu Technology Solutions GmbH",
+            "short_name": "Fujitsu",
+            "categories": [
+                {
+                    "category": "Notebook",
+                    "models": [
+                        {
+                            "model_name": "LIFEBOOK U748",
+                            "key_model_intune": "LIFEBOOK U748",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "LIFEBOOK U748",
+                            "Description_EN": "Fujitsu LIFEBOOK U748 with Intel Core i7-12700H, 16-inch WQXGA display, 16GB RAM, 512GB SSD, and Windows 11 Pro.",
+                            "release_year": "2017",
+                            "Description_DE": "",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                    "category": "Workstation",
+                    "models": [
+                        {
+                            "model_name": "ESPRIMO Q556/2",
+                            "key_model_intune": "ESPRIMO Q556/2",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "ESPRIMO Q556/2",
+                            "Description_EN": "Fujitsu ESPRIMO Q556/2",
+                            "release_year": "2017",
+                            "Description_DE": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "manufacturer": "Hewlett-Packard",
+            "short_name": "HP",
+            "categories": [
+                {
+                    "category": "Notebook",
+                    "models": [
+                        {
+                            "model_name": "HP EliteBook 6 G1i 16 inch Notebook AI PC",
+                            "key_model_intune": "HP EliteBook 6 G1i 16 inch Notebook AI PC",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "",
+                            "Description_EN": "",
+                            "Description_DE": "",
+                            "release_year": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "manufacturer": "Lenovo Inc.",
+            "short_name": "Lenovo",
+            "categories": [
+                {
+                    "category": "Notebook",
+                    "models": [
+                        {
+                            "model_name": "T16 Gen1",
+                            "key_model_intune": "21BVCTO1WW",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "21BVCTO1WW",
+                            "Description_EN": "Lenovo ThinkPad T16 Gen 1 with Intel Core i7-12700H, 16-inch WQXGA display, 16GB RAM, 512GB SSD, and Windows 11 Pro.",
+                            "release_year": "2022",
+                            "Description_DE": "",
+                            "icon": ""
+                        },
+                        {
+                            "model_name": "ThinkPad X1 Carbon Gen 11",
+                            "key_model_intune": "21HM0067GE",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "21HM0067GE",
+                            "Description_ENDescription_EN": "Lenovo ThinkPad X1 Carbon Gen 11 with Intel Core i7-12700H, 16-inch WQXGA display, 16GB RAM, 512GB SSD, and Windows 11 Pro.",
+                            "release_year": "2024",
+                            "icon": "Lenovo_NoteBook_21HM0067GE.jpg",
+                            "Description_EN": "",
+                            "Description_DE": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "manufacturer": "Samsung Group",
+            "short_name": "Samsung",
+            "categories": [
+                {
+                    "category": "Tablet",
+                    "models": [
+                        {
+                            "model_name": "Samsung Galaxy Tab Active 5",
+                            "key_model_intune": "SM-X306B",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "SM-X306B",
+                            "Description_EN": "",
+                            "release_year": "2024",
+                            "icon": "Samsung_Tablet_GalaxyTabActive5.png",
+                            "Description_DE": ""
+                        }
+                    ]
+                },
+                {
+                    "category": "Smartphone",
+                    "models": [
+                        {
+                            "model_name": "SAMSUNG Galaxy Xcover 7 ",
+                            "key_model_intune": "SM-G556B",
+                            "key_model_apple": "",
+                            "key_model_sccm": "",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "SM-G556B",
+                            "Description_EN": "",
+                            "Description_DE": "",
+                            "release_year": "2024",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "manufacturer": "Dell Inc.",
+            "short_name": "Dell",
+            "categories": [
+                {
+                    "category": "Notebook",
+                    "models": [
+                        {
+                            "model_name": "Latitude 5520",
+                            "key_model_intune": "Latitude 5520",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Latitude 5520",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Latitude 5520",
+                            "Description_EN": "15.6-inch Latitude 5520 with 11th Gen Intel Core processors, Wi-Fi 6, Thunderbolt 4, optional LTE and long-life ExpressCharge battery for hybrid workers.",
+                            "release_year": "2021",
+                            "Description_DE": "Das 15,6-Zoll-Latitude 5520 kombiniert Intel-Core-Prozessoren der 11. Generation mit Wi-Fi 6, Thunderbolt 4, optionalem LTE und ExpressCharge für mobiles Arbeiten.",
+                            "icon": "Dell_Notebook_Latitude5520.png"
+                        },
+                        {
+                            "model_name": "Latitude 5590",
+                            "key_model_intune": "Latitude 5590",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Latitude 5590",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Latitude 5590",
+                            "Description_EN": "Latitude 5590 business notebook with 8th Gen Intel Core CPUs, FHD anti-glare display, extensive ports and Dell SafeBIOS security stack.",
+                            "Description_DE": "Das Latitude 5590 setzt auf Intel-Core-Prozessoren der 8. Generation, ein entspiegeltes FHD-Display, viele Anschlüsse und den Dell SafeBIOS-Sicherheitsstack.",
+                            "release_year": "2018",
+                            "icon": "Dell_Notebook_Latitude5590.png"
+                        },
+                        {
+                            "model_name": "Latitude 7390",
+                            "key_model_intune": "Latitude 7390",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Latitude 7390",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Latitude 7390",
+                            "Description_EN": "13-inch Latitude 7390 ultrabook offering carbon-fiber chassis, 360° hinge option, 16GB RAM and enterprise-grade manageability.",
+                            "Description_DE": "Das 13-Zoll-Latitude 7390 bietet ein Carbon-Faser-Gehäuse, optionales 360°-Scharnier, bis zu 16 GB RAM und Enterprise-Manageability.",
+                            "release_year": "2017",
+                            "icon": "Dell_Notebook_Latitude7390.png"
+                        },
+                        {
+                            "model_name": "Latitude 5540",
+                            "key_model_intune": "Latitude 5540",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Latitude 5540",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Latitude 5540",
+                            "Description_EN": "Latitude 5540 (2023) with Intel 13th Gen vPro options, 15.6-inch display choices up to QHD, Wi-Fi 6E and ExpressSign-in presence detection.",
+                            "release_year": "2023",
+                            "Description_DE": "Das Latitude 5540 (2023) bietet Intel-vPro-CPUs der 13. Generation, Displayoptionen bis QHD, Wi-Fi 6E und ExpressSign-in mit Anwesenheitssensor.",
+                            "icon": "Dell_Notebook_Latitude5540.png"
+                        },
+                        {
+                            "model_name": "Latitude 5550",
+                            "key_model_intune": "Latitude 5550",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Latitude 5550",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Latitude 5550",
+                            "Description_EN": "Latitude 5550 (2024) premium 15-inch notebook with Intel Core Ultra processors, AI-accelerated NPU, DDR5 memory and Dell Optimizer 5.",
+                            "release_year": "2024",
+                            "Description_DE": "Das Latitude 5550 (2024) ist ein hochwertiges 15-Zoll-Notebook mit Intel-Core-Ultra-Prozessoren, integrierter NPU für KI-Aufgaben, DDR5-Speicher und Dell Optimizer 5.",
+                            "icon": "Dell_Notebook_Latitude5550.png"
+                        },
+                        {
+                            "model_name": "Latitude 5530",
+                            "key_model_intune": "Latitude 5530",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Latitude 5530",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Latitude 5530",
+                            "Description_EN": "Latitude 5530 (2022) 15-inch system featuring Intel 12th Gen U- und P-Series CPUs, PC ExpressCharge 2.0 and optional 4G LTE/5G.",
+                            "release_year": "2022",
+                            "Description_DE": "Das Latitude 5530 (2022) nutzt Intel-Core-Prozessoren der 12. Generation, ExpressCharge 2.0 sowie optionales 4G LTE bzw. 5G.",
+                            "icon": "Dell_Notebook_Latitude5530.png"
+                        },
+                        {
+                            "model_name": "Latitude 3440",
+                            "key_model_intune": "Latitude 3440",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Latitude 3440",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Latitude 3440",
+                            "Description_EN": "Latitude 3440 mainstream 14-inch notebook with 13th Gen Intel Core processors, numeric keypad, dual fan cooling and Dell ComfortView Plus display.",
+                            "release_year": "2023",
+                            "Description_DE": "Das Latitude 3440 ist ein 14-Zoll-Mainstream-Notebook mit Intel-Core-Prozessoren der 13. Generation, Ziffernblock, Dual-Lüfter-Kühlung und ComfortView-Plus-Display.",
+                            "icon": "Dell_Notebook_Latitude3440.png"
+                        },
+                        {
+                            "model_name": "Latitude 7450",
+                            "key_model_intune": "Latitude 7450",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Latitude 7450",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Latitude 7450",
+                            "Description_EN": "Latitude 7450 (2025) is a 16-inch AI-ready notebook with Intel Core Ultra H-series processors, integrated NPU, up to 64GB LPDDR5X and dual Thunderbolt 4 for high-end collaboration.",
+                            "Description_DE": "Das Latitude 7450 (2025) ist ein 16-Zoll-AI-fähiges Notebook mit Intel-Core-Ultra-H-Prozessoren, integrierter NPU, bis zu 64 GB LPDDR5X und zwei Thunderbolt-4-Ports für moderne Kollaboration.",
+                            "release_year": "2025",
+                            "icon": "Dell_Notebook_Latitude7450.png"
+                        },
+                        {
+                            "model_name": "Latitude 5450",
+                            "key_model_intune": "Latitude 5450",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Latitude 5450",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Latitude 5450",
+                            "Description_EN": "Latitude 5450 (2025) ultra-mobile 14-inch system delivering Intel Core Ultra U-series CPUs, Wi-Fi 7 readiness, optional 5G eSIM and Dell Optimizer intelligence.",
+                            "Description_DE": "Das Latitude 5450 (2025) ist ein besonders mobiles 14-Zoll-System mit Intel-Core-Ultra-U-Prozessoren, vorbereiteten Wi-Fi-7-Funktionen, optionalem 5G-eSIM und Dell-Optimizer-Intelligenz.",
+                            "release_year": "2025",
+                            "icon": "Dell_Notebook_Latitude5450.png"
+                        },
+                        {
+                            "model_name": "Latitude 7350 Ultralight",
+                            "key_model_intune": "Latitude 7350 Ultralight",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Latitude 7350 Ultralight",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Latitude 7350 Ultralight",
+                            "Description_EN": "Latitude 7350 Ultralight (2024) weighs under 1 kg, features a 13.3-inch 2.8K display, Intel 14th Gen U-series CPUs and proximity-based ExpressSign-in.",
+                            "Description_DE": "Das Latitude 7350 Ultralight (2024) wiegt unter 1 kg, bietet ein 13,3-Zoll-2.8K-Display, Intel-U-Prozessoren der 14. Generation und ExpressSign-in mit Näherungssensor.",
+                            "release_year": "2024",
+                            "icon": "Dell_Notebook_Latitude7350Ultralight.png"
+                        }
+                    ]
+                },
+                {
+                    "category": "Workstation",
+                    "models": [
+                        {
+                            "model_name": "OptiPlex 3050",
+                            "key_model_intune": "OptiPlex 3050",
+                            "key_model_apple": "",
+                            "key_model_sccm": "OptiPlex 3050",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "OptiPlex 3050",
+                            "Description_EN": "OptiPlex 3050 small form factor desktop with 7th Gen Intel Core CPUs, tool-less chassis and Dell Client Command Suite support.",
+                            "release_year": "2017",
+                            "Description_DE": "Der OptiPlex 3050 ist ein Small-Form-Factor-Desktop mit Intel-Core-Prozessoren der 7. Generation, werkzeuglosem Gehäuse und Support für die Dell Client Command Suite.",
+                            "icon": "Dell_Workstation_OptiPlex3050.png"
+                        },
+                        {
+                            "model_name": "OptiPlex 3080",
+                            "key_model_intune": "OptiPlex 3080",
+                            "key_model_apple": "",
+                            "key_model_sccm": "OptiPlex 3080",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "OptiPlex 3080",
+                            "Description_EN": "OptiPlex 3080 tower/SFF platform with 10th Gen Intel Core processors, PCIe NVMe storage and optional Intel vPro for managed fleets.",
+                            "release_year": "2020",
+                            "Description_DE": "Der OptiPlex 3080 als Tower oder SFF bietet Intel-Core-Prozessoren der 10. Generation, PCIe-NVMe-Speicher und optional Intel vPro für verwaltete Umgebungen.",
+                            "icon": "Dell_Workstation_OptiPlex3080.png"
+                        },
+                        {
+                            "model_name": "OptiPlex 3070",
+                            "key_model_intune": "OptiPlex 3070",
+                            "key_model_apple": "",
+                            "key_model_sccm": "OptiPlex 3070",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "OptiPlex 3070",
+                            "Description_EN": "OptiPlex 3070 business desktop delivering 9th Gen Intel Core CPUs, multi-display support and enhanced physical security options.",
+                            "release_year": "2019",
+                            "Description_DE": "Der OptiPlex 3070 Business-Desktop setzt auf Intel-Core-Prozessoren der 9. Generation, Multi-Display-Unterstützung und umfangreiche physische Sicherheitsoptionen.",
+                            "icon": "Dell_Workstation_OptiPlex3070.png"
+                        },
+                        {
+                            "model_name": "OptiPlex 3060",
+                            "key_model_intune": "OptiPlex 3060",
+                            "key_model_apple": "",
+                            "key_model_sccm": "OptiPlex 3060",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "OptiPlex 3060",
+                            "Description_EN": "OptiPlex 3060 compact desktop with 8th Gen Intel Core processors, SSD-ready storage bay and Dell Data Security integration.",
+                            "release_year": "2018",
+                            "Description_DE": "Der OptiPlex 3060 ist ein kompakter Desktop mit Intel-Core-Prozessoren der 8. Generation, SSD-fähigem Laufwerksschacht und Integration in Dell Data Security.",
+                            "icon": "Dell_Workstation_OptiPlex3060.png"
+                        },
+                        {
+                            "model_name": "Precision 5820 Tower",
+                            "key_model_intune": "Precision 5820 Tower",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Precision 5820 Tower",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Precision 5820 Tower",
+                            "Description_EN": "Precision 5820 Tower workstation supporting Intel Xeon W CPUs, up to 256GB DDR4 ECC, NVIDIA RTX GPUs and extensive PCIe expansion.",
+                            "Description_DE": "Die Precision 5820 Tower Workstation unterstützt Intel-Xeon-W-Prozessoren, bis zu 256 GB DDR4-ECC, NVIDIA-RTX-GPUs und umfangreiche PCIe-Erweiterungen.",
+                            "release_year": "2017",
+                            "icon": "Dell_Workstation_Precision5820.png"
+                        },
+                        {
+                            "model_name": "Precision 7770",
+                            "key_model_intune": "Precision 7770",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Precision 7770",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Precision 7770",
+                            "Description_EN": "Precision 7770 17-inch mobile workstation with 12th Gen Intel HX CPUs, NVIDIA RTX Ada graphics, UHD HDR display and ISV certifications.",
+                            "Description_DE": "Die Precision 7770 ist eine 17-Zoll-Mobile-Workstation mit Intel-HX-Prozessoren der 12. Generation, NVIDIA-RTX-Ada-Grafik, UHD-HDR-Display und ISV-Zertifizierungen.",
+                            "release_year": "2022",
+                            "icon": "Dell_Workstation_Precision7770.png"
+                        },
+                        {
+                            "model_name": "Precision 5690",
+                            "key_model_intune": "Precision 5690",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Precision 5690",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Precision 5690",
+                            "Description_EN": "Precision 5690 (2024) is a 16-inch mobile workstation pairing Intel Core Ultra HX CPUs with NVIDIA RTX 5000 Ada graphics, 64GB DDR5 and ISV certifications.",
+                            "Description_DE": "Die Precision 5690 (2024) ist eine 16-Zoll-Mobile-Workstation mit Intel-Core-Ultra-HX-Prozessoren, NVIDIA-RTX-5000-Ada-Grafik, 64 GB DDR5 und ISV-Zertifizierungen.",
+                            "release_year": "2024",
+                            "icon": "Dell_Workstation_Precision5690.png"
+                        },
+                        {
+                            "model_name": "Precision 7870 Tower",
+                            "key_model_intune": "Precision 7870 Tower",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Precision 7870 Tower",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Precision 7870 Tower",
+                            "Description_EN": "Precision 7870 Tower (2025) modular chassis with next-gen Intel Xeon 6 processors, up to 1TB DDR5 ECC, PCIe Gen5 storage and dual high-end RTX graphics.",
+                            "Description_DE": "Die Precision 7870 Tower (2025) nutzt ein modulares Gehäuse mit Intel-Xeon-6-Prozessoren, bis zu 1 TB DDR5-ECC, PCIe-Gen5-Speicher und Platz für zwei High-End-RTX-Grafikkarten.",
+                            "release_year": "2025",
+                            "icon": "Dell_Workstation_Precision7870.png"
+                        },
+                        {
+                            "model_name": "OptiPlex 7090 Ultra",
+                            "key_model_intune": "OptiPlex 7090 Ultra",
+                            "key_model_apple": "",
+                            "key_model_sccm": "OptiPlex 7090 Ultra",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "OptiPlex 7090 Ultra",
+                            "Description_EN": "OptiPlex 7090 Ultra (2024) modular desktop hides the compute module inside the monitor stand, offering Intel 13th Gen CPUs, up to 64GB DDR5 and tool-less servicing.",
+                            "Description_DE": "Der OptiPlex 7090 Ultra (2024) versteckt das Rechenmodul im Monitorstandfuß, bietet Intel-CPUs der 13. Generation, bis zu 64 GB DDR5 und werkzeuglosen Service.",
+                            "release_year": "2024",
+                            "icon": "Dell_Workstation_OptiPlex7090Ultra.png"
+                        }
+                    ]
+                },
+                {
+                    "category": "Tablet",
+                    "models": [
+                        {
+                            "model_name": "Latitude 7320 Detachable",
+                            "key_model_intune": "Latitude 7320 Detachable",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Latitude 7320 Detachable",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Latitude 7320 Detachable",
+                            "Description_EN": "Latitude 7320 Detachable 13-inch 2-in-1 with 11th Gen Intel Core vPro, hot-swappable keyboard, 3:2 display and enterprise security features.",
+                            "Description_DE": "Das Latitude 7320 Detachable ist ein 13-Zoll-2-in-1 mit Intel-Core-vPro der 11. Generation, abnehmbarer Tastatur, 3:2-Display und Enterprise-Sicherheitsfunktionen.",
+                            "release_year": "2021",
+                            "icon": "Dell_Tablet_Latitude7320Detachable.png"
+                        },
+                        {
+                            "model_name": "Latitude 7350 Detachable",
+                            "key_model_intune": "Latitude 7350 Detachable",
+                            "key_model_apple": "",
+                            "key_model_sccm": "Latitude 7350 Detachable",
+                            "key_model_custom1": "",
+                            "key_model_custom2": "",
+                            "key_model_custom3": "",
+                            "model_number": "Latitude 7350 Detachable",
+                            "Description_EN": "Latitude 7350 Detachable (2024) 13-inch 3:2 tablet with Intel Core Ultra U-series, Gorilla Glass Victus, smart card reader in the keyboard and optional 5G.",
+                            "Description_DE": "Das Latitude 7350 Detachable (2024) ist ein 13-Zoll-Tablet im 3:2-Format mit Intel-Core-Ultra-U-Prozessoren, Gorilla Glass Victus, Smartcard-Leser in der Tastatur und optionalem 5G.",
+                            "release_year": "2024",
+                            "icon": "Dell_Tablet_Latitude7350Detachable.png"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
