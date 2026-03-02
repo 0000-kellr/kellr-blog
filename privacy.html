@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kellr &mdash; Datenschutzerkl&auml;rung / Privacy Policy</title>
+    <meta name="description" content="Datenschutzerkl&auml;rung f&uuml;r die Kellr App">
+    <link rel="icon" href="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy { max-width: var(--max-w); margin: 0 auto; padding: 140px 20px 80px; }
+        .privacy h1 { font-size: 2rem; margin-bottom: 8px; }
+        .privacy .subtitle { color: var(--text2); margin-bottom: 40px; }
+        .privacy h2 { font-size: 1.3rem; margin-top: 36px; margin-bottom: 12px; color: var(--green); }
+        .privacy h3 { font-size: 1.1rem; margin-top: 24px; margin-bottom: 8px; }
+        .privacy p, .privacy li { color: var(--text2); line-height: 1.8; margin-bottom: 12px; }
+        .privacy ul { margin-left: 20px; margin-bottom: 16px; }
+        .privacy li { margin-bottom: 6px; }
+        .privacy a { color: var(--green); }
+        .privacy .lang-section { display: none; }
+        .privacy .lang-section.active { display: block; }
+        .privacy-lang-toggle {
+            display: inline-flex; gap: 0; margin-bottom: 32px;
+            border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+        }
+        .privacy-lang-toggle button {
+            background: var(--bg3); border: none; color: var(--text2);
+            padding: 8px 20px; cursor: pointer; font-size: 0.9rem; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .privacy-lang-toggle button.active {
+            background: var(--green); color: #000;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
+                <span>Kellr</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="privacy">
+        <h1 data-de="Datenschutzerkl&auml;rung" data-en="Privacy Policy">Datenschutzerkl&auml;rung</h1>
+        <p class="subtitle" data-de="Zuletzt aktualisiert: 2. M&auml;rz 2026" data-en="Last updated: March 2, 2026">Zuletzt aktualisiert: 2. M&auml;rz 2026</p>
+
+        <div class="privacy-lang-toggle">
+            <button id="btn-de" class="active" onclick="switchPrivacyLang('de')">Deutsch</button>
+            <button id="btn-en" onclick="switchPrivacyLang('en')">English</button>
+        </div>
+
+        <!-- DEUTSCH -->
+        <div id="privacy-de" class="lang-section active">
+            <h2>1. Verantwortlicher</h2>
+            <p>Michael Seidl<br>&Ouml;sterreich<br>E-Mail: <a href="mailto:contact@kellr.app">contact@kellr.app</a></p>
+
+            <h2>2. &Uuml;bersicht</h2>
+            <p>Kellr ist eine iOS-App zur Verwaltung deiner Vorratskammer. Wir nehmen den Schutz deiner personenbezogenen Daten sehr ernst. Diese Datenschutzerkl&auml;rung informiert dich &uuml;ber Art, Umfang und Zweck der Verarbeitung personenbezogener Daten innerhalb unserer App gem&auml;&szlig; der Datenschutz-Grundverordnung (DSGVO) und dem &ouml;sterreichischen Datenschutzgesetz (DSG).</p>
+
+            <h2>3. Welche Daten wir erheben</h2>
+            <h3>3.1 Kontodaten</h3>
+            <ul>
+                <li><strong>E-Mail-Adresse:</strong> Wird f&uuml;r die Registrierung und Anmeldung per Magic Link ben&ouml;tigt.</li>
+            </ul>
+            <h3>3.2 Nutzungsdaten</h3>
+            <ul>
+                <li><strong>Haushaltsdaten:</strong> Name des Haushalts, Einladungscodes, Mitgliederzuordnung.</li>
+                <li><strong>Produktdaten:</strong> Produktnamen, Kategorien, Mengen, Ablaufdaten, Lagerorte, Notizen und optionale Produktbilder.</li>
+                <li><strong>Aktivit&auml;tsprotokolle:</strong> Protokollierung von Bestands&auml;nderungen innerhalb deines Haushalts.</li>
+            </ul>
+            <h3>3.3 Daten, die wir NICHT erheben</h3>
+            <ul>
+                <li>Keine Standortdaten</li>
+                <li>Keine Ger&auml;te-IDs oder Tracking-Daten</li>
+                <li>Keine Werbe-IDs</li>
+                <li>Keine Analyse-/Analytics-Daten durch Drittanbieter</li>
+            </ul>
+
+            <h2>4. Zweck der Datenverarbeitung</h2>
+            <p>Wir verarbeiten deine Daten ausschlie&szlig;lich f&uuml;r folgende Zwecke:</p>
+            <ul>
+                <li>Bereitstellung und Betrieb der App (Art. 6 Abs. 1 lit. b DSGVO &mdash; Vertragserf&uuml;llung)</li>
+                <li>Benutzerauthentifizierung per Magic Link</li>
+                <li>Synchronisierung deiner Vorratsdaten &uuml;ber Ger&auml;te und Haushaltsmitglieder</li>
+            </ul>
+
+            <h2>5. Hosting und Datenverarbeitung</h2>
+            <p>Unser Backend wird &uuml;ber <strong>Supabase</strong> betrieben. Die Server befinden sich in <strong>Frankfurt am Main, Deutschland (EU)</strong>. Supabase fungiert als Auftragsverarbeiter gem&auml;&szlig; Art. 28 DSGVO. Deine Daten verlassen den Europ&auml;ischen Wirtschaftsraum (EWR) nicht.</p>
+            <p>Supabase Privacy Policy: <a href="https://supabase.com/privacy" target="_blank">https://supabase.com/privacy</a></p>
+
+            <h2>6. Authentifizierung</h2>
+            <p>Wir verwenden Supabase Email Auth mit Magic Links. Es werden keine Passw&ouml;rter gespeichert. Du erh&auml;ltst einen Anmeldelink per E-Mail, der einen zeitlich begrenzten Token enth&auml;lt.</p>
+
+            <h2>7. Amazon Affiliate Links</h2>
+            <p>In bestimmten Produktkategorien k&ouml;nnen Amazon Affiliate Links angezeigt werden. Wenn du auf einen solchen Link klickst und einen Kauf t&auml;tigst, erhalten wir eine kleine Provision. Der Klick auf einen Affiliate Link &uuml;bertr&auml;gt dich auf die Amazon-Website, deren eigene Datenschutzrichtlinie gilt. Wir erhalten von Amazon keine personenbezogenen Daten &uuml;ber dich.</p>
+
+            <h2>8. Werbung und Analytics</h2>
+            <p>Kellr enth&auml;lt <strong>keine Werbung</strong> und verwendet <strong>keine Drittanbieter-Analytics-Tools</strong>. Es werden keine Tracking-SDKs oder Analyse-Bibliotheken eingesetzt.</p>
+
+            <h2>9. Datenweitergabe an Dritte</h2>
+            <p>Deine Daten werden nicht an Dritte verkauft oder zu Werbezwecken weitergegeben. Eine Weitergabe erfolgt ausschlie&szlig;lich an unseren Hosting-Anbieter (Supabase) zur Bereitstellung des Dienstes.</p>
+
+            <h2>10. Speicherdauer</h2>
+            <p>Deine Daten werden gespeichert, solange dein Konto aktiv ist. Nach L&ouml;schung deines Kontos werden alle zugeordneten Daten innerhalb von 30 Tagen gel&ouml;scht.</p>
+
+            <h2>11. Deine Rechte</h2>
+            <p>Gem&auml;&szlig; DSGVO hast du folgende Rechte:</p>
+            <ul>
+                <li><strong>Auskunftsrecht</strong> (Art. 15): Auskunft &uuml;ber deine gespeicherten Daten</li>
+                <li><strong>Berichtigungsrecht</strong> (Art. 16): Korrektur unrichtiger Daten</li>
+                <li><strong>L&ouml;schungsrecht</strong> (Art. 17): L&ouml;schung deiner Daten (&bdquo;Recht auf Vergessenwerden&ldquo;)</li>
+                <li><strong>Einschr&auml;nkung der Verarbeitung</strong> (Art. 18)</li>
+                <li><strong>Daten&uuml;bertragbarkeit</strong> (Art. 20): Export deiner Daten in maschinenlesbarem Format</li>
+                <li><strong>Widerspruchsrecht</strong> (Art. 21)</li>
+            </ul>
+            <p>Zur Aus&uuml;bung deiner Rechte kontaktiere uns unter: <a href="mailto:contact@kellr.app">contact@kellr.app</a></p>
+
+            <h2>12. Beschwerderecht</h2>
+            <p>Du hast das Recht, eine Beschwerde bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde einzureichen:</p>
+            <p>&Ouml;sterreichische Datenschutzbeh&ouml;rde<br>Barichgasse 40-42, 1030 Wien<br><a href="https://www.dsb.gv.at" target="_blank">www.dsb.gv.at</a></p>
+
+            <h2>13. &Auml;nderungen dieser Datenschutzerkl&auml;rung</h2>
+            <p>Wir behalten uns vor, diese Datenschutzerkl&auml;rung bei Bedarf anzupassen. Die aktuelle Version ist stets unter dieser URL abrufbar. Bei wesentlichen &Auml;nderungen informieren wir dich in der App.</p>
+
+            <h2>14. Kontakt</h2>
+            <p>Michael Seidl<br>E-Mail: <a href="mailto:contact@kellr.app">contact@kellr.app</a><br>Website: <a href="https://kellr.app">https://kellr.app</a></p>
+        </div>
+
+        <!-- ENGLISH -->
+        <div id="privacy-en" class="lang-section">
+            <h2>1. Data Controller</h2>
+            <p>Michael Seidl<br>Austria<br>Email: <a href="mailto:contact@kellr.app">contact@kellr.app</a></p>
+
+            <h2>2. Overview</h2>
+            <p>Kellr is an iOS app for managing your pantry. We take the protection of your personal data very seriously. This privacy policy informs you about the nature, scope, and purpose of processing personal data within our app in accordance with the General Data Protection Regulation (GDPR) and the Austrian Data Protection Act (DSG).</p>
+
+            <h2>3. Data We Collect</h2>
+            <h3>3.1 Account Data</h3>
+            <ul>
+                <li><strong>Email address:</strong> Required for registration and login via Magic Link.</li>
+            </ul>
+            <h3>3.2 Usage Data</h3>
+            <ul>
+                <li><strong>Household data:</strong> Household name, invitation codes, member assignments.</li>
+                <li><strong>Product data:</strong> Product names, categories, quantities, expiry dates, storage locations, notes, and optional product images.</li>
+                <li><strong>Activity logs:</strong> Logging of inventory changes within your household.</li>
+            </ul>
+            <h3>3.3 Data We Do NOT Collect</h3>
+            <ul>
+                <li>No location data</li>
+                <li>No device IDs or tracking data</li>
+                <li>No advertising IDs</li>
+                <li>No third-party analytics data</li>
+            </ul>
+
+            <h2>4. Purpose of Data Processing</h2>
+            <p>We process your data exclusively for the following purposes:</p>
+            <ul>
+                <li>Provision and operation of the app (Art. 6(1)(b) GDPR &mdash; contract performance)</li>
+                <li>User authentication via Magic Link</li>
+                <li>Synchronization of your pantry data across devices and household members</li>
+            </ul>
+
+            <h2>5. Hosting and Data Processing</h2>
+            <p>Our backend is operated via <strong>Supabase</strong>. The servers are located in <strong>Frankfurt am Main, Germany (EU)</strong>. Supabase acts as a data processor pursuant to Art. 28 GDPR. Your data does not leave the European Economic Area (EEA).</p>
+            <p>Supabase Privacy Policy: <a href="https://supabase.com/privacy" target="_blank">https://supabase.com/privacy</a></p>
+
+            <h2>6. Authentication</h2>
+            <p>We use Supabase Email Auth with Magic Links. No passwords are stored. You receive a login link via email containing a time-limited token.</p>
+
+            <h2>7. Amazon Affiliate Links</h2>
+            <p>In certain product categories, Amazon Affiliate links may be displayed. If you click on such a link and make a purchase, we receive a small commission. Clicking an affiliate link takes you to the Amazon website, which has its own privacy policy. We do not receive any personal data about you from Amazon.</p>
+
+            <h2>8. Advertising and Analytics</h2>
+            <p>Kellr contains <strong>no advertising</strong> and uses <strong>no third-party analytics tools</strong>. No tracking SDKs or analytics libraries are used.</p>
+
+            <h2>9. Data Sharing with Third Parties</h2>
+            <p>Your data is not sold or shared with third parties for advertising purposes. Data is shared exclusively with our hosting provider (Supabase) for service provision.</p>
+
+            <h2>10. Data Retention</h2>
+            <p>Your data is stored as long as your account is active. After account deletion, all associated data will be deleted within 30 days.</p>
+
+            <h2>11. Your Rights</h2>
+            <p>Under the GDPR, you have the following rights:</p>
+            <ul>
+                <li><strong>Right of access</strong> (Art. 15): Information about your stored data</li>
+                <li><strong>Right to rectification</strong> (Art. 16): Correction of inaccurate data</li>
+                <li><strong>Right to erasure</strong> (Art. 17): Deletion of your data ("right to be forgotten")</li>
+                <li><strong>Right to restriction of processing</strong> (Art. 18)</li>
+                <li><strong>Right to data portability</strong> (Art. 20): Export of your data in machine-readable format</li>
+                <li><strong>Right to object</strong> (Art. 21)</li>
+            </ul>
+            <p>To exercise your rights, contact us at: <a href="mailto:contact@kellr.app">contact@kellr.app</a></p>
+
+            <h2>12. Right to Lodge a Complaint</h2>
+            <p>You have the right to file a complaint with the competent supervisory authority:</p>
+            <p>Austrian Data Protection Authority (Datenschutzbeh&ouml;rde)<br>Barichgasse 40-42, 1030 Vienna, Austria<br><a href="https://www.dsb.gv.at" target="_blank">www.dsb.gv.at</a></p>
+
+            <h2>13. Changes to This Privacy Policy</h2>
+            <p>We reserve the right to update this privacy policy as needed. The current version is always available at this URL. In case of significant changes, we will notify you within the app.</p>
+
+            <h2>14. Contact</h2>
+            <p>Michael Seidl<br>Email: <a href="mailto:contact@kellr.app">contact@kellr.app</a><br>Website: <a href="https://kellr.app">https://kellr.app</a></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Michael Seidl &mdash; Kellr</p>
+    </footer>
+
+    <script>
+        function switchPrivacyLang(lang) {
+            document.getElementById('privacy-de').classList.toggle('active', lang === 'de');
+            document.getElementById('privacy-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+            document.documentElement.setAttribute('data-lang', lang);
+            // Update elements with data-de/data-en
+            document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+        }
+    </script>
+</body>
+</html>
