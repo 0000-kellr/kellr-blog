@@ -1,35 +1,35 @@
-# Kellr â€” Architektur & Service-Ãœbersicht
+# Kellr - Architektur & Service-Ubersicht
 
-> Letzte Aktualisierung: 2026-03-02 (CI/CD Signing-Logik ergänzt)
+> Letzte Aktualisierung: 2026-03-02 (CI/CD Signing-Logik ergaenzt)
 > Dieses Dokument beschreibt alle verwendeten Services, ihre Integration und Konfiguration.
 
 ---
 
-## ðŸ—ï¸ GesamtÃ¼berblick
+## Gesamtuberblick
 
 ```
 [Michael / Nutzer]
-       â”‚
-       â”‚ WhatsApp Voice/Text
-       â–¼
-[OpenClaw + Claude]  â—„â”€â”€â”€â”€ KI-Steuerung (Sonnet Default, Opus fÃ¼r Coding)
-       â”‚
-       â”œâ”€â”€â–º GitHub (0000-kellr)
-       â”‚         â”œâ”€â”€ kellr (iOS App)
-       â”‚         â””â”€â”€ kellr-blog (Website)
-       â”‚
-       â”œâ”€â”€â–º Supabase (Backend)
-       â”‚
-       â”œâ”€â”€â–º Apple (TestFlight / App Store)
-       â”‚
-       â”œâ”€â”€â–º Resend (E-Mail)
-       â”‚
-       â””â”€â”€â–º Notion (Tasks / Social Media Posts)
+       |
+       | WhatsApp Voice/Text
+       v
+[OpenClaw + Claude]  <---- KI-Steuerung (Sonnet Default, Opus fuer Coding)
+       |
+       |-- GitHub (0000-kellr)
+       |         |-- kellr (iOS App)
+       |         `-- kellr-blog (Website)
+       |
+       |-- Supabase (Backend)
+       |
+       |-- Apple (TestFlight / App Store)
+       |
+       |-- Resend (E-Mail)
+       |
+       `-- Notion (Tasks / Social Media Posts)
 ```
 
 ---
 
-## ðŸ“± iOS App â€” Kellr
+## iOS App - Kellr
 
 | Eigenschaft | Wert |
 |-------------|------|
@@ -37,40 +37,42 @@
 | **Tech** | SwiftUI, iOS 17+ |
 | **Bundle ID** | com.au2mator.kellr |
 | **Team** | QV64L84RFS |
-| **CI/CD** | GitHub Actions â†’ TestFlight (Push to main) |
-| **TestFlight** | Internal: "Familie" Â· Public Link: https://testflight.apple.com/join/NGG31k6t |
+| **CI/CD** | GitHub Actions -> TestFlight (manuell ausgeloest) |
+| **TestFlight** | Internal: "Familie" - Public Link: https://testflight.apple.com/join/NGG31k6t |
 
 ### Signing
+
 - **Distribution Certificate:** iOS Distribution: Michael Seidl (gespeichert als GitHub Secret `DIST_P12_BASE64`)
-- **Certificate ID:** `MT8Z7MGMFU` · läuft bis 2027-03-02
+- **Certificate ID:** `MT8Z7MGMFU` - laeuft bis 2027-03-02
 - **P12 Passwort:** `DIST_P12_PASSWORD` (GitHub Secret)
-- **Provisioning:** Manuelles Signing — Profil wird bei jedem Build frisch via App Store Connect API heruntergeladen
+- **Provisioning:** Manuelles Signing - Profil wird bei jedem Build frisch via App Store Connect API heruntergeladen
 - **API Key:** `GY3WY8PX59` (in `secrets/apple_authkey_GY3WY8PX59.p8`, als GitHub Secret `APP_STORE_CONNECT_PRIVATE_KEY`)
 
 ### CI/CD Build-Logik (GitHub Actions)
 
-**Workflow-Datei:** `.github/workflows/build-and-deploy.yml`  
-**Trigger:** Manuell (`workflow_dispatch`) — **kein** automatischer Push-Trigger
+**Workflow-Datei:** `.github/workflows/build-and-deploy.yml`
+**Trigger:** Manuell (`workflow_dispatch`) - kein automatischer Push-Trigger
 
-#### Schritt 1 — Provisioning Profile herunterladen
+#### Schritt 1 - Provisioning Profile herunterladen
+
 Skript: `.github/scripts/download_profile.py`
 
 ```
 1. pip install PyJWT
 2. JWT mit App Store Connect API Key generieren
 3. "APPLE_ID_AUTH" Capability am Profil aktivieren (falls fehlend)
-4. Alle alten Profile gleichen Namens löschen
-5. Neues Profil erstellen → mobileprovision-Binärdatei laden
-6. UUID aus plist-Binärblock extrahieren:
+4. Alle alten Profile gleichen Namens loeschen
+5. Neues Profil erstellen -> mobileprovision-Binaerdatei laden
+6. UUID aus plist-Binaerblock extrahieren:
    plistlib.loads(profile_data[plist_start:plist_end])["UUID"]
-7. UUID → /tmp/profile_uuid schreiben
-8. Profilname → /tmp/profile_name schreiben
+7. UUID -> /tmp/profile_uuid schreiben
+8. Profilname -> /tmp/profile_name schreiben
 ```
 
-> ⚠️ **Wichtig:** Die UUID muss aus dem plist-Binary der `.mobileprovision`-Datei gelesen werden.  
+> WICHTIG: Die UUID muss aus dem plist-Binary der `.mobileprovision`-Datei gelesen werden.
 > Die Resource-ID der App Store Connect API ist NICHT die UUID, die Xcode braucht!
 
-#### Schritt 2 — Xcode Build & Archive
+#### Schritt 2 - Xcode Build & Archive
 
 ```bash
 xcodebuild archive \
@@ -82,7 +84,7 @@ xcodebuild archive \
   PROVISIONING_PROFILE="$(cat /tmp/profile_uuid)"
 ```
 
-#### Schritt 3 — ExportOptions.plist generieren
+#### Schritt 3 - ExportOptions.plist generieren
 
 ```xml
 <dict>
@@ -97,10 +99,10 @@ xcodebuild archive \
 </dict>
 ```
 
-> ⚠️ **Wichtig:** `-allowProvisioningUpdates` darf beim `exportArchive`-Schritt **nicht** verwendet werden!  
-> Mit Manual Signing führt das zu einem Fehler ("unable to find provisioning profile").
+> WICHTIG: `-allowProvisioningUpdates` darf beim `exportArchive`-Schritt NICHT verwendet werden!
+> Mit Manual Signing fuehrt das zu einem Fehler ("unable to find provisioning profile").
 
-#### Schritt 4 — Upload zu TestFlight
+#### Schritt 4 - Upload zu TestFlight
 
 ```bash
 xcodebuild -exportArchive \
@@ -115,46 +117,48 @@ xcrun altool --upload-app \
   --apiIssuer 360c0f64-c428-4121-a5b4-05b3bcc90e92
 ```
 
-#### Bekannte Fallstricke (hart erarbeitet 🔥)
+#### Bekannte Fallstricke (hart erarbeitet)
 
 | Problem | Ursache | Fix |
 |---------|---------|-----|
 | `unable to find provisioning profile` | `-allowProvisioningUpdates` mit Manual Signing | Flag entfernen |
 | UUID falsch | API Resource-ID statt Profil-UUID | UUID aus plist-Binary lesen |
-| Build schlägt fehl nach Zertifikat-Erneuerung | Altes Profil noch aktiv | Profil-Delete + Neu-Erstellung im Skript |
-| `time.sleep` Python SyntaxError | Sleep zwischen `try`/`except` ohne Code | Korrekte Einrückung |
+| Build schlaegt fehl nach Zertifikat-Erneuerung | Altes Profil noch aktiv | Profil-Delete + Neu-Erstellung im Skript |
+| `time.sleep` Python SyntaxError | Sleep zwischen `try`/`except` ohne Code | Korrekte Einrueckung |
 
 ---
 
-## ðŸ—„ï¸ Backend â€” Supabase
+## Backend - Supabase
 
 | Eigenschaft | Wert |
 |-------------|------|
 | **Projekt** | bflxydqsutvpjzrevjlh |
 | **URL** | https://bflxydqsutvpjzrevjlh.supabase.co |
 | **Region** | Frankfurt (eu-central-1) |
-| **Plan** | Free (Evaluation Pro fÃ¼r Custom Domain) |
+| **Plan** | Free |
 | **Auth** | Supabase Auth (E-Mail + Magic Link) |
 | **Storage** | Supabase Storage (Bucket: public-assets) |
 
 ### Wichtige Tabellen
-- `profiles` â€” User-Profile, Household-VerknÃ¼pfung
-- `households` â€” Haushalte (Seidl-Hofmeister)
-- `products` â€” Vorratskammer-Items
-- `product_categories` â€” Kategorien (Unique Constraint: household+name)
-- `storage_locations` â€” Lagerorte
-- `stock_transactions` â€” Bestandsbewegungen
-- `affiliate_partners` â€” Amazon & Co.
-- `category_affiliate_links` â€” Kategorie â†’ Affiliate-VerknÃ¼pfung
+
+- `profiles` - User-Profile, Household-Verknuepfung
+- `households` - Haushalte (Seidl-Hofmeister)
+- `products` - Vorratskammer-Items
+- `product_categories` - Kategorien (Unique Constraint: household+name)
+- `storage_locations` - Lagerorte
+- `stock_transactions` - Bestandsbewegungen
+- `affiliate_partners` - Amazon & Co.
+- `category_affiliate_links` - Kategorie -> Affiliate-Verknuepfung
 
 ### Credentials (lokal)
+
 - Service Role Key: `secrets/supabase_service_role.txt`
 - Anon Key: `secrets/supabase_anon_key.txt`
 - URL: `secrets/supabase_url.txt`
 
 ---
 
-## ðŸŒ Website â€” kellr.app
+## Website - kellr.app
 
 | Eigenschaft | Wert |
 |-------------|------|
@@ -162,19 +166,20 @@ xcrun altool --upload-app \
 | **Hosting** | GitHub Pages |
 | **Domain** | https://kellr.app |
 | **Tech** | Pure HTML/CSS/JS (kein Framework) |
-| **Content** | data.js â€” JSON-basierte Blog-EintrÃ¤ge |
+| **Content** | data.js - JSON-basierte Blog-Eintraege |
 | **Sprachen** | DE + EN (Toggle) |
 
 ### Seiten
-- **Hero** â€” Projektvorstellung
-- **Journal** â€” TÃ¤gliche Build-Logs
-- **Dashboard** â€” KI-Kosten, Commits, Features (live aus data.js)
-- **About** â€” Ãœber Michael + WhatsApp Community
-- **Community CTA** â€” WhatsApp Community Join-Link
+
+- **Hero** - Projektvorstellung
+- **Journal** - Taegliche Build-Logs
+- **Dashboard** - KI-Kosten, Commits, Features (live aus data.js)
+- **About** - Ueber Michael + WhatsApp Community
+- **Community CTA** - WhatsApp Community Join-Link
 
 ---
 
-## ðŸ“§ E-Mail â€” Resend
+## E-Mail - Resend
 
 | Eigenschaft | Wert |
 |-------------|------|
@@ -191,17 +196,17 @@ xcrun altool --upload-app \
 
 ---
 
-## ðŸ“¬ Kontakt â€” Microsoft 365 (geplant)
+## Kontakt - Microsoft 365 (geplant)
 
 | Eigenschaft | Wert |
 |-------------|------|
 | **Postfach** | contact@kellr.app |
-| **Status** | â³ Ausstehend â€” DNS noch einzurichten |
+| **Status** | Ausstehend - DNS noch einzurichten |
 | **Tenant** | Privat (ms_client_id_Private.txt) |
 
 ---
 
-## ðŸ¤– KI & Automatisierung â€” OpenClaw
+## KI & Automatisierung - OpenClaw
 
 | Eigenschaft | Wert |
 |-------------|------|
@@ -213,26 +218,26 @@ xcrun altool --upload-app \
 | **Agent** | Groot (main session) |
 
 ### Automatisierte Jobs (Cron)
+
 - Resend Domain-Verifikation (alle 5 Min bis verified)
 - kellr.app DNS Check (alle 5 Min bis propagiert)
-- TestFlight Retry (alle 2h bis Upload erfolgreich)
-- TestFlight Build nach Morgen 07:00 (einmalig)
+- Daily LinkedIn Reminder (21:00 Vienna)
 
 ---
 
-## ðŸ“£ Social Media â€” Notion Posts Planer
+## Social Media - Notion Posts Planer
 
 | Eigenschaft | Wert |
 |-------------|------|
 | **DB** | b85c425b76a94007aa83a9cab5d2d45c |
-| **KanÃ¤le** | LinkedIn (SeidlM) + Instagram (SeidlM) |
-| **Rhythmus** | TÃ¤glich: DE 08:00, EN 14:00 |
-| **Status Flow** | Placeholder â†’ ToPlan â†’ Published |
-| **Inhalt** | Building in Public â€” Kellr Fortschritt |
+| **Kanaele** | LinkedIn (SeidlM) + Instagram (SeidlM) |
+| **Rhythmus** | Taeglich: DE 08:00, EN 14:00 |
+| **Status Flow** | Placeholder -> ToPlan -> Published |
+| **Inhalt** | Building in Public - Kellr Fortschritt |
 
 ---
 
-## ðŸ”‘ GitHub
+## GitHub
 
 | Eigenschaft | Wert |
 |-------------|------|
@@ -240,38 +245,26 @@ xcrun altool --upload-app \
 | **App Repo** | 0000-kellr/kellr |
 | **Blog Repo** | 0000-kellr/kellr-blog |
 | **Token** | secrets/github_token.txt (User: Seidlm) |
-| **Enterprise** | au2mator-gmbh (SAML SSO) |
 
 ### GitHub Secrets (kellr Repo)
-- `APP_STORE_CONNECT_PRIVATE_KEY` â€” .p8 API Key
-- `APP_STORE_CONNECT_KEY_ID` â€” GY3WY8PX59
-- `APP_STORE_CONNECT_ISSUER_ID` â€” 360c0f64-...
-- `APPLE_TEAM_ID` â€” QV64L84RFS
-- `DIST_P12_BASE64` â€” Distribution Certificate
-- `DIST_P12_PASSWORD` â€” P12 Passwort
+
+- `APP_STORE_CONNECT_PRIVATE_KEY` - .p8 API Key
+- `APP_STORE_CONNECT_KEY_ID` - GY3WY8PX59
+- `APP_STORE_CONNECT_ISSUER_ID` - 360c0f64-...
+- `APPLE_TEAM_ID` - QV64L84RFS
+- `DIST_P12_BASE64` - Distribution Certificate
+- `DIST_P12_PASSWORD` - P12 Passwort
 
 ---
 
-## ðŸ’° Kosten-Ãœbersicht (Stand Tag 2)
+## Kosten-Ubersicht (Stand Tag 2)
 
 | Service | Kosten |
 |---------|--------|
-| OpenClaw + Claude API | ~â‚¬200 (Tag 1-2, Opus-intensiv) |
-| Supabase | â‚¬0 (Free Plan) |
-| GitHub | â‚¬0 (Free fÃ¼r Public Repos) |
-| Resend | â‚¬0 (Free: 3.000 Mails/Monat) |
-| GitHub Pages | â‚¬0 |
+| OpenClaw + Claude API | ~200 EUR (Tag 1-2, Opus-intensiv) |
+| Supabase | 0 EUR (Free Plan) |
+| GitHub | 0 EUR (Free fuer Public Repos) |
+| Resend | 0 EUR (Free: 3.000 Mails/Monat) |
+| GitHub Pages | 0 EUR |
 | Apple Developer | $99/Jahr (bereits bezahlt) |
-| **Total laufend** | **~â‚¬0/Monat** (excl. KI) |
-
----
-
-## ðŸ“ Wo wird dieses Dokument gepflegt?
-
-**Empfehlung:** Im `kellr-blog` Repo als `ARCHITECTURE.md` â€” damit es:
-- Versioniert ist (Git History)
-- Ã–ffentlich einsehbar (Building in Public)
-- Von Groot automatisch aktualisiert werden kann
-
-Alternativ als eigene Seite auf kellr.app einbaubar.
-
+| **Total laufend** | **~0 EUR/Monat** (excl. KI) |
