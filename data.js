@@ -3,6 +3,56 @@
 
 const JOURNAL = [
     {
+        day: 4,
+        date: "2026-03-03",
+        title: { de: "Design, UX und das perfekte Icon", en: "Design, UX and the Perfect Icon" },
+        body: {
+            de: `<p>Tag 4 war k&uuml;rzer &mdash; aber intensiver als die Zahlen vermuten lassen.</p>
+<p>Nur rund 30&euro; KI-Kosten heute. Aber was wir gebaut haben, &auml;ndert die Nutzungserfahrung der App komplett. Es waren lauter kleine Dinge &mdash; und genau diese kleinen Dinge machen den Unterschied zwischen &ldquo;funktioniert&rdquo; und &ldquo;f&uuml;hlt sich gut an&rdquo;.</p>
+
+<h3>Was heute passiert ist</h3>
+<ul>
+<li><strong>Warnungen-Tab komplett &uuml;berarbeitet:</strong> Swipe-Aktionen direkt auf dem Warnungs-Screen (hinzuf&uuml;gen, entnehmen, bearbeiten). Plus eine neue Prognose-Sektion &mdash; mit Gruppen-Logik, damit kein Produkt doppelt erscheint.</li>
+<li><strong>Inventar neu gestaltet:</strong> Gruppen sind jetzt auf- und zuklappbar. Die Bestandszahl wird gro&szlig; rechts angezeigt. Mehr Luft, bessere Lesbarkeit.</li>
+<li><strong>App-Icon:</strong> Nach mehreren KI-Versuchen &mdash; die alle nicht schön genug waren &mdash; haben wir das K-Icon selbst entworfen und final gesetzt. Ein K aus Regal-Planken mit bunten Vorratsdosen. Simpel, erkennbar, passt zur App.</li>
+<li><strong>Onboarding:</strong> Drei Screens beim ersten Start erkl&auml;ren worum es geht. Kleine Sache, gro&szlig;er Eindruck im App Store Review.</li>
+<li><strong>Xcode 26.0.1 &amp; macOS 26 SDK:</strong> Ab April 2026 verlangt Apple den neuen SDK. Wir haben gleich upgedatet &mdash; war l&auml;ngst f&auml;llig.</li>
+<li><strong>Shop-Zuordnung inline:</strong> Affiliate-Partner k&ouml;nnen jetzt direkt beim Bearbeiten einer Kategorie oder Produktgruppe zugewiesen werden. Kein separater Einstellungs-Punkt mehr.</li>
+<li><strong>Upload-Limit wieder erreicht:</strong> Zu viele Builds in kurzer Zeit &mdash; Apple sperrt f&uuml;r 24 Stunden. Lektion gelernt: Commits b&uuml;ndeln.</li>
+</ul>
+
+<h3>Das pers&ouml;nliche Fazit</h3>
+<p>Heute habe ich bewusst klarer kommuniziert. Weniger &ldquo;mach irgendwas mit den Warnungen&rdquo;, mehr &ldquo;genau dieser Screen, genau diese Logik, genau diese Reihenfolge&rdquo;. Der Unterschied war sp&uuml;rbar: Weniger Korrekturrunden, sauberere Ergebnisse.</p>
+<p>Das ist die eigentliche Lernkurve beim KI-Coding: nicht Programmieren lernen &mdash; sondern <strong>pr&auml;zise Anweisungen geben</strong> lernen. Und das wird jeden Tag ein bisschen besser.</p>`,
+            en: `<p>Day 4 was shorter &mdash; but more intense than the numbers suggest.</p>
+<p>Only around &euro;30 in AI costs today. But what we built completely changes how the app feels to use. Lots of small things &mdash; and those small things are exactly what separates &ldquo;works&rdquo; from &ldquo;feels right.&rdquo;</p>
+
+<h3>What happened today</h3>
+<ul>
+<li><strong>Warnings tab fully redesigned:</strong> Swipe actions directly on the warning screen (add, remove, edit). Plus a new forecast section &mdash; with group-aware logic so no product appears twice.</li>
+<li><strong>Inventory redesigned:</strong> Groups are now collapsible. Stock count shown large on the right. More breathing room, better readability.</li>
+<li><strong>App icon:</strong> After several AI attempts that weren&apos;t quite right &mdash; we designed the K icon ourselves and set it as final. A K made of pantry shelves with colorful product jars. Simple, recognizable, fits the app.</li>
+<li><strong>Onboarding:</strong> Three screens on first launch explain what the app does. Small thing, big impression in App Store review.</li>
+<li><strong>Xcode 26.0.1 &amp; macOS 26 SDK:</strong> Apple requires the new SDK from April 2026. We updated immediately &mdash; it was long overdue.</li>
+<li><strong>Shop assignment inline:</strong> Affiliate partners can now be assigned directly when editing a category or product group. No separate settings screen anymore.</li>
+<li><strong>Upload limit hit again:</strong> Too many builds in quick succession &mdash; Apple locks you out for 24 hours. Lesson learned: batch your commits.</li>
+</ul>
+
+<h3>Personal takeaway</h3>
+<p>Today I communicated more precisely. Less &ldquo;do something with the warnings&rdquo;, more &ldquo;exactly this screen, exactly this logic, exactly this order.&rdquo; The difference was noticeable: fewer correction rounds, cleaner results.</p>
+<p>That&apos;s the real learning curve in AI coding: not learning to program &mdash; but learning to <strong>give precise instructions</strong>. And that gets a little better every day.</p>`
+        },
+        stats: {
+            features: 7,
+            commits: 18,
+            issues: 0,
+            cost: "~30&euro;",
+            time: "~1.5h",
+            messages: "~30"
+        },
+        tags: ["Design", "UX", "Icon", "Onboarding", "Day 4"]
+    },
+    {
         day: 3,
         date: "2026-03-02",
         title: { de: "Bugs, Limits und Lernen", en: "Bugs, Limits and Lessons" },
@@ -125,13 +175,13 @@ const JOURNAL = [
 ];
 
 const STATS = {
-    totalDays: 3,
-    totalFeatures: 30,
-    totalCommits: 60,
+    totalDays: 4,
+    totalFeatures: 37,
+    totalCommits: 78,
     totalIssues: 20,
-    totalCost: "~300&euro;",
-    totalTime: "~5h",
-    totalMessages: "~90",
+    totalCost: "~330&euro;",
+    totalTime: "~6.5h",
+    totalMessages: "~120",
     failedBuilds: 10,
     securityFixes: 3
 };
