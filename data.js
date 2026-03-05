@@ -3,6 +3,56 @@
 
 const JOURNAL = [
     {
+        day: 5,
+        date: "2026-03-04",
+        title: { de: "Der gro&szlig;e Architektur-Switch", en: "The Big Architecture Switch" },
+        body: {
+            de: `<p>Tag 5 begann mit kleinen UI-Fixes &mdash; und endete mit einem kompletten Architektur-Umbau. So l&auml;uft das manchmal.</p>
+<p>Irgendwann in der Mitte des Tages wurde klar: Das Netzwerk-zuerst-Modell ist ein Flaschenhals. Jede Aktion wartet auf Supabase. Der App-Start zeigt einen Spinner. Das f&uuml;hlt sich nicht gut an. Also haben wir das Fundament neugebaut.</p>
+
+<h3>Was heute passiert ist</h3>
+<ul>
+<li><strong>Local-First mit SwiftData:</strong> 6 neue <code>@Model</code>-Klassen direkt auf dem Ger&auml;t &mdash; mit Sync-Metadaten (<code>supabaseId</code>, <code>needsPush</code>, <code>lastSyncedAt</code>). Das Inventar lebt jetzt lokal.</li>
+<li><strong>Offline-Queue:</strong> Wenn Supabase nicht erreichbar ist, landet die &Auml;nderung in einer <code>PendingStockOp</code>-Queue statt verloren zu gehen. Beim n&auml;chsten App-Start wird die Queue geleert.</li>
+<li><strong>Schnellerer App-Start:</strong> Beim zweiten Launch zeigt die App sofort die gecachten Daten &mdash; Supabase l&auml;dt im Hintergrund nach. Kein Spinner mehr.</li>
+<li><strong>SyncEngine:</strong> Neue Klasse die beim App-Foreground automatisch synchronisiert: erst Queue leeren, dann Supabase pullen.</li>
+<li><strong>Sync-Status in den Einstellungen:</strong> Zeigt wann zuletzt synchronisiert wurde, wie viele Operationen noch ausstehen &mdash; und einen &ldquo;Jetzt synchronisieren&rdquo;-Button.</li>
+<li><strong>Upload-Limit wieder voll:</strong> Zu viele Fix-Commits heute. TestFlight-Upload erst morgen.</li>
+</ul>
+
+<h3>Das pers&ouml;nliche Fazit</h3>
+<p>Heute habe ich das erste Mal wirklich gesp&uuml;rt, dass KI-Coding nicht bedeutet: beschreiben und fertig. Man braucht Architektur-Verst&auml;ndnis um zu wissen <em>warum</em> etwas so gebaut werden sollte.</p>
+<p>Ohne 15 Jahre Erfahrung mit Scripting, Automatisierung und Backend-Grundlagen h&auml;tte ich diesen Architektur-Switch nicht steuern k&ouml;nnen. Ich w&auml;re nicht mal auf die Idee gekommen, dass es ein Problem gibt.</p>
+<p>KI ist ein massiver Beschleuniger. Aber der Mensch am Steuer muss wissen, wohin die Fahrt gehen soll.</p>`,
+            en: `<p>Day 5 started with small UI fixes &mdash; and ended with a complete architecture rebuild. That&apos;s how it goes sometimes.</p>
+<p>Midway through the day it became clear: the network-first model is a bottleneck. Every action waits for Supabase. The app shows a spinner on launch. That doesn&apos;t feel right. So we rebuilt the foundation.</p>
+
+<h3>What happened today</h3>
+<ul>
+<li><strong>Local-first with SwiftData:</strong> 6 new <code>@Model</code> classes living directly on-device &mdash; with sync metadata (<code>supabaseId</code>, <code>needsPush</code>, <code>lastSyncedAt</code>). The inventory now lives locally.</li>
+<li><strong>Offline queue:</strong> When Supabase is unreachable, changes land in a <code>PendingStockOp</code> queue instead of being lost. The queue flushes on the next app launch.</li>
+<li><strong>Faster app start:</strong> On the second launch the app shows cached data instantly &mdash; Supabase loads in the background. No spinner.</li>
+<li><strong>SyncEngine:</strong> New class that automatically syncs when the app comes to foreground: flush queue first, then pull from Supabase.</li>
+<li><strong>Sync status in settings:</strong> Shows when last synced, how many operations are pending &mdash; and a &ldquo;Sync now&rdquo; button.</li>
+<li><strong>Upload limit hit again:</strong> Too many fix commits today. TestFlight upload tomorrow.</li>
+</ul>
+
+<h3>Personal takeaway</h3>
+<p>Today I truly felt for the first time that AI coding doesn&apos;t mean: describe and done. You need architectural understanding to know <em>why</em> something should be built a certain way.</p>
+<p>Without 15 years of experience with scripting, automation, and backend fundamentals, I couldn&apos;t have directed this architecture switch. I wouldn&apos;t have even noticed there was a problem.</p>
+<p>AI is a massive accelerator. But the person at the wheel needs to know where they&apos;re going.</p>`
+        },
+        stats: {
+            features: 8,
+            commits: 12,
+            issues: 0,
+            cost: "~80&euro;",
+            time: "~3h",
+            messages: "~80"
+        },
+        tags: ["SwiftData", "Local-First", "Architektur", "Offline", "Day 5"]
+    },
+    {
         day: 4,
         date: "2026-03-03",
         title: { de: "Design, UX und das perfekte Icon", en: "Design, UX and the Perfect Icon" },
@@ -175,13 +225,13 @@ const JOURNAL = [
 ];
 
 const STATS = {
-    totalDays: 4,
-    totalFeatures: 37,
-    totalCommits: 78,
+    totalDays: 5,
+    totalFeatures: 45,
+    totalCommits: 90,
     totalIssues: 20,
-    totalCost: "~330&euro;",
-    totalTime: "~6.5h",
-    totalMessages: "~120",
-    failedBuilds: 10,
+    totalCost: "~410&euro;",
+    totalTime: "~9.5h",
+    totalMessages: "~200",
+    failedBuilds: 18,
     securityFixes: 3
 };
