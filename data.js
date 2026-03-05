@@ -3,6 +3,47 @@
 
 const JOURNAL = [
     {
+        day: 6,
+        date: "2026-03-05",
+        title: { de: "Ruhiger Tag, neue Tester", en: "Slow Day, New Testers" },
+        body: {
+            de: `<p>Tag 6 war ruhig &mdash; und das ist okay.</p>
+<p>Nach dem massiven Architektur-Umbau von gestern (Local-First mit SwiftData + Background-Sync) ging es heute ums Testen. Aber ehrlich gesagt hatte ich kaum Zeit.</p>
+
+<h3>Was heute passiert ist</h3>
+<ul>
+<li><strong>2 neue Beta-Tester:</strong> Frische TestFlight-Einladungen verschickt. Unser Testerkreis w&auml;chst &mdash; jetzt sind wir nicht mehr nur &ldquo;Familie&rdquo;.</li>
+<li><strong>Tests der Local-First-Architektur:</strong> Erste manuelle Tests des neuen Offline-Modus. Funktioniert soweit &mdash; aber noch nicht ausgiebig getestet.</li>
+<li><strong>TestFlight-Limit:</strong> Wieder am Upload-Limit. Zwangspause. Builds b&uuml;ndeln bleibt die Lektion.</li>
+</ul>
+
+<h3>Das pers&ouml;nliche Fazit</h3>
+<p>Nicht jeder Tag muss ein Sprint sein. Manchmal ist das Wichtigste, den Schwung nicht zu verlieren. Zwei neue Tester zu gewinnen ist mehr wert als drei Features &mdash; weil echtes Feedback Gold wert ist.</p>
+<p>Morgen geht es weiter mit den P3-Issues: Barcode-Scanner-Rotation, bessere Accessibility, Onboarding-Tour. Kleine Dinge die den Unterschied machen.</p>`,
+            en: `<p>Day 6 was quiet &mdash; and that&apos;s okay.</p>
+<p>After yesterday&apos;s massive architecture rebuild (Local-First with SwiftData + background sync), today was about testing. But honestly, I barely had time.</p>
+
+<h3>What happened today</h3>
+<ul>
+<li><strong>2 new beta testers:</strong> Fresh TestFlight invitations sent out. Our tester circle is growing &mdash; we&apos;re no longer just &ldquo;family.&rdquo;</li>
+<li><strong>Local-First architecture testing:</strong> First manual tests of the new offline mode. Works so far &mdash; but not extensively tested yet.</li>
+<li><strong>TestFlight limit:</strong> Hit the upload limit again. Forced pause. Batching commits remains the lesson.</li>
+</ul>
+
+<h3>Personal takeaway</h3>
+<p>Not every day has to be a sprint. Sometimes the most important thing is to not lose momentum. Gaining two new testers is worth more than three features &mdash; because real feedback is gold.</p>
+<p>Tomorrow we continue with P3 issues: barcode scanner rotation, better accessibility, onboarding tour. Small things that make the difference.</p>`
+        },
+        stats: {
+            features: 0,
+            commits: 0,
+            issues: 0,
+            cost: "<10&euro;",
+            time: "<1h",
+            messages: "~15"
+        },
+        tags: ["Testing", "Beta-Tester", "Pause", "Day 6"]
+    },    {
         day: 5,
         date: "2026-03-04",
         title: { de: "Der gro&szlig;e Architektur-Switch", en: "The Big Architecture Switch" },
@@ -225,13 +266,13 @@ const JOURNAL = [
 ];
 
 const STATS = {
-    totalDays: 5,
+    totalDays: 6,
     totalFeatures: 45,
     totalCommits: 90,
     totalIssues: 20,
-    totalCost: "~410&euro;",
+    totalCost: "~420&euro;",
     totalTime: "~9.5h",
-    totalMessages: "~200",
+    totalMessages: "~215",
     failedBuilds: 18,
     securityFixes: 3
 };
