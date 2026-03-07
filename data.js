@@ -74,7 +74,8 @@ const JOURNAL = [
             time: "~3h (+KI &uuml;ber Nacht)",
             messages: "~80"
         },
-        tags: ["Code Review", "GoLive", "Privacy", "UX", "Day 7"]
+        tags: ["Code Review", "GoLive", "Privacy", "UX", "Day 7"],
+        image: "https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/blog/day7-inventory.jpg"
     },
     {
         day: 6,
