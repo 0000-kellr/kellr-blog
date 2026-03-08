@@ -165,3 +165,144 @@ a:hover { text-decoration: underline; }
     text-align: center; padding: 40px 20px; color: var(--text2);
     font-size: 0.85rem; border-top: 1px solid var(--border);
 }
+
+/* === App Landing Hero === */
+.hero-inner {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.hero-app-landing {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+.hero-app-icon-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    margin-bottom: 1rem;
+}
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--green);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+.hero-tagline {
+    font-size: 1.1rem;
+    color: var(--text2);
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+}
+.hero-screenshot {
+    flex: 0 0 auto;
+}
+.phone-screenshot {
+    width: 280px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.app-store-badge img {
+    height: 48px;
+    transition: opacity 0.2s;
+}
+.app-store-badge img:hover {
+    opacity: 0.8;
+}
+
+/* === Features Grid === */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.feature-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+}
+.feature-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.1rem;
+}
+.feature-card p {
+    color: var(--text2);
+    font-size: 0.95rem;
+}
+.feature-screenshot {
+    margin-bottom: 1rem;
+}
+.phone-screenshot-small {
+    width: 180px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+/* === Steps === */
+.steps-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+.step {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+}
+.step-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #000;
+    font-weight: 800;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+.step h3 {
+    margin-bottom: 0.5rem;
+}
+.step p {
+    color: var(--text2);
+    font-size: 0.95rem;
+}
+
+/* === Footer badges === */
+.footer-badges {
+    margin-bottom: 1rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-app-landing {
+        text-align: center;
+    }
+    .hero-tagline {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .phone-screenshot {
+        width: 220px;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    .phone-screenshot-small {
+        width: 160px;
+    }
+}
