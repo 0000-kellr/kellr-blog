@@ -103,38 +103,46 @@ document.addEventListener('DOMContentLoaded', () => {
     renderStats();
 });
 
-// Screenshot Slider
-function slideScreenshots(dir) {
-    const track = document.getElementById('sliderTrack');
+// Screenshot Slider (supports multiple sliders via suffix)
+function slideScreenshots(dir, mode) {
+    var suffix = mode ? mode.charAt(0).toUpperCase() + mode.slice(1) : '';
+    var track = document.getElementById('sliderTrack' + suffix);
     if (!track) return;
-    const scrollAmount = 240;
-    track.scrollBy({ left: dir * scrollAmount, behavior: 'smooth' });
+    track.scrollBy({ left: dir * 240, behavior: 'smooth' });
 }
 
-// Init slider dots
-(function initSliderDots() {
-    const track = document.getElementById('sliderTrack');
-    const dotsContainer = document.getElementById('sliderDots');
+// Init slider dots for a given track/dots pair
+function initSlider(trackId, dotsId) {
+    var track = document.getElementById(trackId);
+    var dotsContainer = document.getElementById(dotsId);
     if (!track || !dotsContainer) return;
-    const images = track.querySelectorAll('.slider-screenshot');
-    images.forEach((_, i) => {
-        const dot = document.createElement('div');
+    var images = track.querySelectorAll('.slider-screenshot');
+    images.forEach(function(_, i) {
+        var dot = document.createElement('div');
         dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
-        dot.onclick = () => {
+        dot.onclick = function() {
             images[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
         };
         dotsContainer.appendChild(dot);
     });
-    track.addEventListener('scroll', () => {
-        const center = track.scrollLeft + track.offsetWidth / 2;
-        let closest = 0;
-        let minDist = Infinity;
-        images.forEach((img, i) => {
-            const dist = Math.abs(img.offsetLeft + img.offsetWidth / 2 - center);
+    track.addEventListener('scroll', function() {
+        var center = track.scrollLeft + track.offsetWidth / 2;
+        var closest = 0;
+        var minDist = Infinity;
+        images.forEach(function(img, i) {
+            var dist = Math.abs(img.offsetLeft + img.offsetWidth / 2 - center);
             if (dist < minDist) { minDist = dist; closest = i; }
         });
-        dotsContainer.querySelectorAll('.slider-dot').forEach((d, i) => {
+        dotsContainer.querySelectorAll('.slider-dot').forEach(function(d, i) {
             d.classList.toggle('active', i === closest);
         });
     });
+}
+
+// Init both sliders
+(function() {
+    initSlider('sliderTrackDark', 'sliderDotsDark');
+    initSlider('sliderTrackLight', 'sliderDotsLight');
+    // Legacy fallback
+    initSlider('sliderTrack', 'sliderDots');
 })();
