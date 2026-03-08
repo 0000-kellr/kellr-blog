@@ -396,9 +396,20 @@ a:hover { text-decoration: underline; }
     gap: 2rem;
     margin-top: 2rem;
 }
+.dual-slider {
+    min-width: 0;
+    overflow: hidden;
+}
 .dual-slider h3 {
     font-size: 1.1rem;
     color: var(--text2);
+}
+.dual-slider .screenshot-slider {
+    overflow: hidden;
+}
+.dual-slider .slider-track {
+    overflow-x: auto;
+    flex-wrap: nowrap;
 }
 @media (max-width: 768px) {
     .dual-slider-wrap {
