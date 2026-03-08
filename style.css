@@ -389,3 +389,20 @@ a:hover { text-decoration: underline; }
     .slider-btn { display: none; }
     .slider-screenshot { width: 180px; }
 }
+/* === Dual Slider (Dark + Light) === */
+.dual-slider-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.dual-slider h3 {
+    font-size: 1.1rem;
+    color: var(--text2);
+}
+@media (max-width: 768px) {
+    .dual-slider-wrap {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
