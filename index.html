@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de" data-lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kellr &mdash; Building in Public</title>
-    <meta name="description" content="Building an iOS app entirely with AI. No coding experience. Just WhatsApp voice messages and Claude.">
+    <title>Kellr &mdash; Deine smarte Vorratskammer</title>
+    <meta name="description" content="Nie wieder Essen wegwerfen. Kellr trackt Vorr&auml;te, warnt vor Ablauf und bestellt nach &mdash; f&uuml;r die ganze Familie.">
     <link rel="icon" href="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png">
     <link rel="stylesheet" href="style.css">
     <script data-goatcounter="https://kellr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -18,6 +18,7 @@
                 <span>Kellr</span>
             </a>
             <div class="nav-links">
+                <a href="#features" data-de="Features" data-en="Features">Features</a>
                 <a href="#journal" data-de="Journal" data-en="Journal">Journal</a>
                 <a href="#stats" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
                 <a href="#about" data-de="&Uuml;ber" data-en="About">&Uuml;ber</a>
@@ -28,6 +29,7 @@
             <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
         </div>
         <div class="nav-mobile" id="mobileMenu">
+            <a href="#features" onclick="toggleMenu()" data-de="Features" data-en="Features">Features</a>
             <a href="#journal" onclick="toggleMenu()" data-de="Journal" data-en="Journal">Journal</a>
             <a href="#stats" onclick="toggleMenu()" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
             <a href="#about" onclick="toggleMenu()" data-de="&Uuml;ber" data-en="About">&Uuml;ber</a>
@@ -37,33 +39,124 @@
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero: App Landing -->
     <section class="hero">
         <div class="hero-inner">
-            <div class="hero-badge" data-de="&#129514; KI-Experiment" data-en="&#129514; AI Experiment">&#129514; KI-Experiment</div>
-            <h1>
-                <span data-de="Kann KI wirklich programmieren?" data-en="Can AI really code?">Kann KI wirklich programmieren?</span><br>
-                <span class="text-green" data-de="Ich probiere es aus." data-en="I&apos;m going to find out.">Ich probiere es aus.</span>
-            </h1>
-            <p class="hero-sub" data-de="Ein transparentes Experiment: iOS-App bauen ohne eine Zeile Code selbst zu schreiben. Alles &uuml;ber WhatsApp vom Handy." data-en="A transparent experiment: building an iOS app without writing a single line of code. All via WhatsApp from my phone.">
-                Ein transparentes Experiment: iOS-App bauen ohne eine Zeile Code selbst zu schreiben. Alles &uuml;ber WhatsApp vom Handy.
-            </p>
-            <div class="hero-cta">
-                <a href="#journal" class="btn btn-primary" data-de="&#128214; Journal lesen" data-en="&#128214; Read Journal">&#128214; Journal lesen</a>
-                <a href="#stats" class="btn btn-outline" data-de="&#128202; Live Stats" data-en="&#128202; Live Stats">&#128202; Live Stats</a>
+            <div class="hero-app-landing">
+                <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr App Icon" class="hero-app-icon-large">
+                <h1>Kellr</h1>
+                <p class="hero-subtitle" data-de="Deine smarte Vorratskammer" data-en="Your smart pantry manager">Deine smarte Vorratskammer</p>
+                <p class="hero-tagline" data-de="Nie wieder Essen wegwerfen, nie wieder doppelt kaufen. Kellr trackt Vorr&auml;te, warnt vor Ablauf, bestellt nach &mdash; f&uuml;r die ganze Familie." data-en="Never throw away food again, never buy double. Kellr tracks your pantry, warns before expiry, reorders &mdash; for the whole family.">
+                    Nie wieder Essen wegwerfen, nie wieder doppelt kaufen. Kellr trackt Vorr&auml;te, warnt vor Ablauf, bestellt nach &mdash; f&uuml;r die ganze Familie.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://apps.apple.com/app/kellr/id0000000000" class="app-store-badge" target="_blank">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="48">
+                    </a>
+                </div>
             </div>
-            <div class="hero-app">
-                <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr App Icon" class="hero-app-icon">
-                <div>
-                    <strong>Kellr</strong>
-                    <span data-de="Vorratskammer-Tracker f&uuml;r iOS" data-en="Pantry tracker for iOS">Vorratskammer-Tracker f&uuml;r iOS</span>
+            <div class="hero-screenshot">
+                <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-home.jpg" alt="Kellr Home Screen" class="phone-screenshot">
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution -->
+    <section class="section section-alt">
+        <div class="container" style="text-align:center; max-width:700px;">
+            <h2 data-de="Wer wei&szlig; schon, was im Keller steht?" data-en="Who actually knows what&apos;s in the pantry?">Wer wei&szlig; schon, was im Keller steht?</h2>
+            <p class="section-sub" data-de="Abgelaufene Lebensmittel. Doppelt gekauft. Keiner wei&szlig; was da ist. Kellr macht Schluss damit." data-en="Expired food. Bought twice. Nobody knows what&apos;s there. Kellr puts an end to that.">
+                Abgelaufene Lebensmittel. Doppelt gekauft. Keiner wei&szlig; was da ist. Kellr macht Schluss damit.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 data-de="Was Kellr kann" data-en="What Kellr does">Was Kellr kann</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-screenshot">
+                        <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-inventar-filter.jpg" alt="Inventar" class="phone-screenshot-small">
+                    </div>
+                    <h3 data-de="&#128230; Vorr&auml;te scannen &amp; tracken" data-en="&#128230; Scan &amp; track inventory">&#128230; Vorr&auml;te scannen &amp; tracken</h3>
+                    <p data-de="Barcode scannen, fertig. Automatische Produkterkennung, Lagerorte, Kategorien. Alles auf einen Blick." data-en="Scan barcode, done. Automatic product recognition, storage locations, categories. Everything at a glance.">
+                        Barcode scannen, fertig. Automatische Produkterkennung, Lagerorte, Kategorien. Alles auf einen Blick.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-screenshot">
+                        <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-inventar-swipe.jpg" alt="Bestand anpassen" class="phone-screenshot-small">
+                    </div>
+                    <h3 data-de="&#9200; Ablauf-Warnungen" data-en="&#9200; Expiry warnings">&#9200; Ablauf-Warnungen</h3>
+                    <p data-de="Gelb, orange, rot &mdash; Kellr warnt rechtzeitig bevor etwas abl&auml;uft. Kein Essen mehr wegwerfen." data-en="Yellow, orange, red &mdash; Kellr warns you before anything expires. No more wasting food.">
+                        Gelb, orange, rot &mdash; Kellr warnt rechtzeitig bevor etwas abl&auml;uft. Kein Essen mehr wegwerfen.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-screenshot">
+                        <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-add-product.jpg" alt="Produkt hinzuf&uuml;gen" class="phone-screenshot-small">
+                    </div>
+                    <h3 data-de="&#128722; Direkt nachbestellen" data-en="&#128722; Reorder instantly">&#128722; Direkt nachbestellen</h3>
+                    <p data-de="Mindestbestand unterschritten? Ein Tipp und du bist bei Amazon. Einfacher geht's nicht." data-en="Below minimum stock? One tap and you&apos;re on Amazon. Can&apos;t get easier.">
+                        Mindestbestand unterschritten? Ein Tipp und du bist bei Amazon. Einfacher geht's nicht.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-screenshot">
+                        <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-settings.jpg" alt="Einstellungen" class="phone-screenshot-small">
+                    </div>
+                    <h3 data-de="&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102; F&uuml;r die ganze Familie" data-en="&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102; For the whole family">&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102; F&uuml;r die ganze Familie</h3>
+                    <p data-de="Haushalt erstellen, Familie einladen. Alle sehen den gleichen Bestand in Echtzeit. Wer hat was entnommen? Aktivit&auml;ts-Log zeigt alles." data-en="Create a household, invite family. Everyone sees the same inventory in real time. Who took what? Activity log shows everything.">
+                        Haushalt erstellen, Familie einladen. Alle sehen den gleichen Bestand in Echtzeit. Wer hat was entnommen? Aktivit&auml;ts-Log zeigt alles.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- How it works -->
+    <section class="section section-alt">
+        <div class="container" style="text-align:center;">
+            <h2 data-de="So einfach geht's" data-en="How it works">So einfach geht's</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 data-de="Scannen" data-en="Scan">Scannen</h3>
+                    <p data-de="Barcode scannen oder Produkt manuell eingeben" data-en="Scan barcode or add product manually">Barcode scannen oder Produkt manuell eingeben</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 data-de="Verwalten" data-en="Manage">Verwalten</h3>
+                    <p data-de="Bestand mit einem Swipe anpassen. Die Familie sieht alles." data-en="Adjust stock with a swipe. The family sees everything.">Bestand mit einem Swipe anpassen. Die Familie sieht alles.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 data-de="Nachbestellen" data-en="Reorder">Nachbestellen</h3>
+                    <p data-de="Bestand niedrig? Direkt bei Amazon nachbestellen." data-en="Stock low? Reorder directly on Amazon.">Bestand niedrig? Direkt bei Amazon nachbestellen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building in Public Badge -->
+    <section class="section">
+        <div class="container" style="text-align:center; max-width:700px;">
+            <div class="hero-badge" data-de="&#129514; KI-Experiment" data-en="&#129514; AI Experiment">&#129514; KI-Experiment</div>
+            <h2 data-de="Komplett von KI gebaut" data-en="Built entirely by AI">Komplett von KI gebaut</h2>
+            <p class="section-sub" data-de="Kellr wurde ohne eine Zeile manuellen Code erstellt. Alles &uuml;ber WhatsApp-Sprachnachrichten an eine KI. Transparent dokumentiert im Build Journal." data-en="Kellr was created without a single line of manual code. Everything via WhatsApp voice messages to an AI. Transparently documented in the Build Journal.">
+                Kellr wurde ohne eine Zeile manuellen Code erstellt. Alles &uuml;ber WhatsApp-Sprachnachrichten an eine KI. Transparent dokumentiert im Build Journal.
+            </p>
+            <div class="hero-cta" style="margin-top:1.5rem;">
+                <a href="#journal" class="btn btn-primary" data-de="&#128214; Journal lesen" data-en="&#128214; Read Journal">&#128214; Journal lesen</a>
+                <a href="#stats" class="btn btn-outline" data-de="&#128202; Live Stats" data-en="&#128202; Live Stats">&#128202; Live Stats</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Journal -->
-    <section id="journal" class="section">
+    <section id="journal" class="section section-alt">
         <div class="container">
             <h2 data-de="&#128214; Build Journal" data-en="&#128214; Build Journal">&#128214; Build Journal</h2>
             <p class="section-sub" data-de="T&auml;gliche Eintr&auml;ge &mdash; was gebaut wurde, was es gekostet hat, was schiefging." data-en="Daily entries &mdash; what was built, what it cost, what went wrong.">T&auml;gliche Eintr&auml;ge &mdash; was gebaut wurde, was es gekostet hat, was schiefging.</p>
@@ -72,7 +165,7 @@
     </section>
 
     <!-- Stats Dashboard -->
-    <section id="stats" class="section section-alt">
+    <section id="stats" class="section">
         <div class="container">
             <h2 data-de="&#128202; Dashboard" data-en="&#128202; Dashboard">&#128202; Dashboard</h2>
             <p class="section-sub" data-de="Laufende Gesamtstatistiken des Experiments." data-en="Running totals of the experiment.">Laufende Gesamtstatistiken des Experiments.</p>
@@ -81,7 +174,7 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="section">
+    <section id="about" class="section section-alt">
         <div class="container">
             <h2 data-de="&Uuml;ber das Projekt" data-en="About the Project">&Uuml;ber das Projekt</h2>
             <div class="about-grid">
@@ -98,7 +191,7 @@
                         <li><strong>Platform:</strong> OpenClaw</li>
                         <li><strong>Input:</strong> WhatsApp Voice Messages</li>
                         <li><strong>App:</strong> SwiftUI / iOS</li>
-                        <li><strong>Backend:</strong> Supabase</li>
+                        <li><strong>Backend:</strong> Supabase (Frankfurt, EU)</li>
                         <li><strong>CI/CD:</strong> GitHub Actions</li>
                     </ul>
                 </div>
@@ -106,7 +199,8 @@
                     <h3 data-de="&#128279; Kontakt" data-en="&#128279; Contact">&#128279; Kontakt</h3>
                     <div class="link-list">
                         <a href="https://linkedin.com/in/seidlm" target="_blank">&#128188; LinkedIn &mdash; Michael Seidl</a>
-                        <a href="https://chat.whatsapp.com/GLYnFf0Orue5seSZevmP1h" target="_blank">&#128172; WhatsApp Community beitreten</a>
+                        <a href="mailto:contact@kellr.app">&#9993; contact@kellr.app</a>
+                        <a href="https://chat.whatsapp.com/GLYnFf0Orue5seSZevmP1h" target="_blank">&#128172; WhatsApp Community</a>
                     </div>
                 </div>
             </div>
@@ -114,7 +208,7 @@
     </section>
 
     <!-- Community CTA -->
-    <section class="section section-alt">
+    <section class="section">
         <div class="container" style="text-align:center;">
             <h2 data-de="&#128172; Mitmachen &amp; Feedback" data-en="&#128172; Join &amp; Feedback">&#128172; Mitmachen &amp; Feedback</h2>
             <p data-de="Feature-Ideen, Fragen, Kommentare? Tritt der WhatsApp Community bei und diskutiere mit." data-en="Feature ideas, questions, comments? Join the WhatsApp Community and share your thoughts.">Feature-Ideen, Fragen, Kommentare? Tritt der WhatsApp Community bei und diskutiere mit.</p>
@@ -124,8 +218,17 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p data-de="Built in public mit &#129302; KI &mdash; kein Mensch hat Code geschrieben." data-en="Built in public with &#129302; AI &mdash; no human wrote code.">Built in public mit &#129302; KI &mdash; kein Mensch hat Code geschrieben.</p>
-    <div style="margin-top:16px;font-size:0.85rem;"><a href="/impressum.html" style="color:var(--text2);margin-right:16px;">Impressum</a><a href="/privacy.html" style="color:var(--text2);">Datenschutz</a></div></footer>
+        <div class="footer-badges">
+            <a href="https://apps.apple.com/app/kellr/id0000000000" target="_blank">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="40">
+            </a>
+        </div>
+        <p data-de="Made in Austria &#127462;&#127481; &mdash; komplett von KI gebaut" data-en="Made in Austria &#127462;&#127481; &mdash; built entirely by AI">Made in Austria &#127462;&#127481; &mdash; komplett von KI gebaut</p>
+        <div style="margin-top:16px;font-size:0.85rem;">
+            <a href="/impressum.html" style="color:var(--text2);margin-right:16px;">Impressum</a>
+            <a href="/privacy.html" style="color:var(--text2);">Datenschutz</a>
+        </div>
+    </footer>
 
     <script src="data.js"></script>
     <script src="app.js"></script>
