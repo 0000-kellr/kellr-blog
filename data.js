@@ -3,6 +3,73 @@
 
 const JOURNAL = [
     {
+        day: 9,
+        date: "2026-03-08",
+        title: { de: "Submitted. Eine Woche. Eine App.", en: "Submitted. One Week. One App." },
+        body: {
+            de: `<p>Tag 9. Kellr 1.0 ist beim App Store Review. Eingereicht um 16:28 Uhr. Acht Tage nach dem ersten Commit.</p>
+<p>Heute war der Tag, an dem alles zusammenkam. Nicht der lauteste Tag &mdash; aber der wichtigste.</p>
+
+<h3>Was heute passiert ist</h3>
+<ul>
+<li><strong>App Store Listing:</strong> Lange Beschreibung (4000 Zeichen), Keywords, Subtitle, Promo Text &mdash; alles finalisiert und ins Repo unter <code>docs/appstore-listing.md</code> abgelegt.</li>
+<li><strong>Screenshots:</strong> Zwei Sets &mdash; Dark Mode und Light Mode. Im Xcode Simulator (iPhone 15 Pro Max) sauber aufgenommen. Die Homepage zeigt jetzt zwei Slider nebeneinander.</li>
+<li><strong>Secret Rotation:</strong> Alle Supabase Keys und Resend API Keys rotiert. Alte gel&ouml;scht. Config.swift aktualisiert. Sicherheit vor dem Launch.</li>
+<li><strong>Homepage-Redesign:</strong> Dual-Slider f&uuml;r Dark &amp; Light Mode, neues Hero-Bild, 13 frische Screenshots in Supabase Storage.</li>
+<li><strong>Location Filter Fix:</strong> Die doppelten Filter-Pills (die den Leerraum verursacht haben) entfernt. Ein VStack-Klammer-Fehler sofort nachgefixt.</li>
+<li><strong>Dokumentation aufger&auml;umt:</strong> Media Kit und App Store Listing ins GitHub-Repo verschoben. Neue Regel: Keine lokalen Files mehr f&uuml;r Kellr &mdash; alles in GitHub oder Notion.</li>
+<li><strong>Finaler Build #294:</strong> Mit rotierten Keys. Hochgeladen, ausgew&auml;hlt, eingereicht.</li>
+</ul>
+
+<h3>Die Zahlen des Projekts</h3>
+<p>Eine Woche. Rund <strong>700&euro;</strong> KI-Kosten. Ungef&auml;hr <strong>14 Stunden</strong> meiner Zeit. &Uuml;ber <strong>300 WhatsApp-Nachrichten</strong>. Null Zeilen selbst geschriebener Code.</p>
+<p>Das Ergebnis: Eine vollst&auml;ndige iOS-App mit Barcode-Scanner, Ablaufwarnungen, Familien-Sync, Affiliate-Integration, Local-First-Architektur, Onboarding, Dark Mode &mdash; und jetzt im App Store Review.</p>
+
+<h3>Das pers&ouml;nliche Fazit</h3>
+<p>Eine Woche. Das muss man sich auf der Zunge zergehen lassen.</p>
+<p>Vor 9 Tagen hatte ich eine Idee auf der Couch. Heute ist eine App beim App Store. Nicht irgendein Prototyp &mdash; eine echte App mit Backend, CI/CD, Dokumentation, Homepage, Marketing-Material.</p>
+<p>War es einfach? Nein. Es gab Frustration. Build-Limits. Commits ohne Erlaubnis. Bugs die die KI selbst eingebaut hat. Momente wo ich gedacht habe: Schneller w&auml;re es doch selbst zu programmieren.</p>
+<p>Aber das stimmt nicht. Nicht f&uuml;r jemanden, der noch nie Swift geschrieben hat. Die KI hat nicht nur Code geschrieben &mdash; sie hat mich durch ein komplettes &Ouml;kosystem gef&uuml;hrt, das ich nicht kannte.</p>
+<p>Jetzt bin ich gespannt, was Apple sagt. Und wie die Welt darauf reagiert.</p>
+<p>Weiter geht's. &#127942;</p>`,
+            en: `<p>Day 9. Kellr 1.0 is in App Store Review. Submitted at 4:28 PM. Eight days after the first commit.</p>
+<p>Today was the day everything came together. Not the loudest day &mdash; but the most important one.</p>
+
+<h3>What happened today</h3>
+<ul>
+<li><strong>App Store Listing:</strong> Full description (4000 characters), keywords, subtitle, promo text &mdash; all finalized and committed to the repo under <code>docs/appstore-listing.md</code>.</li>
+<li><strong>Screenshots:</strong> Two complete sets &mdash; Dark Mode and Light Mode. Taken in the Xcode Simulator (iPhone 15 Pro Max). The homepage now shows two sliders side by side.</li>
+<li><strong>Secret Rotation:</strong> All Supabase keys and Resend API keys rotated. Old ones deleted. Config.swift updated. Security before launch.</li>
+<li><strong>Homepage Redesign:</strong> Dual slider for Dark &amp; Light Mode, new hero image, 13 fresh screenshots in Supabase Storage.</li>
+<li><strong>Location Filter Fix:</strong> Removed duplicate filter pills (which caused the blank space). Fixed a missing VStack bracket immediately after.</li>
+<li><strong>Documentation cleanup:</strong> Media Kit and App Store Listing moved to the GitHub repo. New rule: No more local files for Kellr &mdash; everything in GitHub or Notion.</li>
+<li><strong>Final Build #294:</strong> With rotated keys. Uploaded, selected, submitted.</li>
+</ul>
+
+<h3>The Project Numbers</h3>
+<p>One week. About <strong>&euro;700</strong> in AI costs. Roughly <strong>14 hours</strong> of my time. Over <strong>300 WhatsApp messages</strong>. Zero lines of code written by hand.</p>
+<p>The result: A complete iOS app with barcode scanner, expiry warnings, family sync, affiliate integration, local-first architecture, onboarding, dark mode &mdash; and now in App Store Review.</p>
+
+<h3>Personal takeaway</h3>
+<p>One week. Let that sink in.</p>
+<p>9 days ago I had an idea on the couch. Today an app is in the App Store. Not some prototype &mdash; a real app with backend, CI/CD, documentation, homepage, marketing materials.</p>
+<p>Was it easy? No. There was frustration. Build limits. Commits without permission. Bugs the AI itself introduced. Moments where I thought: It would be faster to just code it myself.</p>
+<p>But that&apos;s not true. Not for someone who has never written Swift. The AI didn&apos;t just write code &mdash; it guided me through an entire ecosystem I didn&apos;t know.</p>
+<p>Now I&apos;m curious what Apple says. And how the world reacts.</p>
+<p>Onward. &#127942;</p>`
+        },
+        stats: {
+            features: 3,
+            commits: 41,
+            issues: 0,
+            cost: "~150&euro;",
+            time: "~3h",
+            messages: "~60"
+        },
+        tags: ["App Store", "Submitted", "GoLive", "Screenshots", "Security", "Day 9"],
+        image: "https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/dark-home.png"
+    },
+    {
         day: 8,
         date: "2026-03-07",
         title: { de: "Aufr&auml;umen &amp; GoLive-Planung", en: "Cleanup &amp; GoLive Planning" },
@@ -406,13 +473,13 @@ const JOURNAL = [
 ];
 
 const STATS = {
-    totalDays: 8,
-    totalFeatures: 45,
-    totalCommits: 98,
+    totalDays: 9,
+    totalFeatures: 48,
+    totalCommits: 139,
     totalIssues: 27,
-    totalCost: "~460&euro;",
-    totalTime: "~11h",
-    totalMessages: "~250",
+    totalCost: "~700&euro;",
+    totalTime: "~14h",
+    totalMessages: "~310",
     failedBuilds: 18,
     securityFixes: 3
 };
