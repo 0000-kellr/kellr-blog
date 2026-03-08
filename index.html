@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="hero-screenshot">
-                <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-home.jpg" alt="Kellr Home Screen" class="phone-screenshot">
+                <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/dark-home.png" alt="Kellr Home Screen" class="phone-screenshot">
             </div>
         </div>
     </section>
@@ -71,27 +71,49 @@
         </div>
     </section>
 
-    <!-- Screenshot Slider -->
+  <!-- Screenshot Sliders: Dark & Light Mode -->
     <section class="section">
         <div class="container">
             <h2 data-de="Kellr in Aktion" data-en="Kellr in Action" style="text-align:center;">Kellr in Aktion</h2>
-            <div class="screenshot-slider">
-                <button class="slider-btn slider-prev" onclick="slideScreenshots(-1)" aria-label="Previous">&#8249;</button>
-                <div class="slider-track" id="sliderTrack">
-                    <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-home.jpg" alt="Home" class="slider-screenshot">
-                    <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-inventar-filter.jpg" alt="Inventar" class="slider-screenshot">
-                    <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-inventar-swipe.jpg" alt="Swipe Actions" class="slider-screenshot">
-                    <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-scanner.jpg" alt="Scanner" class="slider-screenshot">
-                    <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-add-product.jpg" alt="Produkt hinzuf&uuml;gen" class="slider-screenshot">
-                    <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-settings.jpg" alt="Einstellungen" class="slider-screenshot">
+            <p class="section-sub" style="text-align:center;" data-de="Dark Mode &amp; Light Mode &mdash; du hast die Wahl." data-en="Dark Mode &amp; Light Mode &mdash; you choose.">Dark Mode &amp; Light Mode &mdash; du hast die Wahl.</p>
+            <div class="dual-slider-wrap">
+                <div class="dual-slider">
+                    <h3 style="text-align:center;margin-bottom:0.75rem;" data-de="&#127761; Dark Mode" data-en="&#127761; Dark Mode">&#127761; Dark Mode</h3>
+                    <div class="screenshot-slider">
+                        <button class="slider-btn slider-prev" onclick="slideScreenshots(-1,'dark')" aria-label="Previous">&#8249;</button>
+                        <div class="slider-track" id="sliderTrackDark">
+                            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/dark-home.png" alt="Home (Dark)" class="slider-screenshot">
+                            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/dark-inventar.png" alt="Inventar (Dark)" class="slider-screenshot">
+                            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/dark-swipe.png" alt="Swipe Actions (Dark)" class="slider-screenshot">
+                            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/dark-warnings.png" alt="Warnungen (Dark)" class="slider-screenshot">
+                            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/dark-family.png" alt="Familie (Dark)" class="slider-screenshot">
+                            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/dark-settings.png" alt="Einstellungen (Dark)" class="slider-screenshot">
+                        </div>
+                        <button class="slider-btn slider-next" onclick="slideScreenshots(1,'dark')" aria-label="Next">&#8250;</button>
+                    </div>
+                    <div class="slider-dots" id="sliderDotsDark"></div>
                 </div>
-                <button class="slider-btn slider-next" onclick="slideScreenshots(1)" aria-label="Next">&#8250;</button>
+                <div class="dual-slider">
+                    <h3 style="text-align:center;margin-bottom:0.75rem;" data-de="&#9728;&#65039; Light Mode" data-en="&#9728;&#65039; Light Mode">&#9728;&#65039; Light Mode</h3>
+                    <div class="screenshot-slider">
+                        <button class="slider-btn slider-prev" onclick="slideScreenshots(-1,'light')" aria-label="Previous">&#8249;</button>
+                        <div class="slider-track" id="sliderTrackLight">
+                            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/light-home.png" alt="Home (Light)" class="slider-screenshot">
+                            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/light-inventar.png" alt="Inventar (Light)" class="slider-screenshot">
+                            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/light-swipe.png" alt="Swipe Actions (Light)" class="slider-screenshot">
+                            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/light-warnings.png" alt="Warnungen (Light)" class="slider-screenshot">
+                            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/light-family.png" alt="Familie (Light)" class="slider-screenshot">
+                            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/light-settings.png" alt="Einstellungen (Light)" class="slider-screenshot">
+                        </div>
+                        <button class="slider-btn slider-next" onclick="slideScreenshots(1,'light')" aria-label="Next">&#8250;</button>
+                    </div>
+                    <div class="slider-dots" id="sliderDotsLight"></div>
+                </div>
             </div>
-            <div class="slider-dots" id="sliderDots"></div>
         </div>
     </section>
 
-    <!-- Features -->
+        <!-- Features -->
     <section id="features" class="section section-alt">
         <div class="container">
             <h2 data-de="Was Kellr kann" data-en="What Kellr does">Was Kellr kann</h2>
