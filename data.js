@@ -64,7 +64,8 @@ const JOURNAL = [
             time: "~1.5h",
             messages: "~35"
         },
-        tags: ["Cleanup", "Accessibility", "GoLive", "Planung", "Day 8"]
+        tags: ["Cleanup", "Accessibility", "GoLive", "Planung", "Day 8"],
+        image: "https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/blog/day8-settings.jpg"
     },
     {
         day: 7,
