@@ -71,45 +71,57 @@
         </div>
     </section>
 
+    <!-- Screenshot Slider -->
+    <section class="section">
+        <div class="container">
+            <h2 data-de="Kellr in Aktion" data-en="Kellr in Action" style="text-align:center;">Kellr in Aktion</h2>
+            <div class="screenshot-slider">
+                <button class="slider-btn slider-prev" onclick="slideScreenshots(-1)" aria-label="Previous">&#8249;</button>
+                <div class="slider-track" id="sliderTrack">
+                    <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-home.jpg" alt="Home" class="slider-screenshot">
+                    <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-inventar-filter.jpg" alt="Inventar" class="slider-screenshot">
+                    <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-inventar-swipe.jpg" alt="Swipe Actions" class="slider-screenshot">
+                    <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-scanner.jpg" alt="Scanner" class="slider-screenshot">
+                    <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-add-product.jpg" alt="Produkt hinzuf&uuml;gen" class="slider-screenshot">
+                    <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-settings.jpg" alt="Einstellungen" class="slider-screenshot">
+                </div>
+                <button class="slider-btn slider-next" onclick="slideScreenshots(1)" aria-label="Next">&#8250;</button>
+            </div>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+
     <!-- Features -->
-    <section id="features" class="section">
+    <section id="features" class="section section-alt">
         <div class="container">
             <h2 data-de="Was Kellr kann" data-en="What Kellr does">Was Kellr kann</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-screenshot">
-                        <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-inventar-filter.jpg" alt="Inventar" class="phone-screenshot-small">
-                    </div>
-                    <h3 data-de="&#128230; Vorr&auml;te scannen &amp; tracken" data-en="&#128230; Scan &amp; track inventory">&#128230; Vorr&auml;te scannen &amp; tracken</h3>
+                    <div class="feature-icon">&#128230;</div>
+                    <h3 data-de="Vorr&auml;te scannen &amp; tracken" data-en="Scan &amp; track inventory">Vorr&auml;te scannen &amp; tracken</h3>
                     <p data-de="Barcode scannen, fertig. Automatische Produkterkennung, Lagerorte, Kategorien. Alles auf einen Blick." data-en="Scan barcode, done. Automatic product recognition, storage locations, categories. Everything at a glance.">
                         Barcode scannen, fertig. Automatische Produkterkennung, Lagerorte, Kategorien. Alles auf einen Blick.
                     </p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-screenshot">
-                        <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-inventar-swipe.jpg" alt="Bestand anpassen" class="phone-screenshot-small">
-                    </div>
-                    <h3 data-de="&#9200; Ablauf-Warnungen" data-en="&#9200; Expiry warnings">&#9200; Ablauf-Warnungen</h3>
+                    <div class="feature-icon">&#9200;</div>
+                    <h3 data-de="Ablauf-Warnungen" data-en="Expiry warnings">Ablauf-Warnungen</h3>
                     <p data-de="Gelb, orange, rot &mdash; Kellr warnt rechtzeitig bevor etwas abl&auml;uft. Kein Essen mehr wegwerfen." data-en="Yellow, orange, red &mdash; Kellr warns you before anything expires. No more wasting food.">
                         Gelb, orange, rot &mdash; Kellr warnt rechtzeitig bevor etwas abl&auml;uft. Kein Essen mehr wegwerfen.
                     </p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-screenshot">
-                        <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-add-product.jpg" alt="Produkt hinzuf&uuml;gen" class="phone-screenshot-small">
-                    </div>
-                    <h3 data-de="&#128722; Direkt nachbestellen" data-en="&#128722; Reorder instantly">&#128722; Direkt nachbestellen</h3>
-                    <p data-de="Mindestbestand unterschritten? Ein Tipp und du bist bei Amazon. Einfacher geht's nicht." data-en="Below minimum stock? One tap and you&apos;re on Amazon. Can&apos;t get easier.">
+                    <div class="feature-icon">&#128722;</div>
+                    <h3 data-de="Direkt nachbestellen" data-en="Reorder instantly">Direkt nachbestellen</h3>
+                    <p data-de="Mindestbestand unterschritten? Ein Tipp und du bist bei Amazon. Einfacher geht's nicht." data-en="Below minimum stock? One tap and you're on Amazon. Can't get easier.">
                         Mindestbestand unterschritten? Ein Tipp und du bist bei Amazon. Einfacher geht's nicht.
                     </p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-screenshot">
-                        <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/hp-settings.jpg" alt="Einstellungen" class="phone-screenshot-small">
-                    </div>
-                    <h3 data-de="&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102; F&uuml;r die ganze Familie" data-en="&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102; For the whole family">&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102; F&uuml;r die ganze Familie</h3>
-                    <p data-de="Haushalt erstellen, Familie einladen. Alle sehen den gleichen Bestand in Echtzeit. Wer hat was entnommen? Aktivit&auml;ts-Log zeigt alles." data-en="Create a household, invite family. Everyone sees the same inventory in real time. Who took what? Activity log shows everything.">
-                        Haushalt erstellen, Familie einladen. Alle sehen den gleichen Bestand in Echtzeit. Wer hat was entnommen? Aktivit&auml;ts-Log zeigt alles.
+                    <div class="feature-icon">&#128106;</div>
+                    <h3 data-de="F&uuml;r die ganze Familie" data-en="For the whole family">F&uuml;r die ganze Familie</h3>
+                    <p data-de="Haushalt erstellen, Familie einladen. Alle sehen den gleichen Bestand in Echtzeit." data-en="Create a household, invite family. Everyone sees the same inventory in real time.">
+                        Haushalt erstellen, Familie einladen. Alle sehen den gleichen Bestand in Echtzeit.
                     </p>
                 </div>
             </div>
