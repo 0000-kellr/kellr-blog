@@ -3,6 +3,70 @@
 
 const JOURNAL = [
     {
+        day: 8,
+        date: "2026-03-07",
+        title: { de: "Aufr&auml;umen &amp; GoLive-Planung", en: "Cleanup &amp; GoLive Planning" },
+        body: {
+            de: `<p>Tag 8 war ruhig &mdash; und genau richtig so. Nach der intensiven Code-Review-Nacht ging es heute ums Aufr&auml;umen und Planen.</p>
+
+<h3>Code-Qualit&auml;t</h3>
+<p>Die Ergebnisse des n&auml;chtlichen Code Reviews wurden umgesetzt &mdash; alles was die KI in drei Runden gefunden hat, ist jetzt gefixt:</p>
+<ul>
+<li><strong>Accessibility:</strong> VoiceOver-Labels f&uuml;r alle Views vervollst&auml;ndigt</li>
+<li><strong>Typsicherheit:</strong> TransactionType von String auf Enum umgestellt</li>
+<li><strong>Retroactive Conformance:</strong> Gef&auml;hrliche String-Identifiable-Extension entfernt</li>
+<li><strong>Barcode Scanner:</strong> Preview passt sich jetzt an Rotation an</li>
+<li><strong>Dead Code:</strong> Ungenutzte SwiftData Models aufger&auml;umt</li>
+</ul>
+<p>7 Issues geschlossen, alle P3. Keine neuen Bugs eingef&uuml;hrt.</p>
+
+<h3>GoLive-Planung</h3>
+<p>Der Rest des Tages ging in die Organisation:</p>
+<ul>
+<li><strong>GoLive-Sprint:</strong> Alle verbleibenden Tasks f&uuml;r den App Store Launch erfasst</li>
+<li><strong>Zieldatum:</strong> 14. M&auml;rz &mdash; eine Woche noch</li>
+<li><strong>Blocker identifiziert:</strong> Supabase Pro Plan, Age Rating, Privacy Policy URL, App Icon Verifikation</li>
+</ul>
+
+<h3>Das pers&ouml;nliche Fazit</h3>
+<p>Nicht jeder Tag muss laut sein. Heute war ein Tag f&uuml;r Qualit&auml;t und Klarheit. Die App ist technisch sauber, der GoLive-Plan steht, und n&auml;chste Woche wird es ernst.</p>
+<p>Manchmal ist Aufr&auml;umen die produktivste Arbeit.</p>`,
+            en: `<p>Day 8 was quiet &mdash; and that was exactly right. After the intense overnight code review, today was about cleanup and planning.</p>
+
+<h3>Code Quality</h3>
+<p>The overnight code review results were implemented &mdash; everything the AI found in three rounds is now fixed:</p>
+<ul>
+<li><strong>Accessibility:</strong> VoiceOver labels completed across all views</li>
+<li><strong>Type safety:</strong> TransactionType converted from String to Enum</li>
+<li><strong>Retroactive conformance:</strong> Dangerous String Identifiable extension removed</li>
+<li><strong>Barcode scanner:</strong> Preview now adapts to rotation</li>
+<li><strong>Dead code:</strong> Unused SwiftData models cleaned up</li>
+</ul>
+<p>7 issues closed, all P3. No new bugs introduced.</p>
+
+<h3>GoLive Planning</h3>
+<p>The rest of the day went into organization:</p>
+<ul>
+<li><strong>GoLive Sprint:</strong> All remaining tasks for the App Store launch captured</li>
+<li><strong>Target date:</strong> March 14th &mdash; one week to go</li>
+<li><strong>Blockers identified:</strong> Supabase Pro Plan, Age Rating, Privacy Policy URL, App Icon verification</li>
+</ul>
+
+<h3>Personal takeaway</h3>
+<p>Not every day needs to be loud. Today was a day for quality and clarity. The app is technically clean, the GoLive plan is set, and next week it gets real.</p>
+<p>Sometimes cleanup is the most productive work you can do.</p>`
+        },
+        stats: {
+            features: 0,
+            commits: 8,
+            issues: 7,
+            cost: "~40&euro;",
+            time: "~1.5h",
+            messages: "~35"
+        },
+        tags: ["Cleanup", "Accessibility", "GoLive", "Planung", "Day 8"]
+    },
+    {
         day: 7,
         date: "2026-03-07",
         title: { de: "Code Review &uuml;ber Nacht, Bugfixes am Tag", en: "Overnight Code Review, Daytime Bugfixes" },
@@ -341,13 +405,13 @@ const JOURNAL = [
 ];
 
 const STATS = {
-    totalDays: 6,
+    totalDays: 8,
     totalFeatures: 45,
-    totalCommits: 90,
-    totalIssues: 20,
-    totalCost: "~420&euro;",
-    totalTime: "~9.5h",
-    totalMessages: "~215",
+    totalCommits: 98,
+    totalIssues: 27,
+    totalCost: "~460&euro;",
+    totalTime: "~11h",
+    totalMessages: "~250",
     failedBuilds: 18,
     securityFixes: 3
 };
