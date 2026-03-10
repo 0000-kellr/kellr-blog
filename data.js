@@ -3,6 +3,53 @@
 
 const JOURNAL = [
     {
+        day: 10,
+        date: "2026-03-09",
+        title: { de: "Warten auf Apple", en: "Waiting for Apple" },
+        body: {
+            de: `<p>Tag 10. Die App ist eingereicht. Jetzt hei&szlig;t es: warten.</p>
+<p>Kellr 1.0 liegt bei Apple zur Pr&uuml;fung. Build #294, eingereicht am 8. M&auml;rz. Status: <strong>Warten auf Pr&uuml;fung</strong>.</p>
+
+<h3>Was in der Zwischenzeit passiert</h3>
+<p>W&auml;hrend Apple pr&uuml;ft, steht die Entwicklung nicht still &mdash; nur nicht an Kellr selbst:</p>
+<ul>
+<li><strong>Least Privileged Report (Kundenprojekt):</strong> Endpoint-to-Permission Mapping weiterentwickelt. Pfade werden jetzt normalisiert (GUIDs &rarr; <code>{id}</code>) und nach Pattern gruppiert mit Call-Count.</li>
+<li><strong>Report UI verbessert:</strong> Category-Spalte im Header gefixt, Calls-Spalte hinzugef&uuml;gt, Tabelle deutlich kompakter und lesbarer.</li>
+<li><strong>Version v1.8.16</strong> an alle Kunden ausgerollt.</li>
+</ul>
+
+<h3>Die Wartezeit</h3>
+<p>Apple sagt typischerweise 24&ndash;48 Stunden. Wir sind jetzt bei Tag 2. Noch im Rahmen.</p>
+<p>Sobald Apple gr&uuml;nes Licht gibt, geht Kellr live im App Store. Dann startet Phase 2: Marketing, Feedback, Iteration.</p>
+<p>Stay tuned. &#9203;</p>`,
+            en: `<p>Day 10. The app is submitted. Now we wait.</p>
+<p>Kellr 1.0 is with Apple for review. Build #294, submitted March 8th. Status: <strong>Waiting for Review</strong>.</p>
+
+<h3>What happened in the meantime</h3>
+<p>While Apple reviews, development doesn&apos;t stop &mdash; just not on Kellr itself:</p>
+<ul>
+<li><strong>Least Privileged Report (client project):</strong> Enhanced endpoint-to-permission mapping. Paths are now normalized (GUIDs &rarr; <code>{id}</code>) and grouped by pattern with call counts.</li>
+<li><strong>Report UI improved:</strong> Fixed missing category column in header, added calls column, table is now much more compact and readable.</li>
+<li><strong>Version v1.8.16</strong> rolled out to all customers.</li>
+</ul>
+
+<h3>The wait</h3>
+<p>Apple typically takes 24&ndash;48 hours. We&apos;re at day 2 now. Still within range.</p>
+<p>As soon as Apple gives the green light, Kellr goes live on the App Store. Then phase 2 begins: marketing, feedback, iteration.</p>
+<p>Stay tuned. &#9203;</p>`
+        },
+        stats: {
+            features: 0,
+            commits: 1,
+            issues: 0,
+            cost: "~20&euro;",
+            time: "~1h",
+            messages: "~30"
+        },
+        tags: ["App Store", "Review", "Waiting", "LPR", "Day 10"],
+        image: "https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/homepage/light-home.png"
+    },
+    {
         day: 9,
         date: "2026-03-08",
         title: { de: "Submitted. Eine Woche. Eine App.", en: "Submitted. One Week. One App." },
@@ -473,13 +520,13 @@ const JOURNAL = [
 ];
 
 const STATS = {
-    totalDays: 9,
+    totalDays: 10,
     totalFeatures: 48,
-    totalCommits: 139,
+    totalCommits: 140,
     totalIssues: 27,
-    totalCost: "~700&euro;",
-    totalTime: "~14h",
-    totalMessages: "~310",
+    totalCost: "~720&euro;",
+    totalTime: "~15h",
+    totalMessages: "~340",
     failedBuilds: 18,
     securityFixes: 3
 };
