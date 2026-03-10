@@ -3,6 +3,57 @@
 
 const JOURNAL = [
     {
+        day: 11,
+        date: "2026-03-10",
+        title: { de: "KELLR IST LIVE! \uD83C\uDF89", en: "KELLR IS LIVE! \uD83C\uDF89" },
+        body: {
+            de: `<p><strong>Kellr 1.0 ist im App Store.</strong> Apple hat approved. Der Moment, auf den wir seit Tag 1 hingearbeitet haben.</p>
+
+<h3>10 Tage. Kein manueller Code.</h3>
+<p>Alles &uuml;ber WhatsApp-Sprachnachrichten an eine KI gesteuert. Kein Xcode ge&ouml;ffnet. Kein Swift gelernt. 290 Commits, 48 Features, ~700&euro; Kosten.</p>
+
+<h3>Was heute passiert ist</h3>
+<ul>
+<li><strong>Apple Review bestanden</strong> &mdash; Status: &ldquo;Bereit f&uuml;r Vertrieb&rdquo;</li>
+<li><strong>App Store Link live:</strong> <a href="https://apps.apple.com/at/app/kellr/id6759869739">Kellr im App Store</a></li>
+<li><strong>Homepage aktualisiert</strong> &mdash; echter App Store Badge statt Platzhalter</li>
+<li><strong>EU H&auml;ndlerstatus</strong> eingerichtet (Digital Markets Act Pflicht)</li>
+</ul>
+
+<h3>Was ist Kellr?</h3>
+<p>Eine iOS App die deine Vorratskammer organisiert. Barcode scannen, Abl&auml;ufe tracken, Haushalt teilen, nachbestellen. F&uuml;r Familien die wissen wollen was sie haben.</p>
+
+<p><strong>Jetzt kostenlos laden:</strong> <a href="https://apps.apple.com/at/app/kellr/id6759869739">App Store</a></p>`,
+            en: `<p><strong>Kellr 1.0 is on the App Store.</strong> Apple approved. The moment we&apos;ve been working towards since day 1.</p>
+
+<h3>10 days. No manual code.</h3>
+<p>Everything controlled via WhatsApp voice messages to an AI. Never opened Xcode. Never learned Swift. 290 commits, 48 features, ~700&euro; in costs.</p>
+
+<h3>What happened today</h3>
+<ul>
+<li><strong>Apple Review passed</strong> &mdash; Status: &ldquo;Ready for Distribution&rdquo;</li>
+<li><strong>App Store link live:</strong> <a href="https://apps.apple.com/at/app/kellr/id6759869739">Kellr on the App Store</a></li>
+<li><strong>Homepage updated</strong> &mdash; real App Store badge instead of placeholder</li>
+<li><strong>EU trader status</strong> set up (Digital Markets Act requirement)</li>
+</ul>
+
+<h3>What is Kellr?</h3>
+<p>An iOS app that organizes your pantry. Scan barcodes, track expiry dates, share with your household, reorder. For families who want to know what they have.</p>
+
+<p><strong>Download for free:</strong> <a href="https://apps.apple.com/at/app/kellr/id6759869739">App Store</a></p>`
+        },
+        stats: {
+            features: 0,
+            commits: 0,
+            issues: 0,
+            cost: "~10&euro;",
+            time: "~1h",
+            messages: "~50"
+        },
+        tags: ["LAUNCH", "App Store", "LIVE", "GoLive", "Day 11"],
+        image: "https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png"
+    },
+    {
         day: 10,
         date: "2026-03-09",
         title: { de: "Warten auf Apple", en: "Waiting for Apple" },
@@ -520,7 +571,7 @@ const JOURNAL = [
 ];
 
 const STATS = {
-    totalDays: 10,
+    totalDays: 11,
     totalFeatures: 48,
     totalCommits: 290,
     totalIssues: 27,
