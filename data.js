@@ -522,7 +522,7 @@ const JOURNAL = [
 const STATS = {
     totalDays: 10,
     totalFeatures: 48,
-    totalCommits: 140,
+    totalCommits: 346,
     totalIssues: 27,
     totalCost: "~720&euro;",
     totalTime: "~15h",
