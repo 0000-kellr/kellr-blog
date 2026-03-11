@@ -3,6 +3,55 @@
 
 const JOURNAL = [
     {
+        day: 13,
+        date: "2026-03-11",
+        title: { de: "Tag 13: Erste Tage live &mdash; Bug gefixt, Security gehaertet, 1.0.1 draussen", en: "Day 13: First days live &mdash; bug fixed, security hardened, 1.0.1 shipped" },
+        body: {
+            de: `<p><strong>Kellr 1.0 ist live &mdash; und schon gab es Action.</strong></p>
+
+<h3>Was heute passiert ist</h3>
+<ul>
+<li><strong>Bug in 1.0:</strong> Release Notes von 1.0.1 enthielten Unicode-Escapes statt echten Umlauten (<code>l\u00f6schen</code> statt <em>l&ouml;schen</em>). Fix: Python-Skript auf <code>ensure_ascii=False</code> umgestellt &mdash; gilt ab 1.0.2.</li>
+<li><strong>Security Advisor:</strong> Supabase meldete 3 Fehler (RLS deaktiviert). Alle behoben.</li>
+<li><strong>11 Datenbankfunktionen</strong> gegen Search-Path-Injection geh&auml;rtet.</li>
+<li><strong>RLS Policies</strong> auf <code>household_invitations</code> und <code>affiliate_partners</code> bereinigt &mdash; dabei kurz die Einladungsanzeige gebrochen und gleich wieder gefixt.</li>
+<li><strong>App Store global:</strong> Die App war nur in Europa verf&uuml;gbar. USA, Kanada, Australien usw. nachtr&auml;glich freigeschaltet.</li>
+<li><strong>1.0.1 live:</strong> Einladungen verwalten (erneut senden, l&ouml;schen) + Passwort zur&uuml;cksetzen.</li>
+</ul>
+
+<h3>Das Learning des Tages</h3>
+<p>KI ist schnell &mdash; aber schnell ohne doppeltes Pr&uuml;fen erzeugt Umwege. Auch wenn es verl&ouml;ckend ist, per Sprachnachricht einfach loszulegen: <strong>Immer doppelt und dreifach pr&uuml;fen, bevor eine &Auml;nderung gemacht wird.</strong></p>
+
+<p>Im Endeffekt: ein Tag vor und zur&uuml;ck, aber am Ende stehen wir besser da als am Morgen. 1.0.1 ist draussen. Alles gr&uuml;n.</p>`,
+            en: `<p><strong>Kellr 1.0 is live &mdash; and it didn&apos;t take long for things to get busy.</strong></p>
+
+<h3>What happened today</h3>
+<ul>
+<li><strong>Bug in 1.0:</strong> Release notes for 1.0.1 contained raw Unicode escapes instead of real characters (<code>l\u00f6schen</code> instead of <em>l&ouml;schen</em>). Fix: updated Python script to use <code>ensure_ascii=False</code> &mdash; takes effect in 1.0.2.</li>
+<li><strong>Security Advisor:</strong> Supabase reported 3 errors (RLS disabled). All resolved.</li>
+<li><strong>11 database functions</strong> hardened against search path injection.</li>
+<li><strong>RLS policies</strong> cleaned up on <code>household_invitations</code> and <code>affiliate_partners</code> &mdash; briefly broke invitation display in the process, fixed immediately.</li>
+<li><strong>App Store global:</strong> App was only available in Europe. Added USA, Canada, Australia and more.</li>
+<li><strong>1.0.1 live:</strong> Invitation management (resend, delete) + password reset.</li>
+</ul>
+
+<h3>The lesson of the day</h3>
+<p>AI is fast &mdash; but fast without double-checking creates detours. Even when it&apos;s tempting to just go via voice message: <strong>always verify twice before making any change.</strong></p>
+
+<p>Net result: one step back, two steps forward. 1.0.1 is out. Everything green.</p>`
+        },
+        stats: {
+            features: 0,
+            commits: 8,
+            issues: 5,
+            cost: "~10&euro;",
+            time: "~4h",
+            messages: "~80"
+        },
+        tags: ["Security", "Bugfix", "1.0.1", "RLS", "AppStore", "Global"],
+        image: "https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-day13-appstore.jpg"
+    },
+    {
         day: 11,
         date: "2026-03-10",
         title: { de: "KELLR IST LIVE! \uD83C\uDF89", en: "KELLR IS LIVE! \uD83C\uDF89" },
