@@ -3,9 +3,9 @@
 
 const JOURNAL = [
     {
-        day: 13,
+        day: 12,
         date: "2026-03-11",
-        title: { de: "Tag 13: Erste Tage live &mdash; Bug gefixt, Security gehaertet, 1.0.1 draussen", en: "Day 13: First days live &mdash; bug fixed, security hardened, 1.0.1 shipped" },
+        title: { de: "Tag 12: Erste Tage live &mdash; Bug gefixt, Security gehaertet, 1.0.1 draussen", en: "Day 12: First days live &mdash; bug fixed, security hardened, 1.0.1 shipped" },
         body: {
             de: `<p><strong>Kellr 1.0 ist live &mdash; und schon gab es Action.</strong></p>
 
