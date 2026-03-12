@@ -112,6 +112,48 @@ Invoke-RestMethod -Uri "https://graph.microsoft.com/v1.0/me/calendarView?startDa
 
 ---
 
+## Supabase SQL Migrations (exec_sql)
+
+Du kannst direkt DDL-Statements gegen Supabase ausführen via stored procedure:
+
+```powershell
+$url = (Get-Content secrets/supabase_url.txt -Raw).Trim()
+$key = (Get-Content secrets/supabase_service_role.txt -Raw).Trim()
+$headers = @{"Authorization"="Bearer $key"; "apikey"=$key; "Content-Type"="application/json; charset=utf-8"}
+$body = [System.Text.Encoding]::UTF8.GetBytes((@{ query = "CREATE TABLE ..." } | ConvertTo-Json))
+Invoke-RestMethod "$url/rest/v1/rpc/exec_sql" -Method POST -Headers $headers -Body $body -ContentType "application/json; charset=utf-8"
+```
+
+- Funktion: `exec_sql(query text)` — gibt leeren String zurück (kein Result-Set)
+- Service Role Key verwenden (nicht Anon Key)
+- Mehrere Statements: einzeln aufrufen (kein Multi-Statement in einem Call)
+
+---
+
+## Notion File Upload (Bilder direkt in Notion)
+
+**API Version:** `2025-09-03` (NICHT 2022-06-28!)
+**Endpoint:** `POST https://api.notion.com/v1/file_uploads` ← Underscore, KEIN Bindestrich!
+
+**Workflow:**
+```powershell
+# 1. Upload-Objekt erstellen
+$r = Invoke-RestMethod "https://api.notion.com/v1/file_uploads" -Method POST `
+  -Headers @{"Authorization"="Bearer $token"; "Notion-Version"="2025-09-03"} `
+  -Body '{"filename":"bild.jpg","content_type":"image/jpeg"}' -ContentType "application/json"
+$uploadId = $r.id
+
+# 2. Datei hochladen (curl.exe verwenden, PowerShell multipart ist kaputt!)
+curl.exe -s -X POST "https://api.notion.com/v1/file_uploads/$uploadId/send" `
+  -H "Authorization: Bearer $token" -H "Notion-Version: 2025-09-03" `
+  -F "file=@bild.jpg;type=image/jpeg"
+
+# 3. In Notion Page Property setzen
+# files: [{ type: "file_upload", file_upload: { id: $uploadId } }]
+```
+
+---
+
 ## Notion Posts Planer (Social Media)
 
 - **DB ID:** `b85c425b76a94007aa83a9cab5d2d45c`
@@ -123,7 +165,69 @@ Invoke-RestMethod -Uri "https://graph.microsoft.com/v1.0/me/calendarView?startDa
   - Content in: **LINKEDIN SeidlM** + **INSTAGRAM SeidlM (POST)**
   - Language: DE oder EN
   - PostTime: DE = 08:00, EN = 14:00
-- **TÃ¤glicher Rhythmus:** 2 Posts pro Tag (DE + EN), Building in Public
+- **TÃ¤glicher Rhythmus:** 1 Post pro Tag, EN+DE kombiniert in einer Notion-Seite
+- **Format:** Englisch zuerst, dann Deutsch, getrennt durch "---"
+- **PostTime:** 11:00 Uhr
+- **Planung:** Posts immer +2 Tage (Review-Buffer) - Day 3 Recap → PostTime 04.03.
+
+---
+
+## 1Password CLI (op)
+
+**Vault:** `groot` — hier liegen alle meine Credentials
+**Service Account Token:** `secrets/op_service_account_token.txt`
+**Binary:** `$env:LOCALAPPDATA\Microsoft\WinGet\Packages\AgileBits.1Password.CLI_Microsoft.Winget.Source_8wekyb3d8bbwe\op.exe`
+*(im User-PATH eingetragen, ab neuer Session einfach `op`)*
+
+### Verwendung in PowerShell
+
+```powershell
+$opExe = "$env:LOCALAPPDATA\Microsoft\WinGet\Packages\AgileBits.1Password.CLI_Microsoft.Winget.Source_8wekyb3d8bbwe\op.exe"
+$env:OP_SERVICE_ACCOUNT_TOKEN = (Get-Content "secrets/op_service_account_token.txt" -Raw).Trim()
+
+# Secret lesen:
+$secret = & $opExe read "op://groot/ItemName/credential"
+
+# Alle Items im Vault auflisten:
+& $opExe item list --vault groot
+```
+
+### Konvention
+- Neue Credentials → immer zuerst in Vault `groot` anlegen, dann via `op read` abrufen
+- `secrets/*.txt` Dateien können schrittweise durch `op read` ersetzt werden
+
+### Item-Referenzen (op://groot/...)
+
+| Vault-Item                  | Feld              | Verwendung                    |
+|-----------------------------|-------------------|-------------------------------|
+| Notion API Token            | credential        | Notion API                    |
+| GitHub Token                | credential        | GitHub / Actions              |
+| Azure DevOps PAT            | credential        | Azure DevOps                  |
+| Bitbucket Token             | credential        | Bitbucket                     |
+| OpenAI API Key              | credential        | OpenAI                        |
+| Mailerlite API Key          | credential        | MailerLite                    |
+| Brave API Key               | credential        | Brave Search API              |
+| Resend Admin API Key        | credential        | Resend (Admin)                |
+| Resend Send API Key         | credential        | Resend (Send)                 |
+| Supabase Service Role       | credential        | Supabase Service Role Key     |
+| Supabase Anon Key           | credential        | Supabase Anon Key             |
+| Supabase URL                | url               | Supabase Project URL          |
+| Teams Shared Secret         | credential        | MS Teams Webhook Secret       |
+| Teams Function URL          | url               | MS Teams Function URL         |
+| Home Assistant              | url + credential  | HA URL + Token                |
+| FSK WordPress               | url/user/password/app_password | FSK WP          |
+| FSK FTP                     | host/user/password| FSK FTP                       |
+| WordPress                   | username/password | WP (au2mator)                 |
+| Microsoft 365 Business      | client_id/tenant_id | MS Graph Business           |
+| Microsoft 365 Private       | client_id/tenant_id | MS Graph Private            |
+| Apple Developer             | issuer_id/key_id/team_id | ASC API                |
+| Kellr Dist Cert (P12 Password) | password       | P12 Passwort = kellr2026      |
+| Apple AuthKey 2C92NAJK9V    | (document)        | ASC API Key (alt)             |
+| Apple AuthKey GY3WY8PX59    | (document)        | ASC API Key (aktiv)           |
+| Kellr Dist Private Key      | (document)        | iOS Distribution Private Key  |
+| Kellr Dist Signing P12      | (document)        | iOS Distribution P12          |
+| Apple Signing Key PEM       | (document)        | Apple Signing Key PEM         |
+| Apple Signing PFX           | (document)        | Apple Signing PFX             |
 
 ---
 
