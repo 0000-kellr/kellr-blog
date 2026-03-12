@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog &mdash; Kellr</title>
+    <meta name="description" content="Was ist neu in Kellr? Alle Updates und &Auml;nderungen auf einen Blick.">
+    <link rel="icon" href="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script data-goatcounter="https://kellr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <style>
+        .changelog-wrap { max-width: 700px; margin: 0 auto; padding: 100px 20px 60px; }
+        .changelog-header { text-align: center; margin-bottom: 48px; }
+        .changelog-header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+        .changelog-header p { color: var(--text2); font-size: 1rem; }
+        .release { border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 24px; background: var(--bg2); }
+        .release-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+        .release-version { font-size: 1.25rem; font-weight: 700; color: var(--text); }
+        .release-date { font-size: 0.85rem; color: var(--text2); }
+        .release-badge { font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+        .badge-new { background: var(--green); color: #000; }
+        .badge-review { background: #FF9F0A; color: #000; }
+        .badge-launch { background: #0A84FF; color: #fff; }
+        .release-section { margin-bottom: 16px; }
+        .release-section h3 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text2); margin-bottom: 10px; }
+        .release-items { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+        .release-items li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: var(--text); }
+        .release-items li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--green); margin-top: 8px; flex-shrink: 0; }
+        .release-divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+        .lang-hidden { display: none; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
+                <span>Kellr</span>
+            </a>
+            <div class="nav-links">
+                <a href="/#features" data-de="Features" data-en="Features">Features</a>
+                <a href="/#journal" data-de="Journal" data-en="Journal">Journal</a>
+                <a href="/changelog.html" style="color:var(--text);" data-de="Changelog" data-en="Changelog">Changelog</a>
+                <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+                    <span class="lang-flag">&#127468;&#127463;</span>
+                </button>
+            </div>
+            <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+        </div>
+        <div class="nav-mobile" id="mobileMenu">
+            <a href="/#features" onclick="toggleMenu()" data-de="Features" data-en="Features">Features</a>
+            <a href="/#journal" onclick="toggleMenu()" data-de="Journal" data-en="Journal">Journal</a>
+            <a href="/changelog.html" onclick="toggleMenu()" data-de="Changelog" data-en="Changelog">Changelog</a>
+            <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+                <span class="lang-flag">&#127468;&#127463;</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="changelog-wrap">
+        <div class="changelog-header">
+            <h1 data-de="&#128218; Changelog" data-en="&#128218; Changelog">&#128218; Changelog</h1>
+            <p data-de="Was ist neu in Kellr &mdash; alle Updates &amp; &Auml;nderungen." data-en="What&apos;s new in Kellr &mdash; all updates &amp; changes.">Was ist neu in Kellr &mdash; alle Updates &amp; &Auml;nderungen.</p>
+        </div>
+
+        <!-- v1.1.0 -->
+        <div class="release">
+            <div class="release-header">
+                <span class="release-version">v1.1.0</span>
+                <span class="release-date" data-de="M&auml;rz 2026" data-en="March 2026">M&auml;rz 2026</span>
+                <span class="release-badge badge-review" data-de="In Review" data-en="In Review">In Review</span>
+            </div>
+            <div class="release-section">
+                <h3 data-de="Neu" data-en="New">Neu</h3>
+                <ul class="release-items">
+                    <li>
+                        <span data-de="Anzeigenamen &auml;ndern &mdash; eigenen Namen direkt in den Einstellungen anpassen." data-en="Rename display name &mdash; update your name directly in Settings.">Anzeigenamen &auml;ndern &mdash; eigenen Namen direkt in den Einstellungen anpassen.</span>
+                    </li>
+                    <li>
+                        <span data-de="Haushaltsnamen &auml;ndern &mdash; den Namen des Haushalts jederzeit umbenennen." data-en="Rename household &mdash; change your household name anytime.">Haushaltsnamen &auml;ndern &mdash; den Namen des Haushalts jederzeit umbenennen.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- v1.0.1 -->
+        <div class="release">
+            <div class="release-header">
+                <span class="release-version">v1.0.1</span>
+                <span class="release-date" data-de="8. M&auml;rz 2026" data-en="March 8, 2026">8. M&auml;rz 2026</span>
+                <span class="release-badge badge-launch" data-de="&#127881; Launch" data-en="&#127881; Launch">&#127881; Launch</span>
+            </div>
+            <div class="release-section">
+                <h3 data-de="Erstver&ouml;ffentlichung" data-en="Initial Release">Erstver&ouml;ffentlichung</h3>
+                <ul class="release-items">
+                    <li><span data-de="Vorratskammer tracken mit Barcode-Scanner und manueller Eingabe." data-en="Track pantry with barcode scanner and manual entry.">Vorratskammer tracken mit Barcode-Scanner und manueller Eingabe.</span></li>
+                    <li><span data-de="Ablauf-Warnungen: Gelb, Orange, Rot &mdash; rechtzeitig informiert." data-en="Expiry warnings: Yellow, Orange, Red &mdash; always informed in time.">Ablauf-Warnungen: Gelb, Orange, Rot &mdash; rechtzeitig informiert.</span></li>
+                    <li><span data-de="Haushalt teilen und Familie einladen." data-en="Share household and invite family.">Haushalt teilen und Familie einladen.</span></li>
+                    <li><span data-de="Direktes Nachbestellen via Amazon Affiliate-Links." data-en="Direct reorder via Amazon affiliate links.">Direktes Nachbestellen via Amazon Affiliate-Links.</span></li>
+                    <li><span data-de="Dark Mode &amp; Light Mode." data-en="Dark Mode &amp; Light Mode.">Dark Mode &amp; Light Mode.</span></li>
+                    <li><span data-de="Lagerorte, Kategorien und Produktgruppen." data-en="Storage locations, categories and product groups.">Lagerorte, Kategorien und Produktgruppen.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-badges">
+            <a href="https://apps.apple.com/app/kellr/id6759869739" target="_blank">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="40">
+            </a>
+        </div>
+        <p data-de="Made in Austria &#127462;&#127481; &mdash; komplett von KI gebaut" data-en="Made in Austria &#127462;&#127481; &mdash; built entirely by AI">Made in Austria &#127462;&#127481; &mdash; komplett von KI gebaut</p>
+        <div style="margin-top:16px;font-size:0.85rem;">
+            <a href="/impressum.html" style="color:var(--text2);margin-right:16px;">Impressum</a>
+            <a href="/privacy.html" style="color:var(--text2);margin-right:16px;">Datenschutz</a>
+            <a href="/changelog.html" style="color:var(--text2);" data-de="Changelog" data-en="Changelog">Changelog</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
