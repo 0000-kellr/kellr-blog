@@ -101,6 +101,15 @@
 - PowerShell stdin-Fix: `cmd /c '"op.exe" item ... < NUL'`
 - `.txt` Secrets noch als Fallback vorhanden
 
+## Composio + Canva (ab 2026-03-12)
+
+- **API Key:** `op://groot/Composio API Key openclaw/API Key`
+- **Canva Connected Account:** `2c63b4a9-ac09-4541-9e5a-4ec23963acf7` (ACTIVE)
+- **32 Canva Actions** via `https://backend.composio.dev/api/v2/actions/CANVA_.../execute`
+- **Key Actions:** CREATE_DESIGN, LIST_USER_DESIGNS, AUTOFILL_JOB, EXPORT_JOB
+- **Workflow:** Template in Canva erstellen → Autofill via API → Export → Download-URL
+- **`@composio/core`** npm package lokal im Workspace installiert (node_modules/)
+
 ## Cron Jobs
 
 - **Reading Reminder:** Alle 2 Wochen So 19:00, frage ob Michael ein Buch liest (Job: 30724787)

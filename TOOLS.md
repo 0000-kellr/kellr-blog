@@ -218,6 +218,7 @@ $secret = & $opExe read "op://groot/ItemName/credential"
 | FSK WordPress               | url/user/password/app_password | FSK WP          |
 | FSK FTP                     | host/user/password| FSK FTP                       |
 | WordPress                   | username/password | WP (au2mator)                 |
+| Openclaw au2mator Website   | username/Openclaw App Password | WP au2mator (REST API) |
 | Microsoft 365 Business      | client_id/tenant_id | MS Graph Business           |
 | Microsoft 365 Private       | client_id/tenant_id | MS Graph Private            |
 | Apple Developer             | issuer_id/key_id/team_id | ASC API                |
@@ -228,6 +229,50 @@ $secret = & $opExe read "op://groot/ItemName/credential"
 | Kellr Dist Signing P12      | (document)        | iOS Distribution P12          |
 | Apple Signing Key PEM       | (document)        | Apple Signing Key PEM         |
 | Apple Signing PFX           | (document)        | Apple Signing PFX             |
+
+---
+
+## Composio + Canva Integration
+
+**API Key:** `op://groot/Composio API Key openclaw/API Key`
+**Canva Connected Account ID:** `2c63b4a9-ac09-4541-9e5a-4ec23963acf7`
+**Canva User:** team_id `oBYO3mHlLiYnekAQ0gsckM` · user_id `oUYO30sZ7_aRC9_fvF2vqc`
+
+### Canva Action ausführen (PowerShell)
+
+```powershell
+$apiKey = (cmd /c '"op.exe" read "op://groot/Composio API Key openclaw/API Key" < NUL').Trim()
+$headers = @{ "x-api-key" = $apiKey; "Content-Type" = "application/json" }
+$body = @{
+  connectedAccountId = "2c63b4a9-ac09-4541-9e5a-4ec23963acf7"
+  input = @{ <action-params> }
+} | ConvertTo-Json -Depth 5
+Invoke-RestMethod "https://backend.composio.dev/api/v2/actions/<ACTION_NAME>/execute" -Method POST -Headers $headers -Body $body
+```
+
+### Wichtige Canva Actions
+
+| Action | Beschreibung |
+|--------|-------------|
+| `CANVA_CREATE_CANVA_DESIGN_WITH_OPTIONAL_ASSET` | Neues Design erstellen |
+| `CANVA_LIST_USER_DESIGNS` | Bestehende Designs auflisten |
+| `CANVA_INITIATE_CANVA_DESIGN_AUTOFILL_JOB` | Brand Template mit Daten befüllen |
+| `CANVA_RETRIEVE_DESIGN_AUTOFILL_JOB_STATUS` | Autofill Status prüfen |
+| `CANVA_INITIATES_CANVA_DESIGN_EXPORT_JOB` | Design exportieren (PNG/PDF) |
+| `CANVA_GET_DESIGN_EXPORT_JOB_RESULT` | Export-Download-URL holen |
+| `CANVA_FETCH_CURRENT_USER_DETAILS` | Verbindung testen |
+
+### Workflow für Template-basierte Grafiken
+1. Michael erstellt ein Canva-Template mit benannten Textfeldern/Platzhaltern
+2. Ich befülle via `CANVA_INITIATE_CANVA_DESIGN_AUTOFILL_JOB`
+3. Export via `CANVA_INITIATES_CANVA_DESIGN_EXPORT_JOB` → Download-URL
+4. Ich lade das fertige PNG/PDF herunter und teile es
+
+### Alle Actions finden
+```powershell
+Invoke-RestMethod "https://backend.composio.dev/api/v2/actions?apps=canva&limit=50" -Headers $headers
+```
+→ 32 Actions verfügbar
 
 ---
 
