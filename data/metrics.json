@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-15T19:44:52.918Z",
+  "updated": "2026-03-15T19:48:18.014Z",
   "website": {
     "visitors_7d": 83,
     "visitors_30d": 198,
@@ -31,8 +31,9 @@
   "appstore": {
     "downloads_7d": null,
     "downloads_30d": null,
-    "rating": null,
+    "rating": 5,
     "rating_count": 1,
+    "new_reviews_7d": 1,
     "auth_ok": true
   },
   "app": {
