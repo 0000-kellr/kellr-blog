@@ -3,6 +3,53 @@
 
 const JOURNAL = [
     {
+        day: 16,
+        date: "2026-03-15",
+        title: { de: "Tag 16: Live Stats Dashboard &mdash; Building in Public, aber wirklich", en: "Day 16: Live Stats Dashboard &mdash; Building in Public, for real" },
+        body: {
+            de: `<p><strong>Heute ist kellr.app/stats/ live gegangen &mdash; ein &ouml;ffentliches Dashboard mit echten Zahlen, t&auml;glich automatisch aktualisiert.</strong></p>
+
+<h3>Was gebaut wurde</h3>
+<ul>
+<li><strong>GitHub Actions Workflow</strong> l&auml;uft jeden Morgen um 07:00 Uhr und zieht Daten aus drei Quellen: App Store Connect API (Downloads, Reviews), Supabase (Haushalte, User) und GoatCounter (Website-Besucher).</li>
+<li><strong>App Store Connect Sales Reports API</strong> angebunden &mdash; t&auml;gliche Download-Zahlen via komprimierter TSV-Reports (Vendor Nr. + JWT-Auth).</li>
+<li>Alles landet in <code>data/metrics.json</code> auf kellr-blog und wird direkt im Dashboard angezeigt. Kein Server, keine laufenden Kosten.</li>
+</ul>
+
+<h3>Die Zahlen heute</h3>
+<ul>
+<li>📥 <strong>23 Downloads</strong> in den letzten 7 Tagen</li>
+<li>⭐ <strong>5,0 ★</strong> Rating (1 Review &mdash; eine glatte 5!)</li>
+<li>🏠 <strong>16 Haushalte</strong>, 20 User</li>
+<li>🌐 <strong>83 Website-Besucher</strong> diese Woche</li>
+</ul>
+
+<h3>Das Learning</h3>
+<p>Transparenz zwingt zur Qualit&auml;t. Wenn die Zahlen &ouml;ffentlich sind, kann man sich nicht mehr verstecken &mdash; weder vor sich selbst noch vor potenziellen Nutzern. Das ist der eigentliche Sinn von Building in Public.</p>`,
+            en: `<p><strong>Today kellr.app/stats/ went live &mdash; a public dashboard with real numbers, automatically updated every day.</strong></p>
+
+<h3>What was built</h3>
+<ul>
+<li><strong>GitHub Actions workflow</strong> runs every morning at 7am and pulls data from three sources: App Store Connect API (downloads, reviews), Supabase (households, users), and GoatCounter (website visitors).</li>
+<li><strong>App Store Connect Sales Reports API</strong> integrated &mdash; daily download counts via compressed TSV reports (vendor number + JWT auth).</li>
+<li>Everything lands in <code>data/metrics.json</code> on kellr-blog and renders directly in the dashboard. No server, no running costs.</li>
+</ul>
+
+<h3>The numbers today</h3>
+<ul>
+<li>📥 <strong>23 downloads</strong> in the last 7 days</li>
+<li>⭐ <strong>5.0 ★</strong> rating (1 review &mdash; a perfect 5!)</li>
+<li>🏠 <strong>16 households</strong>, 20 users</li>
+<li>🌐 <strong>83 website visitors</strong> this week</li>
+</ul>
+
+<h3>The learning</h3>
+<p>Transparency forces quality. When the numbers are public, you can&apos;t hide &mdash; not from yourself, not from potential users. That&apos;s the real point of building in public.</p>`
+        },
+        tags: ["dashboard", "building-in-public", "automation"]
+    },
+
+    {
         day: 12,
         date: "2026-03-11",
         title: { de: "Tag 12: Erste Tage live &mdash; Bug gefixt, Security gehaertet, 1.0.1 draussen", en: "Day 12: First days live &mdash; bug fixed, security hardened, 1.0.1 shipped" },
