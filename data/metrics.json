@@ -1,1 +1,11 @@
-{"updated":null,"website":null,"appstore":null,"app":null}
+{
+  "updated": "2026-03-15T18:40:28.191Z",
+  "website": null,
+  "appstore": {
+    "downloads_7d": 0,
+    "downloads_30d": 0,
+    "rating": null,
+    "rating_count": 0
+  },
+  "app": null
+}
