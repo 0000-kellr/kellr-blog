@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kellr — Stats</title>
+<link rel="icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Inter, -apple-system, Helvetica Neue, Arial, sans-serif; background: #f7f8f5; color: #2d2d2d; min-height: 100vh; }
+
+/* NAV */
+.nav { background: #2d2d2d; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo img { height: 28px; }
+.nav-logo span { font-size: 15px; font-weight: 700; color: #fff; }
+.nav-logo span em { color: #96c15c; font-style: normal; }
+.nav-badge { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+
+/* HERO */
+.hero { background: #2d2d2d; padding: 32px 32px 48px; }
+.hero h1 { font-size: 28px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+.hero p { font-size: 14px; color: rgba(255,255,255,0.45); }
+.hero p span { color: #96c15c; }
+
+/* GRID */
+.container { max-width: 1100px; margin: -24px auto 48px; padding: 0 24px; }
+
+.section-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #96c15c; margin: 32px 0 12px; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+
+.card { background: #fff; border-radius: 10px; padding: 20px 22px; border: 1px solid #ebebeb; }
+.card-label { font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: #aaa; margin-bottom: 8px; }
+.card-value { font-size: 32px; font-weight: 800; color: #2d2d2d; line-height: 1; }
+.card-value.green { color: #96c15c; }
+.card-sub { font-size: 12px; color: #aaa; margin-top: 6px; }
+.card-delta { display: inline-flex; align-items: center; gap: 3px; font-size: 12px; font-weight: 600; margin-top: 6px; }
+.card-delta.up { color: #4a8c1c; }
+.card-delta.neutral { color: #aaa; }
+
+.card-wide { grid-column: span 2; }
+
+/* TABLE */
+.table-card { background: #fff; border-radius: 10px; border: 1px solid #ebebeb; overflow: hidden; margin-top: 16px; }
+.table-card table { width: 100%; border-collapse: collapse; }
+.table-card th { padding: 10px 16px; text-align: left; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #aaa; background: #fafaf8; border-bottom: 1px solid #f0f0f0; }
+.table-card td { padding: 11px 16px; font-size: 13px; color: #2d2d2d; border-bottom: 1px solid #f7f7f7; }
+.table-card tr:last-child td { border-bottom: none; }
+.table-card td.num { font-weight: 700; text-align: right; }
+
+/* UPDATED */
+.updated { text-align: center; font-size: 12px; color: #bbb; margin-top: 32px; padding-bottom: 32px; }
+
+/* LOADING */
+.loading { text-align: center; padding: 80px 32px; color: #aaa; font-size: 14px; }
+.skeleton { background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 6px; height: 36px; margin-bottom: 8px; }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+/* NULL STATE */
+.null { color: #ccc; font-size: 24px; font-weight: 700; }
+
+@media (max-width: 600px) {
+  .nav, .hero { padding: 16px; }
+  .container { padding: 0 16px; }
+  .cards { grid-template-columns: 1fr 1fr; }
+  .card-wide { grid-column: span 1; }
+  .hero h1 { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="/">
+    <img src="https://kellr.app/assets/images/kellr-logo.png" alt="Kellr" onerror="this.style.display='none'">
+    <span>Kellr <em>Stats</em></span>
+  </a>
+  <span class="nav-badge">Public Dashboard</span>
+</nav>
+
+<div class="hero">
+  <h1>Growth Dashboard</h1>
+  <p>Updated daily · <span id="updated-date">loading...</span></p>
+</div>
+
+<div class="container" id="dashboard">
+  <div class="loading">Loading metrics...</div>
+</div>
+
+<script>
+async function loadMetrics() {
+  const el = document.getElementById('dashboard');
+  try {
+    const res = await fetch('../data/metrics.json');
+    if (!res.ok) throw new Error('Not found');
+    const d = await res.json();
+
+    const updatedDate = d.updated ? new Date(d.updated).toLocaleDateString('en', { day: 'numeric', month: 'long', year: 'numeric' }) : '—';
+    document.getElementById('updated-date').textContent = updatedDate;
+
+    const w = d.website || {};
+    const a = d.appstore || {};
+    const s = d.app || {};
+
+    function val(v, suffix = '') { return v != null ? v.toLocaleString() + suffix : '<span class="null">—</span>'; }
+
+    el.innerHTML = `
+      <div class="section-title">App</div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-label">Downloads (7d)</div>
+          <div class="card-value green">${val(a.downloads_7d)}</div>
+          <div class="card-sub">Last 7 days</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Downloads (30d)</div>
+          <div class="card-value">${val(a.downloads_30d)}</div>
+          <div class="card-sub">Last 30 days</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Rating</div>
+          <div class="card-value">${a.rating != null ? a.rating.toFixed(1) + ' ⭐' : '<span class="null">—</span>'}</div>
+          <div class="card-sub">${val(a.rating_count)} ratings</div>
+        </div>
+      </div>
+
+      <div class="section-title">Users & Households</div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-label">Households</div>
+          <div class="card-value green">${val(s.households_total)}</div>
+          <div class="card-delta up">+${val(s.new_households_7d)} this week</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Users</div>
+          <div class="card-value">${val(s.users_total)}</div>
+          <div class="card-delta up">+${val(s.new_users_7d)} this week</div>
+        </div>
+      </div>
+
+      <div class="section-title">Website</div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-label">Visitors (7d)</div>
+          <div class="card-value">${val(w.visitors_7d)}</div>
+          <div class="card-sub">Unique visitors</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Visitors (30d)</div>
+          <div class="card-value">${val(w.visitors_30d)}</div>
+          <div class="card-sub">Unique visitors</div>
+        </div>
+      </div>
+
+      ${w.top_pages && w.top_pages.length ? `
+      <div class="table-card" style="margin-top:16px;">
+        <table>
+          <thead><tr><th>Top Pages (30d)</th><th style="text-align:right;">Visitors</th></tr></thead>
+          <tbody>
+            ${w.top_pages.map(p => `<tr><td>${p.path}</td><td class="num">${p.visitors.toLocaleString()}</td></tr>`).join('')}
+          </tbody>
+        </table>
+      </div>` : ''}
+
+      <div class="updated">Data refreshed daily at 06:00 UTC · <a href="https://kellr.app" style="color:#96c15c;text-decoration:none;">kellr.app</a></div>
+    `;
+  } catch (e) {
+    el.innerHTML = '<div class="loading">Could not load metrics. Try again later.</div>';
+  }
+}
+loadMetrics();
+</script>
+</body>
+</html>
