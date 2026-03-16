@@ -1,26 +1,26 @@
 {
-  "updated": "2026-03-15T20:01:43.201Z",
+  "updated": "2026-03-16T06:39:01.195Z",
   "website": {
-    "visitors_7d": 83,
-    "visitors_30d": 198,
-    "pageviews_7d": 83,
-    "pageviews_30d": 198,
+    "visitors_7d": 78,
+    "visitors_30d": 206,
+    "pageviews_7d": 78,
+    "pageviews_30d": 206,
     "top_pages": [
       {
         "path": "/",
-        "visitors": 177
+        "visitors": 184
       },
       {
         "path": "/impressum.html",
         "visitors": 10
       },
       {
-        "path": "/privacy",
+        "path": "/changelog.html",
         "visitors": 4
       },
       {
-        "path": "/changelog.html",
-        "visitors": 3
+        "path": "/privacy",
+        "visitors": 4
       },
       {
         "path": "/privacy.html",
