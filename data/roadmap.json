@@ -1,5 +1,45 @@
 [
     {
+        "updated_at":  "2026-03-25T07:21:37Z",
+        "url":  "https://github.com/0000-kellr/kellr/issues/39",
+        "number":  39,
+        "created_at":  "2026-03-25T07:21:37Z",
+        "title":  "feat: Open Food Facts — query all 4 databases + contribute data",
+        "labels":  [
+                       "enhancement"
+                   ]
+    },
+    {
+        "updated_at":  "2026-03-25T07:15:45Z",
+        "url":  "https://github.com/0000-kellr/kellr/issues/38",
+        "number":  38,
+        "created_at":  "2026-03-25T07:00:13Z",
+        "title":  "feat: Weekly pantry report via email",
+        "labels":  [
+                       "enhancement"
+                   ]
+    },
+    {
+        "updated_at":  "2026-03-25T07:00:11Z",
+        "url":  "https://github.com/0000-kellr/kellr/issues/37",
+        "number":  37,
+        "created_at":  "2026-03-25T07:00:11Z",
+        "title":  "feat: Push Notifications for expiry warnings",
+        "labels":  [
+                       "enhancement"
+                   ]
+    },
+    {
+        "updated_at":  "2026-03-25T07:00:09Z",
+        "url":  "https://github.com/0000-kellr/kellr/issues/36",
+        "number":  36,
+        "created_at":  "2026-03-25T07:00:09Z",
+        "title":  "feat: Renew household join code",
+        "labels":  [
+                       "enhancement"
+                   ]
+    },
+    {
         "updated_at":  "2026-03-25T06:44:44Z",
         "url":  "https://github.com/0000-kellr/kellr/issues/35",
         "number":  35,
