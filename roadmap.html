@@ -14,7 +14,7 @@
         .roadmap-header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
         .roadmap-header p { color: var(--text2); font-size: 1rem; }
         .issue-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 12px; background: var(--bg2); display: flex; align-items: flex-start; gap: 16px; text-decoration: none; color: var(--text); transition: border-color 0.15s; }
-        .issue-card:hover { border-color: var(--green); }
+        .issue-card { cursor: default; }
         .issue-number { font-size: 0.8rem; color: var(--text2); flex-shrink: 0; margin-top: 3px; min-width: 36px; }
         .issue-body { flex: 1; }
         .issue-title { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
@@ -113,7 +113,7 @@
             .filter(l => !LABEL_HIDE.includes(l))
             .map(l => '<span class="issue-label ' + (LABEL_CLASS[l] || 'label-default') + '">' + l + '</span>')
             .join('');
-          return '<a href="' + issue.url + '" target="_blank" rel="noopener" class="issue-card">'
+          return '<div class="issue-card">'
             + '<span class="issue-number">#' + issue.number + '</span>'
             + '<div class="issue-body">'
             + '<div class="issue-title">' + issue.title.replace(/</g,'&lt;') + '</div>'
