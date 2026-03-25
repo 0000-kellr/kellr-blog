@@ -195,10 +195,17 @@ async function xFollowRelevantAccounts() {
     const users = results.includes?.users || [];
     let followed = 0;
 
+    const englishKeywords = /\b(free|gear|wholesale|dropship|survival kit|giveaway|shop|store|youtube channel|goodies|random)\b/i;
+    const dachKeywords = /vorrat|keller|haushalt|lebensmittel|notvorrat|prepper|deutschland|österreich|schweiz|dach|krisenvorsorge|blackout|lager|kühl|einmach|konserv/i;
+
     for (const user of users) {
       if (followed >= 3) break;
       if (user.id === me.data.id) continue;
       if (user.public_metrics?.followers_count < 50) continue;
+      const bio = (user.description || '').toLowerCase();
+      const name = (user.name || '').toLowerCase();
+      if (englishKeywords.test(bio)) continue;
+      if (!dachKeywords.test(bio) && !dachKeywords.test(name)) continue;
 
       try {
         await xClient.v2.follow(me.data.id, user.id);

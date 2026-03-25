@@ -519,9 +519,23 @@ async function sendFollowerSuggestions() {
     });
 
     const users = search.includes?.users || [];
-    // Filter: >100 Follower, noch nicht @kellr_app
+
+    // DACH-Filter: Beschreibung oder Name muss deutsch klingen
+    // Ausschlusskriterien: englische Keywords, kein DACH-Bezug
+    const englishKeywords = /\b(free|gear|wholesale|dropship|survival kit|giveaway|shop|store|youtube channel|goodies|random)\b/i;
+    const dachKeywords = /vorrat|keller|haushalt|lebensmittel|notvorrat|prepper|deutschland|österreich|schweiz|dach|krisenvorsorge|blackout|lager|kühl|einmach|konserv/i;
+
     const suggestions = users
-      .filter(u => u.public_metrics?.followers_count > 100 && u.username !== 'kellr_app')
+      .filter(u => {
+        if (u.public_metrics?.followers_count < 100) return false;
+        if (u.username === 'kellr_app') return false;
+        const bio = (u.description || '').toLowerCase();
+        const name = (u.name || '').toLowerCase();
+        // Englische Spam-Accounts raus
+        if (englishKeywords.test(bio)) return false;
+        // Mindestens ein DACH/DE-Keyword im Namen oder Bio
+        return dachKeywords.test(bio) || dachKeywords.test(name);
+      })
       .slice(0, 3);
 
     if (suggestions.length > 0) {
