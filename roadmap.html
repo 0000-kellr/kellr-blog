@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap &mdash; Kellr</title>
+    <meta name="description" content="Was kommt als n&auml;chstes in Kellr? Offene Features, Bugs und Ideen.">
+    <link rel="icon" href="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script data-goatcounter="https://kellr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <style>
+        .roadmap-wrap { max-width: 700px; margin: 0 auto; padding: 100px 20px 60px; }
+        .roadmap-header { text-align: center; margin-bottom: 48px; }
+        .roadmap-header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+        .roadmap-header p { color: var(--text2); font-size: 1rem; }
+        .issue-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 12px; background: var(--bg2); display: flex; align-items: flex-start; gap: 16px; text-decoration: none; color: var(--text); transition: border-color 0.15s; }
+        .issue-card:hover { border-color: var(--green); }
+        .issue-number { font-size: 0.8rem; color: var(--text2); flex-shrink: 0; margin-top: 3px; min-width: 36px; }
+        .issue-body { flex: 1; }
+        .issue-title { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+        .issue-labels { display: flex; gap: 6px; flex-wrap: wrap; }
+        .issue-label { font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+        .label-bug { background: #FF3B30; color: #fff; }
+        .label-enhancement { background: var(--green); color: #000; }
+        .label-ux { background: #0A84FF; color: #fff; }
+        .label-review { background: #FF9F0A; color: #000; }
+        .label-default { background: var(--border); color: var(--text2); }
+        .roadmap-empty { text-align: center; color: var(--text2); padding: 60px 0; }
+        .roadmap-updated { text-align: center; font-size: 0.8rem; color: var(--text2); margin-bottom: 32px; }
+        #roadmap-loading { text-align: center; color: var(--text2); padding: 40px 0; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
+                <span>Kellr</span>
+            </a>
+            <div class="nav-links">
+                <a href="/#features" data-de="Features" data-en="Features">Features</a>
+                <a href="/#journal" data-de="Journal" data-en="Journal">Journal</a>
+                <a href="/roadmap.html" style="color:var(--text);" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
+                <a href="/changelog.html" data-de="Changelog" data-en="Changelog">Changelog</a>
+                <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+                    <span class="lang-flag">&#127468;&#127463;</span>
+                </button>
+            </div>
+            <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+        </div>
+        <div class="nav-mobile" id="mobileMenu">
+            <a href="/#features" onclick="toggleMenu()" data-de="Features" data-en="Features">Features</a>
+            <a href="/#journal" onclick="toggleMenu()" data-de="Journal" data-en="Journal">Journal</a>
+            <a href="/roadmap.html" onclick="toggleMenu()" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
+            <a href="/changelog.html" onclick="toggleMenu()" data-de="Changelog" data-en="Changelog">Changelog</a>
+            <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+                <span class="lang-flag">&#127468;&#127463;</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="roadmap-wrap">
+        <div class="roadmap-header">
+            <h1 data-de="&#128506; Roadmap" data-en="&#128506; Roadmap">&#128506; Roadmap</h1>
+            <p data-de="Was wir gerade bauen &mdash; offen &amp; transparent." data-en="What we&apos;re building &mdash; open &amp; transparent.">Was wir gerade bauen &mdash; offen &amp; transparent.</p>
+        </div>
+        <p class="roadmap-updated" id="roadmap-updated"></p>
+        <div id="roadmap-list"><p id="roadmap-loading">Wird geladen...</p></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-badges">
+            <a href="https://apps.apple.com/app/kellr/id6759869739" target="_blank">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="40">
+            </a>
+        </div>
+        <p data-de="Made in Austria &#127462;&#127481; &mdash; komplett von KI gebaut" data-en="Made in Austria &#127462;&#127481; &mdash; built entirely by AI">Made in Austria &#127462;&#127481; &mdash; komplett von KI gebaut</p>
+        <div style="margin-top:16px;font-size:0.85rem;">
+            <a href="/impressum.html" style="color:var(--text2);margin-right:16px;">Impressum</a>
+            <a href="/privacy.html" style="color:var(--text2);margin-right:16px;">Datenschutz</a>
+            <a href="/changelog.html" style="color:var(--text2);margin-right:16px;" data-de="Changelog" data-en="Changelog">Changelog</a>
+            <a href="/roadmap.html" style="color:var(--text2);" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+    const LABEL_CLASS = {
+      bug: 'label-bug',
+      enhancement: 'label-enhancement',
+      ux: 'label-ux',
+      review: 'label-review',
+    };
+    const LABEL_HIDE = ['P1','P2','P3'];
+
+    async function loadRoadmap() {
+      const list = document.getElementById('roadmap-list');
+      const updEl = document.getElementById('roadmap-updated');
+      try {
+        const r = await fetch('/data/roadmap.json?v=' + Date.now());
+        const issues = await r.json();
+        if (!issues.length) {
+          list.innerHTML = '<p class="roadmap-empty" data-de="Keine offenen Issues im Moment." data-en="No open issues right now.">Keine offenen Issues im Moment.</p>';
+          return;
+        }
+        const lang = document.documentElement.getAttribute('data-lang') || 'de';
+        updEl.textContent = lang === 'de'
+          ? issues.length + ' offene Issues'
+          : issues.length + ' open issues';
+
+        list.innerHTML = issues.map(issue => {
+          const labels = issue.labels
+            .filter(l => !LABEL_HIDE.includes(l))
+            .map(l => '<span class="issue-label ' + (LABEL_CLASS[l] || 'label-default') + '">' + l + '</span>')
+            .join('');
+          return '<a href="' + issue.url + '" target="_blank" rel="noopener" class="issue-card">'
+            + '<span class="issue-number">#' + issue.number + '</span>'
+            + '<div class="issue-body">'
+            + '<div class="issue-title">' + issue.title.replace(/</g,'&lt;') + '</div>'
+            + (labels ? '<div class="issue-labels">' + labels + '</div>' : '')
+            + '</div></a>';
+        }).join('');
+      } catch(e) {
+        list.innerHTML = '<p class="roadmap-empty">Roadmap konnte nicht geladen werden.</p>';
+      }
+    }
+    loadRoadmap();
+    </script>
+</body>
+</html>
