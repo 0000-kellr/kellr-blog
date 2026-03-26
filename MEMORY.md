@@ -46,9 +46,10 @@
 
 ## Kellr App — Version Status
 - **v1.4.1 LIVE im App Store** ✅ (approved 2026-03-25, Dark Mode Fix + Auth Deep Link Fix + Registrierungs-Hint-Text)
-- **v1.5.0 in TestFlight** — Auth Flow Fix (Password Reset UI, Resend Confirmation, Magic Link), Build 328
-- **v1.4.0** — ProductReadOnlyView / Tap-to-Detail (approved 2026-03-25)
-- Nächste Build-Nummer: **329**
+- **v1.5.0 in TestFlight** — Auth Flow Fix + Error Messages + Magic Link Fix, aktuell Build 330
+- **v1.4.1 LIVE** — Dark Mode Fix + Auth Deep Link Fix + Registrierungs-Hint-Text
+- **v1.4.0** — ProductReadOnlyView / Tap-to-Detail
+- Nächste Build-Nummer: **331**
 - changelog.html immer updaten wenn Release live geht
 
 ## Kellr Auth Deep Link Fix (2026-03-24) ✅ ERLEDIGT
