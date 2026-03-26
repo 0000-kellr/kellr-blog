@@ -256,6 +256,21 @@ Wenn ein Task geplant wird (Due Date gesetzt), IMMER folgende Felder setzen — 
 - **Compositing**: Schwarzer Hintergrund PNG/JPEG → einfach zu ersetzen (keine AA-Probleme). Weiß → schwierig.
 - **App Icon**: AppIcon-1024.png = Michael's K-Regal-Design auf Forest Green #1B5E35. Alle 13 Größen in AppIcon.appiconset/
 
+## Kellr pbxproj — ID-Vergabe (KRITISCH, kein Subagent darf das ignorieren!)
+Beim Hinzufügen neuer Swift-Dateien via GitHub API IMMER die nächste freie ID verwenden.
+**Belegte IDs (Stand 2026-03-26):**
+- A100.../A200...0001–0021: Kern-Views/Models
+- A100.../A200...0030–0037: Services, Auth, Onboarding etc.
+- A100.../A200...0040, 0042: Kellr.entitlements, ExpiryDateScannerView
+- A100.../A200...0049: ProductReadOnlyView
+- **A100.../A200...0050: Config.swift** ← BELEGT! Nicht nochmal vergeben!
+- **A100.../A200...0051: KeychainHelper.swift**
+- A100.../A200...0060: ChangePasswordView (neu, 2026-03-26)
+- BB.../DD...: ProductGroup, ProductCategory, PendingStockOp, KellrModelContainer, SyncEngine, SupabaseModels, SupabaseService+*
+- **Nächste freie ID: A200...0061 / A100...0061**
+
+**Regel:** Vor jedem neuen File → pbxproj vom aktuellen Commit holen, grep nach letzter ID, erst dann neue vergeben. NIE blind hochzählen ohne Check.
+
 ## Kellr App — Konventionen
 - **KEINE lokalen Files** für Kellr-Content. Alles entweder in **GitHub** (Doku, Code) oder **Notion** (Tasks, Orga).
 - Notion = To-dos + organisatorischer Kontext. GitHub = Code + Dokumentation (`docs/`).
