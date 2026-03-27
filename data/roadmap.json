@@ -1,113 +1,91 @@
 [
-    {
-        "updated_at":  "2026-03-25T07:21:37Z",
-        "url":  "https://github.com/0000-kellr/kellr/issues/39",
-        "number":  39,
-        "created_at":  "2026-03-25T07:21:37Z",
-        "title":  "feat: Open Food Facts — query all 4 databases + contribute data",
-        "labels":  [
-                       "enhancement"
-                   ]
-    },
-    {
-        "updated_at":  "2026-03-25T07:15:45Z",
-        "url":  "https://github.com/0000-kellr/kellr/issues/38",
-        "number":  38,
-        "created_at":  "2026-03-25T07:00:13Z",
-        "title":  "feat: Weekly pantry report via email",
-        "labels":  [
-                       "enhancement"
-                   ]
-    },
-    {
-        "updated_at":  "2026-03-25T07:00:11Z",
-        "url":  "https://github.com/0000-kellr/kellr/issues/37",
-        "number":  37,
-        "created_at":  "2026-03-25T07:00:11Z",
-        "title":  "feat: Push Notifications for expiry warnings",
-        "labels":  [
-                       "enhancement"
-                   ]
-    },
-    {
-        "updated_at":  "2026-03-25T07:00:09Z",
-        "url":  "https://github.com/0000-kellr/kellr/issues/36",
-        "number":  36,
-        "created_at":  "2026-03-25T07:00:09Z",
-        "title":  "feat: Renew household join code",
-        "labels":  [
-                       "enhancement"
-                   ]
-    },
-    {
-        "updated_at":  "2026-03-25T06:44:44Z",
-        "url":  "https://github.com/0000-kellr/kellr/issues/35",
-        "number":  35,
-        "created_at":  "2026-03-25T06:44:44Z",
-        "title":  "feat: Household-local product name cache (override Open Food Facts)",
-        "labels":  [
-                       "enhancement"
-                   ]
-    },
-    {
-        "updated_at":  "2026-03-12T16:46:13Z",
-        "url":  "https://github.com/0000-kellr/kellr/issues/28",
-        "number":  28,
-        "created_at":  "2026-03-07T09:16:36Z",
-        "title":  "Quick Actions (Home Screen Shortcuts) fixen",
-        "labels":  [
-                       "bug"
-                   ]
-    },
-    {
-        "updated_at":  "2026-03-07T12:31:56Z",
-        "url":  "https://github.com/0000-kellr/kellr/issues/27",
-        "number":  27,
-        "created_at":  "2026-03-07T09:16:35Z",
-        "title":  "Produkt-Placeholder verbessern (Kategorie-Icons)",
-        "labels":  [
-                       "enhancement"
-                   ]
-    },
-    {
-        "updated_at":  "2026-03-07T12:31:55Z",
-        "url":  "https://github.com/0000-kellr/kellr/issues/26",
-        "number":  26,
-        "created_at":  "2026-03-07T09:16:34Z",
-        "title":  "Mini-Verbrauchsdiagramm in Produkt-Detail",
-        "labels":  [
-                       "enhancement"
-                   ]
-    },
-    {
-        "updated_at":  "2026-03-07T12:31:54Z",
-        "url":  "https://github.com/0000-kellr/kellr/issues/25",
-        "number":  25,
-        "created_at":  "2026-03-07T09:16:33Z",
-        "title":  "Mehrsprachigkeit (i18n)",
-        "labels":  [
-                       "enhancement"
-                   ]
-    },
-    {
-        "updated_at":  "2026-03-12T16:46:14Z",
-        "url":  "https://github.com/0000-kellr/kellr/issues/20",
-        "number":  20,
-        "created_at":  "2026-03-01T21:27:51Z",
-        "title":  "[P3] Quick Win: Pull-to-Refresh fehlt auf einigen Views",
-        "labels":  [
-                       "review"
-                   ]
-    },
-    {
-        "updated_at":  "2026-03-07T12:31:53Z",
-        "url":  "https://github.com/0000-kellr/kellr/issues/3",
-        "number":  3,
-        "created_at":  "2026-03-01T19:56:11Z",
-        "title":  "Onboarding Tour for first-time users",
-        "labels":  [
-                       "enhancement",
-                       "ux"
-                   ]
-    }
+  {
+    "number": 50,
+    "title": "feat: Contribute product data back to Open Food Facts",
+    "labels": [
+      "enhancement"
+    ],
+    "created_at": "2026-03-27T09:01:56Z",
+    "updated_at": "2026-03-27T09:01:56Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/50",
+    "state": "open"
+  },
+  {
+    "number": 38,
+    "title": "feat: Weekly pantry report via email",
+    "labels": [
+      "enhancement"
+    ],
+    "created_at": "2026-03-25T07:00:13Z",
+    "updated_at": "2026-03-25T07:15:45Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/38",
+    "state": "open"
+  },
+  {
+    "number": 37,
+    "title": "feat: Push Notifications for expiry warnings",
+    "labels": [
+      "enhancement"
+    ],
+    "created_at": "2026-03-25T07:00:11Z",
+    "updated_at": "2026-03-25T07:00:11Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/37",
+    "state": "open"
+  },
+  {
+    "number": 36,
+    "title": "feat: Renew household join code",
+    "labels": [
+      "enhancement"
+    ],
+    "created_at": "2026-03-25T07:00:09Z",
+    "updated_at": "2026-03-25T07:00:09Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/36",
+    "state": "open"
+  },
+  {
+    "number": 28,
+    "title": "Quick Actions (Home Screen Shortcuts) fixen",
+    "labels": [
+      "bug"
+    ],
+    "created_at": "2026-03-07T09:16:36Z",
+    "updated_at": "2026-03-12T16:46:13Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/28",
+    "state": "open"
+  },
+  {
+    "number": 26,
+    "title": "Mini-Verbrauchsdiagramm in Produkt-Detail",
+    "labels": [
+      "enhancement"
+    ],
+    "created_at": "2026-03-07T09:16:34Z",
+    "updated_at": "2026-03-07T12:31:55Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/26",
+    "state": "open"
+  },
+  {
+    "number": 25,
+    "title": "Mehrsprachigkeit (i18n)",
+    "labels": [
+      "enhancement"
+    ],
+    "created_at": "2026-03-07T09:16:33Z",
+    "updated_at": "2026-03-07T12:31:54Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/25",
+    "state": "open"
+  },
+  {
+    "number": 3,
+    "title": "Onboarding Tour for first-time users",
+    "labels": [
+      "enhancement",
+      "ux"
+    ],
+    "created_at": "2026-03-01T19:56:11Z",
+    "updated_at": "2026-03-07T12:31:53Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/3",
+    "state": "open"
+  }
 ]
