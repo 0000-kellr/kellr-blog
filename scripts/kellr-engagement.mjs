@@ -195,17 +195,26 @@ async function xFollowRelevantAccounts() {
     const users = results.includes?.users || [];
     let followed = 0;
 
-    const englishKeywords = /\b(free|gear|wholesale|dropship|survival kit|giveaway|shop|store|youtube channel|goodies|random)\b/i;
-    const dachKeywords = /vorrat|keller|haushalt|lebensmittel|notvorrat|prepper|deutschland|österreich|schweiz|dach|krisenvorsorge|blackout|lager|kühl|einmach|konserv/i;
+    // Strenger Filter: NUR deutschsprachige DACH-Accounts
+    // Englische Keywords = sofort ausschließen
+    const englishKeywords = /\b(free|gear|wholesale|dropship|survival|giveaway|shop|store|youtube|goodies|random|prepping|bushcraft|off.grid|homestead|preparedness|emergency|grid.down)\b/i;
+    // Muss mindestens eines dieser deutschen Keywords haben
+    const dachKeywords = /vorrat|haushalt|lebensmittel|notvorrat|prepper|vorratsküche|vorratshaltung|deutschland|österreich|schweiz|dach|krisenvorsorge|blackout|einkochen|einmachen|konserven|haltbarmachen|tiefkühl|vorräte|lagern|krisenfest|vorsorgend/i;
+    // Bio muss auf Deutsch sein (keine englischen Sätze)
+    const hasEnglishSentence = /\b(i am|i'm|we are|follow me|check out|my page|our page|based in|located in|shipping)\b/i;
 
     for (const user of users) {
       if (followed >= 3) break;
       if (user.id === me.data.id) continue;
-      if (user.public_metrics?.followers_count < 50) continue;
-      const bio = (user.description || '').toLowerCase();
+      if (user.public_metrics?.followers_count < 100) continue; // Mindestens 100 Follower
+      const bio = (user.description || '');
+      const bioLower = bio.toLowerCase();
       const name = (user.name || '').toLowerCase();
-      if (englishKeywords.test(bio)) continue;
-      if (!dachKeywords.test(bio) && !dachKeywords.test(name)) continue;
+      // Englische Keywords → ausschließen
+      if (englishKeywords.test(bioLower)) continue;
+      if (hasEnglishSentence.test(bio)) continue;
+      // Muss deutsches Keyword haben
+      if (!dachKeywords.test(bioLower) && !dachKeywords.test(name)) continue;
 
       try {
         await xClient.v2.follow(me.data.id, user.id);
