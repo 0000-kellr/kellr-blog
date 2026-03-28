@@ -1,6 +1,33 @@
 {
-  "updated": "2026-03-27T06:32:20.207Z",
-  "website": null,
+  "updated": "2026-03-28T06:26:08.143Z",
+  "website": {
+    "visitors_7d": 93,
+    "visitors_30d": 358,
+    "pageviews_7d": 93,
+    "pageviews_30d": 358,
+    "top_pages": [
+      {
+        "path": "/",
+        "visitors": 292
+      },
+      {
+        "path": "/changelog.html",
+        "visitors": 29
+      },
+      {
+        "path": "/impressum.html",
+        "visitors": 13
+      },
+      {
+        "path": "/roadmap.html",
+        "visitors": 10
+      },
+      {
+        "path": "/privacy",
+        "visitors": 7
+      }
+    ]
+  },
   "appstore": {
     "downloads_7d": 5,
     "downloads_30d": 40,
