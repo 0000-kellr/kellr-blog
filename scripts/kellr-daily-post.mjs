@@ -459,15 +459,18 @@ async function postInstagram() {
       if (container.error) throw new Error(container.error.message);
       containerId = container.id;
 
-      // Warten bis Video verarbeitet (bis zu 60s)
-      console.log('  ⏳ Waiting for Instagram video processing...');
-      for (let i = 0; i < 12; i++) {
-        await new Promise(r => setTimeout(r, 5000));
+      // Warten bis Video verarbeitet (bis zu 4 Minuten)
+      console.log('  ⏳ Waiting for Instagram video processing (up to 4min)...');
+      let igReady = false;
+      for (let i = 0; i < 24; i++) {
+        await new Promise(r => setTimeout(r, 10000));
         const statusResp = await fetch(`https://graph.facebook.com/v19.0/${containerId}?fields=status_code&access_token=${fbPageToken}`);
         const status = await statusResp.json();
-        if (status.status_code === 'FINISHED') break;
+        console.log(`  IG status [${i+1}/24]: ${status.status_code}`);
+        if (status.status_code === 'FINISHED') { igReady = true; break; }
         if (status.status_code === 'ERROR') throw new Error('IG video processing failed');
       }
+      if (!igReady) throw new Error('IG video processing timeout after 4 minutes');
     } else {
       // IG requires 1:1 or 4:5 aspect ratio – resize image to 1080x1080 via sharp
       let igImageUrl = post.image;
