@@ -11,6 +11,17 @@
     "state": "open"
   },
   {
+    "number": 54,
+    "title": "feat: Apple Watch complication / app",
+    "labels": [
+      "enhancement"
+    ],
+    "created_at": "2026-04-03T18:04:25Z",
+    "updated_at": "2026-04-03T18:04:25Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/54",
+    "state": "open"
+  },
+  {
     "number": 53,
     "title": "feat: Offline sync indicator",
     "labels": [
