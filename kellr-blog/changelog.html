@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog &mdash; Kellr</title>
+    <meta name="description" content="Was ist neu in Kellr? Alle Updates und &Auml;nderungen auf einen Blick.">
+    <link rel="icon" href="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script data-goatcounter="https://kellr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <style>
+        .changelog-wrap { max-width: 700px; margin: 0 auto; padding: 100px 20px 60px; }
+        .changelog-header { text-align: center; margin-bottom: 48px; }
+        .changelog-header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+        .changelog-header p { color: var(--text2); font-size: 1rem; }
+        .release { border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 24px; background: var(--bg2); }
+        .release-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+        .release-version { font-size: 1.25rem; font-weight: 700; color: var(--text); }
+        .release-date { font-size: 0.85rem; color: var(--text2); }
+        .release-badge { font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+        .badge-new { background: var(--green); color: #000; }
+        .badge-review { background: #FF9F0A; color: #000; }
+        .badge-launch { background: #0A84FF; color: #fff; }
+        .release-section { margin-bottom: 16px; }
+        .release-section h3 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text2); margin-bottom: 10px; }
+        .release-items { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+        .release-items li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: var(--text); }
+        .release-items li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--green); margin-top: 8px; flex-shrink: 0; }
+        .release-divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+        .lang-hidden { display: none; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
+                <span>Kellr</span>
+            </a>
+            <div class="nav-links">
+                <a href="/#features" data-de="Features" data-en="Features">Features</a>
+                <a href="/#journal" data-de="Journal" data-en="Journal">Journal</a>
+                <a href="/changelog.html" style="color:var(--text);" data-de="Changelog" data-en="Changelog">Changelog</a>
+                <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+                    <span class="lang-flag">&#127468;&#127463;</span>
+                </button>
+            </div>
+            <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+        </div>
+        <div class="nav-mobile" id="mobileMenu">
+            <a href="/#features" onclick="toggleMenu()" data-de="Features" data-en="Features">Features</a>
+            <a href="/#journal" onclick="toggleMenu()" data-de="Journal" data-en="Journal">Journal</a>
+            <a href="/roadmap.html" onclick="toggleMenu()" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
+            <a href="/changelog.html" onclick="toggleMenu()" data-de="Changelog" data-en="Changelog">Changelog</a>
+            <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+                <span class="lang-flag">&#127468;&#127463;</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="changelog-wrap">
+        <div class="changelog-header">
+            <h1 data-de="&#128218; Changelog" data-en="&#128218; Changelog">&#128218; Changelog</h1>
+            <p data-de="Was ist neu in Kellr &mdash; alle Updates &amp; &Auml;nderungen." data-en="What&apos;s new in Kellr &mdash; all updates &amp; changes.">Was ist neu in Kellr &mdash; alle Updates &amp; &Auml;nderungen.</p>
+        </div>
+        <!-- v2.0.1 -->
+        <div class="release">
+            <div class="release-header">
+                <span class="release-version">v2.0.1</span>
+                <span class="release-date" data-de="6. April 2026" data-en="April 6, 2026">6. April 2026</span>
+                <span class="release-badge badge-new" data-de="Neu" data-en="New">Neu</span>
+            </div>
+            <div class="release-section">
+                <h3 data-de="Neu" data-en="New">Neu</h3>
+                <ul class="release-items">
+                    <li><span data-de="Kellr Pro &mdash; Abo f&uuml;r &euro;&nbsp;7,99/Jahr via StoreKit&nbsp;2. Unbegrenzte Einkaufsliste, CheckOff-Einlagerung und mehr." data-en="Kellr Pro &mdash; subscription for &euro;&nbsp;7.99/year via StoreKit&nbsp;2. Unlimited shopping list, CheckOff stocking and more.">Kellr Pro &mdash; Abo f&uuml;r &euro;&nbsp;7,99/Jahr via StoreKit&nbsp;2. Unbegrenzte Einkaufsliste, CheckOff-Einlagerung und mehr.</span></li>
+                    <li><span data-de="Einkaufsliste (Haushalt-Liste) &mdash; geteilte Liste f&uuml;r alle Haushaltsmitglieder, mit Kategorien und Teilen-Funktion." data-en="Shopping List (Household List) &mdash; shared list for all household members, with categories and share function.">Einkaufsliste (Haushalt-Liste) &mdash; geteilte Liste f&uuml;r alle Haushaltsmitglieder, mit Kategorien und Teilen-Funktion.</span></li>
+                    <li><span data-de="CheckOff Sheet &mdash; beim Abhaken eines Einkaufslisten-Artikels direkt die Menge, das Ablaufdatum und den Lagerort festlegen und ins Inventar einbuchen." data-en="CheckOff Sheet &mdash; when checking off a shopping list item, set quantity, expiry date and storage location and stock it directly into inventory.">CheckOff Sheet &mdash; beim Abhaken eines Einkaufslisten-Artikels direkt die Menge, das Ablaufdatum und den Lagerort festlegen und ins Inventar einbuchen.</span></li>
+                    <li><span data-de="Push-Benachrichtigungen &mdash; Ablauf-Warnungen (3, 7 und 14 Tage vorher) und Niedrigbestand-Alerts. Direkt aus der Benachrichtigung zur Einkaufsliste hinzuf&uuml;gen." data-en="Push Notifications &mdash; expiry warnings (3, 7 and 14 days in advance) and low stock alerts. Add to shopping list directly from the notification.">Push-Benachrichtigungen &mdash; Ablauf-Warnungen (3, 7 und 14 Tage vorher) und Niedrigbestand-Alerts. Direkt aus der Benachrichtigung zur Einkaufsliste hinzuf&uuml;gen.</span></li>
+                    <li><span data-de="Siri-Integration &mdash; &bdquo;F&uuml;ge [Artikel] zu Kellr hinzu&ldquo; und &bdquo;Zeige Kellr Einkaufsliste&ldquo;." data-en="Siri integration &mdash; &ldquo;Add [item] to Kellr&rdquo; and &ldquo;Show Kellr shopping list&rdquo;.">Siri-Integration &mdash; &bdquo;F&uuml;ge [Artikel] zu Kellr hinzu&ldquo; und &bdquo;Zeige Kellr Einkaufsliste&ldquo;.</span></li>
+                    <li><span data-de="Lagerort-Auswahl beim Einbuchen direkt von der Einkaufsliste." data-en="Storage location picker when stocking from the shopping list.">Lagerort-Auswahl beim Einbuchen direkt von der Einkaufsliste.</span></li>
+                    <li><span data-de="&bdquo;Zur Einkaufsliste&ldquo; aus dem Inventar &mdash; optional im Inventar behalten oder entfernen." data-en="&ldquo;Add to shopping list&rdquo; from inventory &mdash; optionally keep or remove from inventory.">&bdquo;Zur Einkaufsliste&ldquo; aus dem Inventar &mdash; optional im Inventar behalten oder entfernen.</span></li>
+                </ul>
+            </div>
+            <hr class="release-divider">
+            <div class="release-section">
+                <h3 data-de="Verbessert" data-en="Improved">Verbessert</h3>
+                <ul class="release-items">
+                    <li><span data-de="Tab-Badges f&uuml;r Einkaufslisten-Anzahl und Warnungen auf einen Blick." data-en="Tab badges showing shopping list count and warning count at a glance.">Tab-Badges f&uuml;r Einkaufslisten-Anzahl und Warnungen auf einen Blick.</span></li>
+                    <li><span data-de="Diverse UX-Verbesserungen: Share-Button, Kategorie-Erkennung, Race-Condition-Fixes." data-en="Various UX improvements: share button, category detection, race condition fixes.">Diverse UX-Verbesserungen: Share-Button, Kategorie-Erkennung, Race-Condition-Fixes.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- v1.4.1 -->
+        <div class="release">
+            <div class="release-header">
+                <span class="release-version">v1.4.1</span>
+                <span class="release-date" data-de="25. M&auml;rz 2026" data-en="March 25, 2026">25. M&auml;rz 2026</span>
+                <span class="release-badge badge-review" data-de="In Review" data-en="In Review">In Review</span>
+            </div>
+            <div class="release-section">
+                <h3 data-de="Verbessert" data-en="Improved">Verbessert</h3>
+                <ul class="release-items">
+                    <li><span data-de="Hinweis bei unvollst&auml;ndigem Registrierungsformular" data-en="Hint text when registration form is incomplete">Hinweis bei unvollst&auml;ndigem Registrierungsformular</span></li>
+                    <li><span data-de="Dark Mode Verbesserungen" data-en="Dark mode improvements">Dark Mode Verbesserungen</span></li>
+                </ul>
+            </div>
+            <hr class="release-divider">
+            <div class="release-section">
+                <h3 data-de="Behoben" data-en="Fixed">Behoben</h3>
+                <ul class="release-items">
+                    <li><span data-de="E-Mail-Best&auml;tigung &ouml;ffnet jetzt direkt die App" data-en="Email confirmation now opens the app directly">E-Mail-Best&auml;tigung &ouml;ffnet jetzt direkt die App</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- v1.4.0 -->
+            <div class="release">
+            <div class="release-header">
+                <span class="release-version">v1.4.0</span>
+                <span class="release-date" data-de="24. M&auml;rz 2026" data-en="March 24, 2026">24. M&auml;rz 2026</span>
+                <span class="release-badge badge-new" data-de="Live" data-en="Live">Live</span>
+            </div>
+            <div class="release-section">
+                <h3 data-de="Neu" data-en="New">Neu</h3>
+                <ul class="release-list">
+                    <li><span data-de="Artikel-Detail &mdash; Tippe auf einen Artikel im Inventar f&uuml;r eine &Uuml;bersichtsseite: Menge direkt anpassen, Verlauf einsehen und nachbestellen." data-en="Item Detail &mdash; Tap any item in inventory to open a detail view: adjust quantity directly, view history and reorder.">Artikel-Detail &mdash; Tippe auf einen Artikel im Inventar f&uuml;r eine &Uuml;bersichtsseite: Menge direkt anpassen, Verlauf einsehen und nachbestellen.</span></li>
+                </ul>
+            </div>
+        </div>    <div class="release">
+            <div class="release-header">
+                <span class="release-version">v1.3.0</span>
+                <span class="release-date" data-de="23. M&auml;rz 2026" data-en="March 23, 2026">23. M&auml;rz 2026</span>
+                <span class="release-badge badge-live" data-de="Live" data-en="Live">Live</span>
+            </div>
+            <div class="release-section">
+                <h3 data-de="Neu" data-en="New">Neu</h3>
+                <ul class="release-items">
+                    <li>
+                        <span data-de="Scanner-Modi &mdash; Tippe auf den Scanner-Button und w&auml;hle zwischen Einbuchen und Ausbuchen. Artikel einfach scannen zum sofortigen Entnehmen." data-en="Scanner modes &mdash; Tap the scanner button and choose between adding and removing stock. Scan any item to instantly remove it from your inventory.">Scanner-Modi &mdash; Tippe auf den Scanner-Button und w&auml;hle zwischen Einbuchen und Ausbuchen. Artikel einfach scannen zum sofortigen Entnehmen.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- v1.2.0 -->
+        <div class="release">
+            <div class="release-header">
+                <span class="release-version">v1.2.0</span>
+                <span class="release-date" data-de="17. M&auml;rz 2026" data-en="March 17, 2026">17. M&auml;rz 2026</span>
+                <span class="release-badge badge-new" data-de="Live" data-en="Live">Live</span>
+            </div>
+            <div class="release-section">
+                <h3 data-de="Neu" data-en="New">Neu</h3>
+                <ul class="release-items">
+                    <li>
+                        <span data-de="Ablaufdatum-Scanner &mdash; Kamera auf das Ablaufdatum halten, Kellr erkennt es automatisch." data-en="Expiry date scanner &mdash; point the camera at the expiry date and Kellr reads it automatically.">Ablaufdatum-Scanner &mdash; Kamera auf das Ablaufdatum halten, Kellr erkennt es automatisch.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="release-section">
+                <h3 data-de="Verbessert" data-en="Improved">Verbessert</h3>
+                <ul class="release-items">
+                    <li>
+                        <span data-de="Bugfixes und allgemeine Verbesserungen." data-en="Bug fixes and general improvements.">Bugfixes und allgemeine Verbesserungen.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+                <!-- v1.1.0 -->
+        <div class="release">
+            <div class="release-header">
+                <span class="release-version">v1.1.0</span>
+                <span class="release-date" data-de="M&auml;rz 2026" data-en="March 2026">M&auml;rz 2026</span>
+                <span class="release-badge badge-new" data-de="Live" data-en="Live">Live</span>
+            </div>
+            <div class="release-section">
+                <h3 data-de="Neu" data-en="New">Neu</h3>
+                <ul class="release-items">
+                    <li>
+                        <span data-de="Anzeigenamen &auml;ndern &mdash; eigenen Namen direkt in den Einstellungen anpassen." data-en="Rename display name &mdash; update your name directly in Settings.">Anzeigenamen &auml;ndern &mdash; eigenen Namen direkt in den Einstellungen anpassen.</span>
+                    </li>
+                    <li>
+                        <span data-de="Haushaltsnamen &auml;ndern &mdash; den Namen des Haushalts jederzeit umbenennen." data-en="Rename household &mdash; change your household name anytime.">Haushaltsnamen &auml;ndern &mdash; den Namen des Haushalts jederzeit umbenennen.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- v1.0.1 -->
+        <div class="release">
+            <div class="release-header">
+                <span class="release-version">v1.0.1</span>
+                <span class="release-date" data-de="8. M&auml;rz 2026" data-en="March 8, 2026">8. M&auml;rz 2026</span>
+                <span class="release-badge badge-launch" data-de="&#127881; Launch" data-en="&#127881; Launch">&#127881; Launch</span>
+            </div>
+            <div class="release-section">
+                <h3 data-de="Erstver&ouml;ffentlichung" data-en="Initial Release">Erstver&ouml;ffentlichung</h3>
+                <ul class="release-items">
+                    <li><span data-de="Vorratskammer tracken mit Barcode-Scanner und manueller Eingabe." data-en="Track pantry with barcode scanner and manual entry.">Vorratskammer tracken mit Barcode-Scanner und manueller Eingabe.</span></li>
+                    <li><span data-de="Ablauf-Warnungen: Gelb, Orange, Rot &mdash; rechtzeitig informiert." data-en="Expiry warnings: Yellow, Orange, Red &mdash; always informed in time.">Ablauf-Warnungen: Gelb, Orange, Rot &mdash; rechtzeitig informiert.</span></li>
+                    <li><span data-de="Haushalt teilen und Familie einladen." data-en="Share household and invite family.">Haushalt teilen und Familie einladen.</span></li>
+                    <li><span data-de="Direktes Nachbestellen via Amazon Affiliate-Links." data-en="Direct reorder via Amazon affiliate links.">Direktes Nachbestellen via Amazon Affiliate-Links.</span></li>
+                    <li><span data-de="Dark Mode &amp; Light Mode." data-en="Dark Mode &amp; Light Mode.">Dark Mode &amp; Light Mode.</span></li>
+                    <li><span data-de="Lagerorte, Kategorien und Produktgruppen." data-en="Storage locations, categories and product groups.">Lagerorte, Kategorien und Produktgruppen.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-badges">
+            <a href="https://apps.apple.com/app/kellr/id6759869739" target="_blank">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="40">
+            </a>
+        </div>
+        <p data-de="Made in Austria &#127462;&#127481; &mdash; komplett von KI gebaut" data-en="Made in Austria &#127462;&#127481; &mdash; built entirely by AI">Made in Austria &#127462;&#127481; &mdash; komplett von KI gebaut</p>
+        <div style="margin-top:16px;font-size:0.85rem;">
+            <a href="/impressum.html" style="color:var(--text2);margin-right:16px;">Impressum</a>
+            <a href="/privacy.html" style="color:var(--text2);margin-right:16px;">Datenschutz</a>
+            <a href="/changelog.html" style="color:var(--text2);" data-de="Changelog" data-en="Changelog">Changelog</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
