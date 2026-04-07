@@ -1,5 +1,17 @@
 [
   {
+    "number": 62,
+    "title": "UX: Signup with existing email shows no feedback",
+    "labels": [
+      "ux",
+      "auth"
+    ],
+    "created_at": "2026-04-07T18:31:09Z",
+    "updated_at": "2026-04-07T18:31:09Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/62",
+    "state": "open"
+  },
+  {
     "number": 61,
     "title": "Feature: Re-Engagement E-Mail fuer User ohne Haushalt (Onboarding Drop-off)",
     "labels": [
