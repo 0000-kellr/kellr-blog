@@ -1,5 +1,31 @@
 [
   {
+    "number": 60,
+    "title": "Feature: App-Version Tracking in profiles (last_seen_at, app_version, app_platform)",
+    "labels": [
+      "enhancement",
+      "database",
+      "ios"
+    ],
+    "created_at": "2026-04-07T09:20:12Z",
+    "updated_at": "2026-04-07T09:20:12Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/60",
+    "state": "open"
+  },
+  {
+    "number": 59,
+    "title": "Web App: Umstellung auf relationale category_id + location_id (nach Issue #58)",
+    "labels": [
+      "enhancement",
+      "database",
+      "web"
+    ],
+    "created_at": "2026-04-07T09:20:12Z",
+    "updated_at": "2026-04-07T09:20:12Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/59",
+    "state": "open"
+  },
+  {
     "number": 58,
     "title": "Refactor: Relationale Kategorie + Lagerort (category_id, location_id FK)",
     "labels": [
