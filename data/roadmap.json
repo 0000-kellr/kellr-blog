@@ -1,5 +1,18 @@
 [
   {
+    "number": 58,
+    "title": "Refactor: Relationale Kategorie + Lagerort (category_id, location_id FK)",
+    "labels": [
+      "enhancement",
+      "refactor",
+      "database"
+    ],
+    "created_at": "2026-04-07T09:19:02Z",
+    "updated_at": "2026-04-07T09:19:02Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/58",
+    "state": "open"
+  },
+  {
     "number": 57,
     "title": "Refactor: category als relationale Verknüpfung (category_id FK)",
     "labels": [
