@@ -233,15 +233,15 @@ async function render() {
           <div class="card-delta">+${v(s.new_users_7d)} this week</div>
         </div>
         <div class="card">
-          <div class="card-label">Avg. Users / HH</div>
-          <div class="card-value">${s.households_total && s.users_total ? (s.users_total / s.households_total).toFixed(1) : '<span class="null-val">—</span>'}</div>
-          <div class="card-sub">Per household</div>
-        </div>
-        <div class="card">
-          <div class="card-label">New This Week</div>
-          <div class="card-value green">${v(s.new_users_7d)}</div>
-          <div class="card-sub">New users</div>
-        </div>
+           <div class="card-label">Products</div>
+           <div class="card-value">${v(s.products_total)}</div>
+           <div class="card-sub">Total tracked</div>
+         </div>
+         <div class="card">
+           <div class="card-label">Transactions</div>
+           <div class="card-value">${v(s.transactions_total)}</div>
+           <div class="card-sub">Stock changes</div>
+         </div>
       </div>
 
       <div class="section-label">Website — kellr.app</div>

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-08T10:52:37.645Z",
+  "updated": "2026-04-08T11:01:37.660Z",
   "website": {
     "visitors_7d": 37,
     "visitors_30d": 278,
@@ -40,6 +40,8 @@
     "households_total": 34,
     "users_total": 52,
     "new_users_7d": 14,
-    "new_households_7d": 6
+    "new_households_7d": 6,
+    "products_total": 165,
+    "transactions_total": 298
   }
 }
