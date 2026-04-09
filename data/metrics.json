@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T18:39:08.076Z",
+  "updated": "2026-04-09T18:40:36.863Z",
   "website": {
     "visitors_7d": 39,
     "visitors_30d": 273,
@@ -29,8 +29,8 @@
     ]
   },
   "appstore": {
-    "downloads_7d": 0,
-    "downloads_30d": 0,
+    "downloads_7d": 25,
+    "downloads_30d": 73,
     "rating": 5,
     "rating_count": 2,
     "new_reviews_7d": 0,
