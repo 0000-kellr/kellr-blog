@@ -1,5 +1,28 @@
 [
   {
+    "number": 65,
+    "title": "Feature: Package Tracking - Phase 3: Kellr Inbox (Personal Email, Pro)",
+    "labels": [
+      "enhancement",
+      "kellr-pro"
+    ],
+    "created_at": "2026-04-11T20:11:20Z",
+    "updated_at": "2026-04-11T20:11:20Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/65",
+    "state": "open"
+  },
+  {
+    "number": 64,
+    "title": "Feature: Package Tracking - Phase 2: Amazon Integration",
+    "labels": [
+      "enhancement"
+    ],
+    "created_at": "2026-04-11T20:11:19Z",
+    "updated_at": "2026-04-11T20:11:19Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/64",
+    "state": "open"
+  },
+  {
     "number": 63,
     "title": "Feature: Package Tracking - Phase 1: Manual Tracking (Universal)",
     "labels": [
