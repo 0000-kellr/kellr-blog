@@ -1,5 +1,16 @@
 [
   {
+    "number": 63,
+    "title": "Feature: Package Tracking - Phase 1: Manual Tracking (Universal)",
+    "labels": [
+      "enhancement"
+    ],
+    "created_at": "2026-04-11T20:10:57Z",
+    "updated_at": "2026-04-11T20:10:57Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/63",
+    "state": "open"
+  },
+  {
     "number": 62,
     "title": "UX: Signup with existing email shows no feedback",
     "labels": [
