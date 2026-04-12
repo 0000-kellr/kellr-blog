@@ -1,5 +1,17 @@
 [
   {
+    "number": 66,
+    "title": "Feature: Private Pakete (nur fuer mich sichtbar)",
+    "labels": [
+      "enhancement",
+      "feature-request"
+    ],
+    "created_at": "2026-04-12T11:17:09Z",
+    "updated_at": "2026-04-12T11:17:09Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/66",
+    "state": "open"
+  },
+  {
     "number": 65,
     "title": "Feature: Package Tracking - Phase 3: Kellr Inbox (Personal Email, Pro)",
     "labels": [
@@ -29,7 +41,7 @@
       "enhancement"
     ],
     "created_at": "2026-04-11T20:10:57Z",
-    "updated_at": "2026-04-11T20:10:57Z",
+    "updated_at": "2026-04-11T23:42:24Z",
     "url": "https://github.com/0000-kellr/kellr/issues/63",
     "state": "open"
   },
