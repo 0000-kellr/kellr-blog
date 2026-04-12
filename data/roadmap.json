@@ -1,5 +1,17 @@
 [
   {
+    "number": 69,
+    "title": "Feature: Zentrale Barcode-zu-ASIN Mapping-Tabelle (Community-Datenbank)",
+    "labels": [
+      "enhancement",
+      "feature-request"
+    ],
+    "created_at": "2026-04-12T21:35:39Z",
+    "updated_at": "2026-04-12T21:35:39Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/69",
+    "state": "open"
+  },
+  {
     "number": 68,
     "title": "Feature: ASIN-Mapping fuer Produkte (Grundlage fuer Amazon-Integration Phase 2)",
     "labels": [
