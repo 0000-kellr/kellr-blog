@@ -57,17 +57,6 @@
     "state": "open"
   },
   {
-    "number": 71,
-    "title": "Package Tracking: Race condition in loadShipments / deleteShipment",
-    "labels": [
-      "bug"
-    ],
-    "created_at": "2026-04-13T14:49:30Z",
-    "updated_at": "2026-04-13T14:49:30Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/71",
-    "state": "open"
-  },
-  {
     "number": 70,
     "title": "Webhook: Add rate limiting to tracking-webhook Edge Function",
     "labels": [
