@@ -11,18 +11,6 @@
     "state": "open"
   },
   {
-    "number": 72,
-    "title": "Package Tracking: try? silently swallows network errors (no user feedback)",
-    "labels": [
-      "enhancement",
-      "ux"
-    ],
-    "created_at": "2026-04-13T14:49:31Z",
-    "updated_at": "2026-04-16T13:48:01Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/72",
-    "state": "closed"
-  },
-  {
     "number": 70,
     "title": "Webhook: Add rate limiting to tracking-webhook Edge Function",
     "labels": [
@@ -102,17 +90,6 @@
     "created_at": "2026-04-11T20:11:19Z",
     "updated_at": "2026-04-11T20:11:19Z",
     "url": "https://github.com/0000-kellr/kellr/issues/64",
-    "state": "open"
-  },
-  {
-    "number": 63,
-    "title": "Feature: Package Tracking - Phase 1: Manual Tracking (Universal)",
-    "labels": [
-      "enhancement"
-    ],
-    "created_at": "2026-04-11T20:10:57Z",
-    "updated_at": "2026-04-16T13:48:02Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/63",
     "state": "open"
   },
   {
@@ -291,9 +268,9 @@
       "enhancement"
     ],
     "created_at": "2026-03-07T09:16:34Z",
-    "updated_at": "2026-03-07T12:31:55Z",
+    "updated_at": "2026-04-16T13:48:05Z",
     "url": "https://github.com/0000-kellr/kellr/issues/26",
-    "state": "open"
+    "state": "closed"
   },
   {
     "number": 25,
