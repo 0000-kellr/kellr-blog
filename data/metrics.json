@@ -1,9 +1,9 @@
 {
-  "updated": "2026-04-15T06:44:14.195Z",
+  "updated": "2026-04-16T06:45:13.919Z",
   "website": null,
   "appstore": {
-    "downloads_7d": 19,
-    "downloads_30d": 58,
+    "downloads_7d": 16,
+    "downloads_30d": 55,
     "rating": 5,
     "rating_count": 2,
     "new_reviews_7d": 0,
@@ -12,9 +12,9 @@
   "app": {
     "households_total": 45,
     "users_total": 66,
-    "new_users_7d": 16,
-    "new_households_7d": 13,
-    "products_total": 397,
-    "transactions_total": 612
+    "new_users_7d": 11,
+    "new_households_7d": 9,
+    "products_total": 409,
+    "transactions_total": 628
   }
 }
