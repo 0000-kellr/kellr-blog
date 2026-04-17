@@ -12,17 +12,6 @@
     "state": "open"
   },
   {
-    "number": 78,
-    "title": "Feature: Supermarkt-Preisvergleich in der Einkaufsliste",
-    "labels": [
-      "enhancement"
-    ],
-    "created_at": "2026-04-15T16:39:24Z",
-    "updated_at": "2026-04-16T14:14:42Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/78",
-    "state": "open"
-  },
-  {
     "number": 70,
     "title": "Webhook: Add rate limiting to tracking-webhook Edge Function",
     "labels": [
