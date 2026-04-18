@@ -1,5 +1,17 @@
 [
   {
+    "number": 83,
+    "title": "Home: Split 'Paket hinzufügen' — Add shipments list button",
+    "labels": [
+      "enhancement",
+      "kellr-app"
+    ],
+    "created_at": "2026-04-18T21:37:37Z",
+    "updated_at": "2026-04-18T21:37:37Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/83",
+    "state": "open"
+  },
+  {
     "number": 80,
     "title": "Shipment: Link products beyond household inventory",
     "labels": [
