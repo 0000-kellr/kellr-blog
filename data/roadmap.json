@@ -1,5 +1,16 @@
 [
   {
+    "number": 84,
+    "title": "Bug: price_product_ean not saved when accepting price suggestion in shopping list",
+    "labels": [
+      "bug"
+    ],
+    "created_at": "2026-04-19T18:05:58Z",
+    "updated_at": "2026-04-19T18:05:58Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/84",
+    "state": "open"
+  },
+  {
     "number": 80,
     "title": "Shipment: Link products beyond household inventory",
     "labels": [
