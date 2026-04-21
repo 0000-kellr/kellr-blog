@@ -20,9 +20,6 @@
             <div class="nav-links">
                 <a href="#features" data-de="Features" data-en="Features">Features</a>
                 <a href="#pricing" data-de="Preise" data-en="Pricing">Preise</a>
-                <a href="#journal" data-de="Journal" data-en="Journal">Journal</a>
-                <a href="/stats/" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
-                <a href="#about" data-de="&Uuml;ber" data-en="About">&Uuml;ber</a>
                 <a href="/roadmap.html" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
                 <a href="/changelog.html" data-de="Changelog" data-en="Changelog">Changelog</a>
                 <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
@@ -34,9 +31,6 @@
         <div class="nav-mobile" id="mobileMenu">
             <a href="#features" onclick="toggleMenu()" data-de="Features" data-en="Features">Features</a>
             <a href="#pricing" onclick="toggleMenu()" data-de="Preise" data-en="Pricing">Preise</a>
-            <a href="#journal" onclick="toggleMenu()" data-de="Journal" data-en="Journal">Journal</a>
-            <a href="/stats/" onclick="toggleMenu()" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
-            <a href="#about" onclick="toggleMenu()" data-de="&Uuml;ber" data-en="About">&Uuml;ber</a>
             <a href="/roadmap.html" onclick="toggleMenu()" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
             <a href="/changelog.html" onclick="toggleMenu()" data-de="Changelog" data-en="Changelog">Changelog</a>
             <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
@@ -165,6 +159,13 @@
                         Unbegrenzte Einkaufsliste, CheckOff-Einlagerung und Siri-Integration. F&uuml;r nur &euro;&nbsp;7,99/Jahr.
                     </p>
                 </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#127991;</div>
+                    <h3 data-de="Preisvergleich" data-en="Price Comparison">Preisvergleich</h3>
+                    <p data-de="Sieh aktuelle Preise von Billa, Spar, DM, Hofer und mehr direkt beim Produkt. Nie mehr zu viel bezahlen." data-en="See current prices from Billa, Spar, DM, Hofer and more directly on each product. Never overpay again.">
+                        Sieh aktuelle Preise von Billa, Spar, DM, Hofer und mehr direkt beim Produkt. Nie mehr zu viel bezahlen.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -197,6 +198,7 @@
                         <li>&#11088;&nbsp;<span data-de="CheckOff: direkt einlagern beim Abhaken" data-en="CheckOff: stock directly when checking off">CheckOff: direkt einlagern beim Abhaken</span></li>
                         <li>&#11088;&nbsp;<span data-de="Siri-Integration" data-en="Siri integration">Siri-Integration</span></li>
                         <li>&#11088;&nbsp;<span data-de="Lagerort-Auswahl beim Einbuchen" data-en="Storage location picker when stocking">Lagerort-Auswahl beim Einbuchen</span></li>
+                        <li>&#11088;&nbsp;<span data-de="Einkaufsliste nach g&uuml;nstigstem Shop sortieren" data-en="Sort shopping list by cheapest shop">Einkaufsliste nach g&uuml;nstigstem Shop sortieren</span></li>
                     </ul>
                     <div style="margin-top:24px;">
                         <a href="https://apps.apple.com/app/kellr/id6759869739" target="_blank" class="btn btn-primary" style="display:inline-block;text-decoration:none;" data-de="Jetzt upgraden" data-en="Upgrade now">Jetzt upgraden</a>
@@ -230,6 +232,28 @@
         </div>
     </section>
 
+    <!-- Price Data -->
+    <section class="section section-alt">
+        <div class="container" style="text-align:center; max-width:800px;">
+            <h2 data-de="&#128233; Preise aus &ouml;sterreichischen &amp; deutschen Shops" data-en="&#128233; Prices from Austrian &amp; German shops">&#128233; Preise aus &ouml;sterreichischen &amp; deutschen Shops</h2>
+            <p class="section-sub" data-de="&Uuml;ber 70.000 Produkte mit aktuellen Preisdaten &mdash; direkt in der App." data-en="Over 70,000 products with current price data &mdash; directly in the app.">
+                &Uuml;ber 70.000 Produkte mit aktuellen Preisdaten &mdash; direkt in der App.
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px;">
+                <span style="background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:0.9rem;font-weight:600;">🛒 BILLA</span>
+                <span style="background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:0.9rem;font-weight:600;">🛒 SPAR</span>
+                <span style="background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:0.9rem;font-weight:600;">🛒 Hofer</span>
+                <span style="background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:0.9rem;font-weight:600;">🧴 DM Drogerie</span>
+                <span style="background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:0.9rem;font-weight:600;">🧴 BIPA</span>
+                <span style="background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:0.9rem;font-weight:600;">🛒 Mpreis</span>
+                <span style="background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:0.9rem;font-weight:600;">💊 Shop Apotheke</span>
+                <span style="background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:0.9rem;font-weight:600;">💪 ESN</span>
+                <span style="background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:0.9rem;font-weight:600;">💪 More Nutrition</span>
+                <span style="background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:0.9rem;font-weight:600;">+ mehr</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Building in Public Badge -->
     <section class="section">
         <div class="container" style="text-align:center; max-width:700px;">
@@ -242,24 +266,6 @@
                 <a href="#journal" class="btn btn-primary" data-de="&#128214; Journal lesen" data-en="&#128214; Read Journal">&#128214; Journal lesen</a>
                 <a href="#stats" class="btn btn-outline" data-de="&#128202; Live Stats" data-en="&#128202; Live Stats">&#128202; Live Stats</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Journal -->
-    <section id="journal" class="section section-alt">
-        <div class="container">
-            <h2 data-de="&#128214; Build Journal" data-en="&#128214; Build Journal">&#128214; Build Journal</h2>
-            <p class="section-sub" data-de="T&auml;gliche Eintr&auml;ge &mdash; was gebaut wurde, was es gekostet hat, was schiefging." data-en="Daily entries &mdash; what was built, what it cost, what went wrong.">T&auml;gliche Eintr&auml;ge &mdash; was gebaut wurde, was es gekostet hat, was schiefging.</p>
-            <div id="journal-entries"></div>
-        </div>
-    </section>
-
-    <!-- Stats Dashboard -->
-    <section id="stats" class="section">
-        <div class="container">
-            <h2 data-de="&#128202; Dashboard" data-en="&#128202; Dashboard">&#128202; Dashboard</h2>
-            <p class="section-sub" data-de="Laufende Gesamtstatistiken des Experiments." data-en="Running totals of the experiment.">Laufende Gesamtstatistiken des Experiments.</p>
-            <div class="stats-grid" id="stats-grid"></div>
         </div>
     </section>
 
