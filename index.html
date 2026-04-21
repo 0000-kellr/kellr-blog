@@ -12,32 +12,34 @@
 <body>
     <!-- Navigation -->
     <nav class="nav">
-        <div class="nav-inner">
-            <a href="#" class="nav-logo">
-                <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
-                <span>Kellr</span>
-            </a>
-            <div class="nav-links">
-                <a href="#features" data-de="Features" data-en="Features">Features</a>
-                <a href="#pricing" data-de="Preise" data-en="Pricing">Preise</a>
-                <a href="/roadmap.html" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
-                <a href="/changelog.html" data-de="Changelog" data-en="Changelog">Changelog</a>
-                <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
-                    <span class="lang-flag">&#127468;&#127463;</span>
-                </button>
-            </div>
-            <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
-        </div>
-        <div class="nav-mobile" id="mobileMenu">
-            <a href="#features" onclick="toggleMenu()" data-de="Features" data-en="Features">Features</a>
-            <a href="#pricing" onclick="toggleMenu()" data-de="Preise" data-en="Pricing">Preise</a>
-            <a href="/roadmap.html" onclick="toggleMenu()" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
-            <a href="/changelog.html" onclick="toggleMenu()" data-de="Changelog" data-en="Changelog">Changelog</a>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
+            <span>Kellr</span>
+        </a>
+        <div class="nav-links">
+            <a href="/#features" data-de="Features" data-en="Features">Features</a>
+            <a href="/#pricing" data-de="Preise" data-en="Pricing">Preise</a>
+            <a href="/stats/" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
+            <a href="/roadmap.html" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
+            <a href="/changelog.html" data-de="Changelog" data-en="Changelog">Changelog</a>
             <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
                 <span class="lang-flag">&#127468;&#127463;</span>
             </button>
         </div>
-    </nav>
+        <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+        <a href="/#features" onclick="toggleMenu()" data-de="Features" data-en="Features">Features</a>
+        <a href="/#pricing" onclick="toggleMenu()" data-de="Preise" data-en="Pricing">Preise</a>
+        <a href="/stats/" onclick="toggleMenu()" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
+        <a href="/roadmap.html" onclick="toggleMenu()" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
+        <a href="/changelog.html" onclick="toggleMenu()" data-de="Changelog" data-en="Changelog">Changelog</a>
+        <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+            <span class="lang-flag">&#127468;&#127463;</span>
+        </button>
+    </div>
+</nav>
 
     <!-- Hero: App Landing -->
     <section class="hero">
@@ -262,13 +264,20 @@
             <p class="section-sub" data-de="Kellr wurde ohne eine Zeile manuellen Code erstellt. Alles &uuml;ber WhatsApp-Sprachnachrichten an eine KI. Transparent dokumentiert im Build Journal." data-en="Kellr was created without a single line of manual code. Everything via WhatsApp voice messages to an AI. Transparently documented in the Build Journal.">
                 Kellr wurde ohne eine Zeile manuellen Code erstellt. Alles &uuml;ber WhatsApp-Sprachnachrichten an eine KI. Transparent dokumentiert im Build Journal.
             </p>
-            <div class="hero-cta" style="margin-top:1.5rem;">
-                <a href="#journal" class="btn btn-primary" data-de="&#128214; Journal lesen" data-en="&#128214; Read Journal">&#128214; Journal lesen</a>
-                <a href="#stats" class="btn btn-outline" data-de="&#128202; Live Stats" data-en="&#128202; Live Stats">&#128202; Live Stats</a>
-            </div>
+
         </div>
     </section>
 
+    <!-- Stats Dashboard -->
+    <section id="stats" class="section">
+        <div class="container" style="text-align:center; max-width:700px;">
+            <h2 data-de="&#128202; Live Dashboard" data-en="&#128202; Live Dashboard">&#128202; Live Dashboard</h2>
+            <p class="section-sub" data-de="Downloads, User, Bewertungen &mdash; alles live und &ouml;ffentlich." data-en="Downloads, users, ratings &mdash; all live and public.">Downloads, User, Bewertungen &mdash; alles live und &ouml;ffentlich.</p>
+            <div style="margin-top:1.5rem;">
+                <a href="/stats/" class="btn btn-primary" data-de="&#128202; Dashboard &ouml;ffnen" data-en="&#128202; Open Dashboard">&#128202; Dashboard &ouml;ffnen</a>
+            </div>
+        </div>
+    </section>
     <!-- About -->
     <section id="about" class="section section-alt">
         <div class="container">

@@ -32,31 +32,34 @@
 </head>
 <body>
     <nav class="nav">
-        <div class="nav-inner">
-            <a href="/" class="nav-logo">
-                <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
-                <span>Kellr</span>
-            </a>
-            <div class="nav-links">
-                <a href="/#features" data-de="Features" data-en="Features">Features</a>
-                <a href="/#journal" data-de="Journal" data-en="Journal">Journal</a>
-                <a href="/changelog.html" style="color:var(--text);" data-de="Changelog" data-en="Changelog">Changelog</a>
-                <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
-                    <span class="lang-flag">&#127468;&#127463;</span>
-                </button>
-            </div>
-            <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
-        </div>
-        <div class="nav-mobile" id="mobileMenu">
-            <a href="/#features" onclick="toggleMenu()" data-de="Features" data-en="Features">Features</a>
-            <a href="/#journal" onclick="toggleMenu()" data-de="Journal" data-en="Journal">Journal</a>
-            <a href="/roadmap.html" onclick="toggleMenu()" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
-            <a href="/changelog.html" onclick="toggleMenu()" data-de="Changelog" data-en="Changelog">Changelog</a>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
+            <span>Kellr</span>
+        </a>
+        <div class="nav-links">
+            <a href="/#features" data-de="Features" data-en="Features">Features</a>
+            <a href="/#pricing" data-de="Preise" data-en="Pricing">Preise</a>
+            <a href="/stats/" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
+            <a href="/roadmap.html" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
+            <a href="/changelog.html" style="color:var(--text);" data-de="Changelog" data-en="Changelog">Changelog</a>
             <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
                 <span class="lang-flag">&#127468;&#127463;</span>
             </button>
         </div>
-    </nav>
+        <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+        <a href="/#features" onclick="toggleMenu()" data-de="Features" data-en="Features">Features</a>
+        <a href="/#pricing" onclick="toggleMenu()" data-de="Preise" data-en="Pricing">Preise</a>
+        <a href="/stats/" onclick="toggleMenu()" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
+        <a href="/roadmap.html" onclick="toggleMenu()" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
+        <a href="/changelog.html" onclick="toggleMenu()" data-de="Changelog" data-en="Changelog">Changelog</a>
+        <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+            <span class="lang-flag">&#127468;&#127463;</span>
+        </button>
+    </div>
+</nav>
 
     <div class="changelog-wrap">
         <div class="changelog-header">
