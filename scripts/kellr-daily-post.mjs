@@ -468,7 +468,7 @@ async function brandVideo(videoBuffer, tagline) {
 
   const result = spawnSync(ffmpegPath, [
     '-i', tmpIn, '-i', tmpOverlay,
-    '-filter_complex', `[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,${drawtextFilter}[txt];[txt][1:v]overlay=0:0`,
+    '-filter_complex', `[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1:1,${drawtextFilter}[txt];[txt][1:v]overlay=0:0`,
     '-c:v', 'libx264', '-crf', '18', '-preset', 'fast', '-pix_fmt', 'yuv420p',
     '-y', tmpOut
   ], { stdio: ['ignore','pipe','pipe'] });
