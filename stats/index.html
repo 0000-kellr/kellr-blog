@@ -1,32 +1,4 @@
-<nav class="nav">
-    <div class="nav-inner">
-        <a href="/" class="nav-logo">
-            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
-            <span>Kellr</span>
-        </a>
-        <div class="nav-links">
-            <a href="/#features" data-de="Features" data-en="Features">Features</a>
-            <a href="/#pricing" data-de="Preise" data-en="Pricing">Preise</a>
-            <a href="/stats/" style="color:var(--text);" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
-            <a href="/roadmap.html" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
-            <a href="/changelog.html" data-de="Changelog" data-en="Changelog">Changelog</a>
-            <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
-                <span class="lang-flag">&#127468;&#127463;</span>
-            </button>
-        </div>
-        <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
-    </div>
-    <div class="nav-mobile" id="mobileMenu">
-        <a href="/#features" onclick="toggleMenu()" data-de="Features" data-en="Features">Features</a>
-        <a href="/#pricing" onclick="toggleMenu()" data-de="Preise" data-en="Pricing">Preise</a>
-        <a href="/stats/" onclick="toggleMenu()" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
-        <a href="/roadmap.html" onclick="toggleMenu()" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
-        <a href="/changelog.html" onclick="toggleMenu()" data-de="Changelog" data-en="Changelog">Changelog</a>
-        <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
-            <span class="lang-flag">&#127468;&#127463;</span>
-        </button>
-    </div>
-</nav>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -163,6 +135,29 @@ a { color: var(--green); text-decoration: none; }
 </head>
 <body>
 
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
+      Kellr
+    </a>
+    <div class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#journal">Journal</a>
+      <a href="/stats/" class="active">Dashboard</a>
+      <a href="/#about">Über</a>
+      <a href="/changelog.html">Changelog</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+  </div>
+  <div class="nav-mobile" id="mobileMenu">
+    <a href="/#features">Features</a>
+    <a href="/#journal">Journal</a>
+    <a href="/stats/" style="color:var(--green)">Dashboard</a>
+    <a href="/#about">Über</a>
+    <a href="/changelog.html">Changelog</a>
+  </div>
+</nav>
 
 <div class="hero">
   <div class="hero-inner">
@@ -247,6 +242,20 @@ async function render() {
            <div class="card-value">${v(s.transactions_total)}</div>
            <div class="card-sub">Stock changes</div>
          </div>
+      </div>
+
+      <div class="section-label">Preisdatenbank</div>
+      <div class="cards cards-2">
+        <div class="card">
+          <div class="card-label">Produkte mit Preisen</div>
+          <div class="card-value green">${v(s.price_products_total)}</div>
+          <div class="card-sub">AT &amp; DE Superm&auml;rkte</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Shops</div>
+          <div class="card-value">${v(s.price_shops_total)}</div>
+          <div class="card-sub">Superm&auml;rkte &amp; Drogerien</div>
+        </div>
       </div>
 
       <div class="section-label">Website — kellr.app</div>
