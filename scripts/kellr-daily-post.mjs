@@ -241,8 +241,9 @@ Stelle sicher, dass der Post eindeutig dieser Zielgruppe zugeordnet werden kann 
   const data = await resp.json();
   const rawText = data.content[0].text;
 
-  // JSON extrahieren (falls in Markdown-Block verpackt)
-  const jsonMatch = rawText.match(/\{[\s\S]*\}/);
+  // JSON extrahieren — Markdown-Codeblock entfernen falls vorhanden
+  const stripped = rawText.replace(/```(?:json)?\s*/gi, '').replace(/```/g, '').trim();
+  const jsonMatch = stripped.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error(`Claude hat kein gueltiges JSON zurueckgegeben:\n${rawText}`);
 
   // Robustes Parsing: Kontrollzeichen bereinigen, trailing commas entfernen
