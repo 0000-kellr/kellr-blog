@@ -1,16 +1,5 @@
 [
   {
-    "number": 87,
-    "title": "Report incorrect price per shop",
-    "labels": [
-      "enhancement"
-    ],
-    "created_at": "2026-04-23T05:13:39Z",
-    "updated_at": "2026-04-23T05:13:39Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/87",
-    "state": "open"
-  },
-  {
     "number": 86,
     "title": "Duplicate detection: merge items with same EAN + best-before date",
     "labels": [
