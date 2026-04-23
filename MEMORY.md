@@ -2,321 +2,221 @@
 
 ## Michael - Persönliches
 
-- Geboren am **7. Oktober 1982** (wird 42 in 2024)
+- Geboren am **7. Oktober 1982** (43 in 2026)
 - Freundin **Jasmine** - Mutter seiner beiden Kinder
 - Söhne: **Leon** und **Louis**
 - LinkedIn: linkedin.com/in/seidlm
 
 ## Beruflich
 
-- **au2mator** — 2015 gegründet
-- **au2mator GmbH** — ~2021/2022, komplett selbstständig gemacht
-
-## Technisches Setup
-
-- Nutzt **Ollama** lokal
-- 2026-02-15: Download von **Mixtral 8x7B (~26 GB, Q4/Q5)** gestartet
+- **au2mator** — 2015 gegründet, seit ~2021/2022 GmbH, komplett selbstständig
+- **Buch:** "From scripting basics to enterprise automation with Azure, Entra ID, and APIs" (co-author mit Ahmed Uzejnovic) — Amazon: https://amzn.eu/d/0aQLLOyK
+- **PowerShell Summit 2026** (Bellevue/Seattle, 13.–16. April 2026): 2 Sessions
+  - Di: "Get started with PowerShell and MS GRAPH API and become a Pro" (1:15pm, Room 406)
+  - Do: "8 Ways to Screw Your Azure Automation" (2:00pm, Room 405)
+  - Buch-Vorstellung + Verlosung + Manner Wafferl 🧇
 
 ## Konventionen
 
-- **Account-/Zugriffs-Naming:** Alles mit Suffix `_Private` = **privat**. Alles ohne `_Private` = **geschäftlich**.
-- **Kalender:** Es gibt **geschäftlich** und **privat** getrennte Kalender/Accounts (gleiche `_Private`-Konvention).
-- **Tooling:** Wenn etwas auf einem gekoppelten Gerät laufen soll → bevorzugt **nodes** (z.B. `nodes.run`/`nodes.invoke`) statt **exec** (host-lokal), außer du sagst explizit „am Host ausführen“.
-- **Chat-Logging:** Michael will, dass der komplette WhatsApp-Chatverlauf fortlaufend mitgeschrieben wird, damit er später darauf verweisen kann.
+- **Account-Naming:** Suffix `_Private` = privat, ohne = geschäftlich (gilt für Kalender, Accounts, etc.)
+- **Tooling:** Gerät → **nodes** bevorzugen statt exec (außer Michael sagt „am Host ausführen")
+- **Chat-Logging:** kompletter WhatsApp-Chatverlauf soll mitgeschrieben werden
 
 ## Notion Setup
 
-- **Tasks DB:** `31645ea5-eae3-4792-b4d9-5f0e7115fd44` — Property "Typ" (Task/Idee/Link/Shopping) seit 2026-02-23
-- **Projects DB:** `416a22e6-76b2-498c-9760-3d58dcd3b377` — Title = "Project name"
-- **Encoding:** Immer UTF-8 Bytes + Unicode Escapes für Umlaute, Rate Limiting 350-400ms
+- **Tasks DB:** `31645ea5-eae3-4792-b4d9-5f0e7115fd44` — Property "Typ" (Task/Idee/Link/Shopping)
+- **Projects DB:** `416a22e6-76b2-498c-9760-3d58dcd3b377`
+- **Encoding:** Immer UTF-8, Rate Limiting 350-400ms
 - **Inbox:** Status = "To Plan" UND kein Project verknüpft
 
-## au2mator Strategie (Igelprinzip)
+### Kundenprojekte
+- **Organizations DB:** `1cbd0a63-9c4f-4933-a80e-3d1246e7c177`
+- **Projects Doings DB:** `124e2066-cdfc-4254-8ff0-218d78535e6e`
+- **Doing Status Text:** IMMER als Notion `mention` mit `type: date`, NIE Freitext `@today`
+- Format: `[{type:"mention", mention:{type:"date", date:{start:"YYYY-MM-DD"}}}, {type:"text", text:{content:" \n- Erfasst"}}]`
 
-- **Leidenschaft:** Automatisierung
-- **Best at:** Azure Automation für Mittelstand DACH
-- **Economic Engine:** Managed Services / wiederkehrende Umsätze
-- **Igel-Satz:** "Wir machen mittelständische Unternehmen im DACH-Raum durch Azure Automation effizienter – als Managed Service."
+### Task Planung — Pflichtfelder
+Bei geplanten Tasks (Due Date) IMMER: Status, Estimates, Planing
+- Plan = `IW^;` · Best Effort = `EEQK` · Least Effort = `c00a1338-93a9-4ba6-84be-b6b57f4177d7`
+
+## au2mator Strategie
+
+- **Igel-Satz:** "Mittelständische Unternehmen im DACH-Raum durch Azure Automation effizienter — als Managed Service."
 
 ## Laufende Projekte
 
 - **AA Youtube Videos:** 17 Episoden geplant, Episoden-DB in Notion, erstes Recording 11. März 2026
-- **GitHub Einführung:** In Progress, One-Pager erstellt (DE+EN) in workspace/onepager/
-- **GitHub Enterprise Migration:** DevOps → GitHub (`0000-au2mator`), Monorepo `au2mator-portal` (Backend + UI), Pipeline als GitHub Actions, in Test-Phase
+- **GitHub Einführung:** One-Pager erstellt (DE+EN) in workspace/onepager/
+- **GitHub Enterprise Migration:** DevOps → GitHub (`0000-au2mator`), Monorepo `0000-au2mator-portal` ✅ FERTIG (2026-03-26), Build bei Push auf master, Version Bump aktiv
+  - **TODO: IIS Auto-Deploy** — Azure VM → Azure CLI + VM Run Command + Blob Storage. Details: Subscription ID, RG+VM Name, IIS Site+Name nötig.
 
-## Kellr App — Version Status
-- **v1.4.1 LIVE im App Store** ✅ (approved 2026-03-25, Dark Mode Fix + Auth Deep Link Fix + Registrierungs-Hint-Text)
-- **v1.5.0 in TestFlight** — Auth Flow Fix + Error Messages + Magic Link Fix, aktuell Build 330
-- **v1.4.1 LIVE** — Dark Mode Fix + Auth Deep Link Fix + Registrierungs-Hint-Text
-- **v1.4.0** — ProductReadOnlyView / Tap-to-Detail
-- Nächste Build-Nummer: **331**
-- changelog.html immer updaten wenn Release live geht
+## Zuverlässigkeit — Non-Negotiable
 
-## Kellr Auth Deep Link Fix (2026-03-24) ✅ ERLEDIGT
-- **Problem:** E-Mail Bestätigungslink öffnet Website statt App
-- **Root Cause:** Mail-App WKWebView kann kein 302 Redirect zu kellr:// Custom URL Scheme folgen
-- **Lösung:** Zwischenseite `https://kellr.app/auth-callback` (in kellr-blog deployed) leitet per JS zu `kellr://` weiter
-- **redirect_to** im Swift Code: `https://kellr.app/auth-callback` (URL-encoded)
-- **Supabase:** `https://kellr.app/auth-callback` als Redirect URL eingetragen ✅ — funktioniert!
+Michael soll **nie derjenige sein, der mir sagt dass etwas falsch gelaufen ist.**
+- Jeder Cron/Script/Sub-Agent braucht Fehler-Alerting. Kein Job ohne `failureAlert`.
+- Ich bin die Überwachungsinstanz, nicht Michael.
+- Bei Heartbeats: Cron-Job-Status prüfen, bei `consecutiveErrors > 0` sofort WhatsApp.
 
 ## au2mator Development
 
-- **Azure DevOps PAT:** `secrets/azuredevops_pat.txt`
 - **Notion Work Items DB:** `7dd5c182-e4e4-4419-a428-a34ecdcd2636`
 - **Notion Releases DB:** `90545595-2d42-4e37-ab72-6ee2463cabe9`
-- **GitHub Enterprise Org:** `0000-au2mator` (SAML SSO), Token: `secrets/github_token.txt`
+- **GitHub Enterprise Org:** `0000-au2mator` (SAML SSO)
 - **Externe Dev-Firma:** Papatia (Bitbucket: `papatia/a2m.newui`)
 - **Release-Kosten:** ~€8.000 pro Release mit externen Devs
-- **Angebot:** Ich (Groot) kann einfachere Features für ~$5-10/Feature umsetzen
+
+## au2mator LPR (Least Privileged Report)
+
+- **Master Repo:** `0000-au2mator/0000-a2m-PROD-LPR` — IMMER nur hierhin pushen!
+- **Kunden-Repos:** `485-Polytec-Holding-AG/485-a2m-PROD-LPR` + `764-WINTERSTEIGER-Holding-AG/764-a2m-PROD-LPR` — NIE direkt pushen!
+- **PS-Version in AA:** 7.4 | **Auth:** 2 App Registrations, KEINE Managed Identity
+- **Versionierung:** Nur Patch-Increments (0.0.1) — v2.0.0 für offiziellen Live-Launch reserviert!
+- **Aktuell: v1.8.19** (2026-03-16)
+- **GitHub App:** `a2m-PROD-LPR-syncapp`, App ID `3092323`, Key: `op://groot/a2m-PROD-LPR-syncapp Private Key/a2m-PROD-LPR-syncapp.pem`
+- **LPR API App:** `a2m-PROD-LPR-API`, AppId `a17bf6c8-67a5-4332-a3e0-3776d670464f`
+- **PS Gotchas:** `$var = if(...)` nur PS 7+; `Write-Verbose` statt `Write-Output`; `$PID` ist reserviert → `$spId`; StrictMode: `.PSObject.Properties['name']`; JS in PS Here-Strings: kein Template Literals
+
+## au2mator LPR Landing Page
+
+- **DE:** WP Page 2166, WP Media ID 2226 | **EN:** WP Page 2213, WP Media ID 2212 ✅
+- **Deploy-Pattern:** HTML → WP Media → Page redirect → Cache PURGE
+
+## au2mator Internal Runbooks — Notion Schema
+- **Header:** `@{"Authorization"="Bearer $Notion_API"; "Notion-Version"="2021-08-16"}`
+- **Referenz:** RB_073 (höchste Nummer = bester Code)
+
+## au2mator Consulting Website
+
+- **Domain:** au2mator-consulting.com (WordPress, live ✅)
+- **WP Credentials:** 1Password `kn6nc2zdpqnp6bhibyw5nht4ii`, User: `openclaw`
+- **Sprachen:** DE (default) + EN via Polylang
+- **Projekte:** 5 Cases (BauMit, Wintersteiger, Playtika, Energie AG, Greiwing)
 
 ## Credentials
 
-⚠️ **REGEL: NIEMALS Secrets in `secrets/*.txt` speichern! Immer direkt aus 1Password lesen!**
+⚠️ **REGEL: NIEMALS Secrets in `secrets/*.txt`! Immer aus 1Password!**
 
-- **GitHub:** 1Password Item-ID `uwmv5a3yo5ztoyv77jwfiilwze`, Feld `token` → `op://groot/uwmv5a3yo5ztoyv77jwfiilwze/token`
+- **GitHub:** `op://groot/uwmv5a3yo5ztoyv77jwfiilwze/token`
 - **MailerLite:** `op://groot/Mailerlite API Key/credential`
 - **Azure DevOps:** `op://groot/Azure DevOps PAT/credential`
-- **Bitbucket:** `op://groot/Bitbucket Token/credential` (funktioniert nicht für papatia workspace)
+- **Bitbucket:** `op://groot/Bitbucket Token/credential`
+
+## 1Password Integration
+
+- Vault: `groot` — alle Credentials (29+ Items)
+- Service Account Token: `secrets/op_service_account_token.txt` (bleibt als Datei)
+- op.exe: im User-PATH (WinGet), Details in TOOLS.md
 
 ## Bücher
 
 - **Buchliste DB:** `82dfe54b-4c6c-4c18-bb18-0107a437d436`
-- **Aktuell:** The ONE Thing (Gary Keller)
-- **Zuletzt:** Good to Great (fertig 26.02.2026)
-
-## au2mator LPR Landing Page — Deployment (2026-03-13)
-- **WP Rocket Fix:** Seite als statisches HTML via WP Media hosten → WP Rocket greift nie ran
-- **Deploy-Pattern:** HTML bearbeiten → als WP Media hochladen (Content-Type: text/html) → WP Page 2166 redirect updaten → Cache PURGE
-- **DE:** `lpr-landing-v2.html` → `lpr-landing-1.html` (WP Media ID 2226)
-- **EN:** `lpr-landing-en.html` via `translate-lpr-en.js` → `lpr-landing-en.html` (WP Media ID 2212) ✅ deployed + WPML verknüpft
-- **WPML:** DE Page 2166 ↔ EN Page 2213 verknüpft ✅
-- **Logos:** WP Media ID 2202 (white), 2203 (regular), 2204 (symbol)
-- **Scripts:** `fix-inline-styles.js`, `fix-inline-styles2.js`, `translate-lpr-en.js`
-
-## au2mator LPR (Least Privileged Report)
-
-- **Master Repo:** `0000-au2mator/0000-a2m-PROD-LPR` — IMMER nur hierhin pushen! (renamed von `0000-a2m-PROD-LeastPriviligedReport`)
-- **Kunden-Repos:** `485-Polytec-Holding-AG/485-a2m-PROD-LPR` + `764-WINTERSTEIGER-Holding-AG/764-a2m-PROD-LPR` — NIEMALS direkt pushen, nur via Release-Sync!
-- **Workflow:** Push auf Master (`0000-au2mator`) → synct automatisch ins interne AA zum Testen → wenn OK → Release (nur nach Freigabe!) → `release-sync.yml` synct zu Kunden (`customers.json`)
-- **AA Variables Prefix:** `a2m-PROD-LPR-`
-- **PS-Version in AA:** 7.4 (NICHT 5.1! Alles auf PS 7.4 ausrichten)
-- **Auth:** 2 App Registrations (Lese-App + Mail-App), KEINE Managed Identity
-- **Mail-Credentials:** Nur via AA Variables (nicht als Script-Parameter)
-- **PS-Version in AA:** 7.4
-- **Design:** au2mator Brand (Inter Font, #2d2d2d dark, #96c15c green, weißer Hintergrund)
-- **Versionierung:** Nur Patch-Increments (0.0.1) — v2.0.0 ist für den offiziellen Live-Launch reserviert!
-- **Aktuell: v1.8.19** (2026-03-16) — Credential Expiry Monitor: App Reg + SP Secrets/Zertifikate mit Status (Expired/Critical/Warning/OK) im HTML Report. Neue Funktion `Get-CredentialExpiryData`, neue Sektion mit KPI-Cards + Tabelle (sortierbar/filterbar), beide Sprachen (DE/EN).
-- **License Fallback: KEIN Fallback** — `Get-PermissionsMap` wirft bei jedem Fehler (403/401/429/500), kein embedded JSON, kein stiller Durchlauf ✅
-- **dev-au2mator End-to-End Test: ERFOLGREICH** ✅ (2026-03-15)
-- **GitHub App:** Name `a2m-PROD-LPR-syncapp`, App ID `3092323`, Private Key: `op://groot/a2m-PROD-LPR-syncapp Private Key/a2m-PROD-LPR-syncapp.pem`
-- **LPR API App Registration:** Name `a2m-PROD-LPR-API`, AppId `a17bf6c8-67a5-4332-a3e0-3776d670464f`, ObjectId `c76379ae-505c-4658-b2f5-4ab477d6bf51`, Identifier URI `api://a17bf6c8-67a5-4332-a3e0-3776d670464f`, AppRole `LPR.Access` (ID: `5ac2d7a0-6621-4b00-9d51-30fa6438e930`), Scope: `api://a17bf6c8-67a5-4332-a3e0-3776d670464f/.default`
-- **permissions-map.json:** 340 Endpoints, embedded im Script als Fallback (AA kann keine externen Files)
-- **PowerShell Gotcha:** `$var = if(...)` nur PS 7+, in Hashtables IMMER `$(if(...))`
-- **Log Analytics Gotcha:** `make_set()` liefert JSON-Strings, manuell parsen mit ConvertFrom-Json
-- **OData Cast Segments:** `/graph.servicePrincipal` muss gestrippt werden für Endpoint-Matching
-- **Wichtig:** `Write-Verbose` statt `Write-Output` (sonst Token-Pollution in Funktionen)
-- **`$PID` ist reserviert** in PowerShell — `$spId` verwenden
-- **StrictMode:** `.PSObject.Properties['name']` statt direktem Property-Zugriff; `@()` um `.Count`
-- **JS in PS Here-Strings:** Kein Template Literals — nur String-Concatenation; `<script>` als `@'...'@` (single-quoted)
-- **Release-Sync Workflow:** Nach Repo-Rename kaputt — manueller Sync als Workaround
-- **Manueller Kunden-Sync:** PS-Script das Script von Master holt, `__VERSION__` ersetzt, zu allen Kunden pusht
-- **Aktueller Stand:** v1.8.5 (nächster: v1.8.6 mit Mail-i18n)
-
-## 1Password Integration (ab 2026-03-12)
-
-- Vault: `groot` — alle Credentials migriert (29 Items: API Keys, Logins, Dokumente)
-- Service Account Token: `secrets/op_service_account_token.txt` (Bootstrap-Einstieg, bleibt als Datei)
-- op.exe: im User-PATH (WinGet), Details in TOOLS.md
-- Zugriff in Scripts: Node.js `spawnSync(opExe, ['read', 'op://groot/Item/field'], { stdio: ['ignore',...] })`
-- PowerShell stdin-Fix: `cmd /c '"op.exe" item ... < NUL'`
-- `.txt` Secrets noch als Fallback vorhanden
-
-## Composio + Canva (entfernt 2026-03-12)
-
-- Getestet, aber Canva API erlaubt kein programmatisches Zeichnen von Elementen
-- Autofill nur mit leeren Template-Feldern möglich — zu wenig für Architecture Diagrams
-- Composio maskiert OAuth-Token → kein direkter Asset-Upload möglich
-- **Entscheidung:** Composio/Canva entfernt. Diagramme als HTML/SVG oder PowerPoint erstellen.
-
-## Notion Task Planung — Pflichtfelder
-Wenn ein Task geplant wird (Due Date gesetzt), IMMER folgende Felder setzen — wenn nicht erwähnt: NACHFRAGEN!
-- **Status** → "Not Started"
-- **Estimates** → Zeitschätzung (z.B. "30min", "2h")
-- **Planing** → Plan (`IW^;`) · Best Effort (`EEQK`) · Least Effort (`c00a1338-93a9-4ba6-84be-b6b57f4177d7`)
-  - Plan = strikt an diesem Tag · Best Effort = erster freier Slot · Least Effort = nächster freier Slot zum Due Date
-
-## Kellr Stats Dashboard — Deployment (2026-03-15)
-
-- **Live URL:** `kellr.app/stats/`
-- **Private Repo:** `0000-kellr/kellr-metrics` — GitHub Actions Workflow ID `246538085`
-- **Workflow:** täglich 06:00 UTC → fetcht Daten → pusht `data/metrics.json` + `stats/index.html` nach `kellr-blog`
-- **Design:** Kellr-Style (Dark Mode, #34C759 grün, System Font)
-- **Nav-Link:** `index.html` updated: `#stats` → `/stats/`
-- **Quellen:** GoatCounter ✅ · App Store Connect ✅ · Supabase ✅ · Amazon (manuell)
-- **App Store Connect:** Team Key ID `7H9LF88CVV`, Issuer `360c0f64-c428-4121-a5b4-05b3bcc90e92`, Vendor Nr `94063707`
-- **1Password:** "appstore connect statistik key" (item `tfohrjo224ug37ld2trlrgq3l4`) — Key ID, Issuer ID, Vendor Nr, .p8 File
-- **GitHub Secrets (kellr-metrics):** GOATCOUNTER_TOKEN, GOATCOUNTER_SITE, APPSTORE_KEY_ID, APPSTORE_ISSUER_ID, APPSTORE_PRIVATE_KEY, APPSTORE_VENDOR_NO, APPSTORE_APP_ID, SUPABASE_URL, SUPABASE_SERVICE_KEY, KELLR_BLOG_TOKEN
-- **Supabase Fix:** REST API `?select=id` + `Prefer: count=exact` + `Range: 0-0` → Count aus `Content-Range` Header (kein exec_sql!)
-- **Stand 2026-03-15:** Downloads 7d=23, Rating=5.0★, Reviews=1, HH=16, Users=20, Visitors 7d=83
-
-## Anthropic Kosten (API Format geändert)
-
-- API gibt jetzt Token-Counts statt cost_usd — Preise: Input $3/MTok, Cache Write $3.75/MTok, Cache Read $0.30/MTok, Output $15/MTok
-- 13.3.: **$74.81** | 14.3.: **$61.55** | 15.3.: noch nicht verfügbar (1 Tag Delay)
-- Hauptkostentreiber: Cache Writes (~80% der Kosten)
+- **Aktuell:** Selbstbild (Carol S. Dweck, Audible) | **Zuletzt:** The ONE Thing (fertig 09.04.2026)
 
 ## Pipedrive — Monday Outreach Flow
 
-**Jeden Montag** auf Michaels Anstoß hin:
-1. Pipedrive Filter 74 ("New Community Downloads") abfragen
-2. Filter: aktuelles Jahr, Business-Mail (kein Gmail/Yahoo/Libero/Hotmail/etc.), noch nicht kontaktiert (`email_messages_count == 0`), keine Fake/Test-Daten
-3. Duplikate zusammenführen (gleicher Name mehrfach → einmal behalten)
-4. Personalisierte Mail-Entwürfe schreiben (EN Standard, DE wenn Person/Firma klar DACH)
-5. Als pinned Note in Pipedrive anlegen (Format: "EMAIL DRAFT\n\nTO: ...\nSUBJECT: ...\n\nBody")
-6. Michael geht Liste durch und sendet selbst
-7. Nach Abschluss: alle EMAIL DRAFT Notes löschen
-- Meeting-Link immer einbauen: https://click.au2mator.com/MEET_CommunityDownload
-- Free-Mail-Domains ausschließen: gmail, yahoo, hotmail, outlook, live, icloud, gmx, web.de, t-online, libero.it, tiscali.it, virgilio.it, home.nl, sapo.pt, naver.com, proton.me, email.com
+Jeden Montag auf Michaels Anstoß:
+1. Filter 74 ("New Community Downloads") — Business-Mail, noch nicht kontaktiert, kein Fake
+2. **VOR dem Erstellen prüfen (BEIDE Checks):**
+   - `email_messages_count > 0` → bereits per Mail kontaktiert → Überspringen!
+   - Note mit "EMAIL DRAFT" bereits vorhanden → ebenfalls Überspringen!
+   - API: `GET /persons/{id}?fields=email_messages_count`
+3. Personalisierte Mail-Entwürfe (EN default, DE wenn DACH klar)
+4. Als pinned Note in Pipedrive: "EMAIL DRAFT\n\nTO: ...\nSUBJECT: ...\n\nBody"
+5. Michael sendet selbst → danach Drafts löschen
+- Meeting-Link: https://click.au2mator.com/MEET_CommunityDownload
+- Free-Mail ausschließen: gmail, yahoo, hotmail, outlook, live, icloud, gmx, web.de, t-online, libero.it, etc.
 
-## au2mator Consulting Website (au2mator-consulting.com)
+## Kellr Push Notifications (v1.6.0) — LIVE ✅ (2026-04-04)
+- **APNs Key:** ID `892653Q99T`, Team `QV64L84RFS`
+- **1Password:** "Kellr APNs Key (AuthKey_892653Q99T.p8)"
 
-- **Domain:** au2mator-consulting.com (WordPress, live ✅)
-- **WP Credentials:** 1Password Item `kn6nc2zdpqnp6bhibyw5nht4ii` ("openclaw consulting HP"), User: `openclaw`, API Key im Feld "API"
-- **Rolle:** Groot ist permanenter **Webadmin** — zuständig für Content, Security, Performance, Plugin-Hygiene
-- **Aufgabe:** Consulting-Portfolio-Site, zeigt Projekte nach Technologie gefiltert (au2mator Portal / ServiceNow / Jira)
-- **Plugins (aktiv):** Elementor Pro, Polylang + Connect Polylang for Elementor, Yoast SEO, WP Mail SMTP Pro, Antispam Bee, Code Snippets
-- **Impressum-Daten:** workspace/au2mator-consulting-impressum-data.md (au2mator GmbH, Wilhelm-Fein-Strasse 37, 4540 Pfarrkirchen, FN 609158x, ATU79770507)
-- **Sprachen:** DE (default) + EN via Polylang
-- **Projekte:** 5 Consulting Cases aus Notion (BauMit, Wintersteiger, Playtika, Energie AG, Greiwing)
-- **Build:** Sub-Agent `a2c-website-build` läuft (gestartet 2026-03-18 ~14:00)
-- **Webadmin-Pflichten:** Plugins aktuell halten, Security-Headers, Performance, Inhalte pflegen, Leads generieren
+## Kellr Roadmap
+- **v1.6.0** → ✅ LIVE (2026-04-04): Push Notifications + Deep Links + Action Buttons
+- **v2.0.2** → ✅ LIVE (2026-04-11): Kellr Pro Paywall + Privacy/Terms Links Fix
+- **v2.0.3** → ✅ LIVE
+- **v2.0.6** → ✅ LIVE (2026-04-21): Preisvergleich + Stock-Bugfix #85
+- **v2.0.5** → ✅ LIVE (2026-04-17): Paket-Tracking, ConsumptionBarChart, Long Press Copy, Subscription-Logic Refactor
+- **v2.0.6** → ✅ LIVE (2026-04-21): Preisvergleich Feature, Stock-Bugfix (#85 quantity persistence)
+- **v2.0.7** → ✅ LIVE (2026-04-23): Tracking Status-Dot (grün/rot), Carrier-Bugfix Webhook
+- **v3.0** → Apple Watch App (Issue #56)
+
+## Kellr App — Version Status
+- **v1.5.0 LIVE** ✅ (2026-03-26) | **v1.6.0 LIVE** ✅ | **v2.0.2 LIVE** ✅ (2026-04-11) | **v2.0.3** eingereicht | **v2.0.5 LIVE** ✅ (2026-04-17)
+- changelog.html immer updaten wenn Release live geht
+
+## Kellr Stats Dashboard
+- **Live URL:** `kellr.app/stats/`
+- **Repo:** `0000-kellr/kellr-metrics`, täglich 06:00 UTC
+- **App Store Connect:** Key `V8PRSQAK93` (App-Manager, Groot App Manager), Issuer `360c0f64-c428-4121-a5b4-05b3bcc90e92`, App-ID `6759869739`, Vendor `94063707`
+- **Statistik Key:** `7H9LF88CVV` (Sales/Trends only, kein Reviews-Zugriff)
+- **GoatCounter:** Token in 1Password `j24a4r5oclfz4ahp2xly3mndwu`, API: start/end Parameter (nicht period=week!)
 
 ## Kellr X (@kellr_app)
+- **Account:** @kellr_app, User ID: `2035411178349047808`
+- **1Password:** `2kygrqd7nguhiseitxg6znldhu`
+- **Hashtags:** #Vorratskammer #Haushaltstipps #Kellermanagement #Prepper #Blackoutvorsorge
+- **Scripts:** `scripts/kellr-daily-post.mjs`, `scripts/kellr-engagement.mjs`, `scripts/x-post.mjs`
 
-- **Account:** @kellr_app (Twitter/X), User ID: `2035411178349047808`
-- **1Password:** Item `2kygrqd7nguhiseitxg6znldhu` ("X (Twitter) API - Kellr"), Vault: groot
-- **Auth:** OAuth2 User Token (Access + Refresh Token in 1Password)
-- **Strategie:** Deutsch, Hashtags: #Vorratskammer #Haushaltstipps #Kellermanagement #Prepper #Blackoutvorsorge #Krisenvorsorge #Notvorrat
-- **Scripts:** `scripts/x-daily-post.mjs`, `scripts/x-refresh-token.mjs`, `scripts/x-post.mjs`
-- **npm:** `twitter-api-v2` installiert im workspace
+## Kellr Social Media
+- **Facebook Page:** "kellr" (ID: `1011515808714434`)
+- **Instagram:** @kellr_app (ID: `17841438133721668`) — via Facebook Page Token
+- **App:** "Kellr App Business" (App ID: `951620470661905`) — 1Password: "Kellr Social Media API"
+- **System User:** "Kellr bot" — Token läuft nicht ab
 
 ## Cron Jobs
-
-- **Reading Reminder:** Alle 2 Wochen So 19:00, frage ob Michael ein Buch liest (Job: 30724787)
-- **Kellr Daily Post (X + FB + IG):** täglich 10:00 Uhr Wien → `scripts/kellr-daily-post.mjs` (Job: 942162d8-ac7c-4332-8a92-6b4d7017e664)
-- **Kellr Engagement (X + FB + IG):** täglich 12:00 + 18:00 Uhr Wien → `scripts/kellr-engagement.mjs` (Job: 3a0499f4-429f-4762-8519-85990d570ec5)
-- **Kellr X Weekly Report:** jeden Montag 09:00 Uhr Wien → WhatsApp Report (Job: 470e0ec0-1607-468e-b1ef-9f729c959d42)
-
-## Kellr Social Media (ab 2026-03-22)
-
-- **Facebook Page:** "kellr" (ID: `1011515808714434`) — Page Token in 1Password
-- **Instagram:** @kellr_app (ID: `17841438133721668`) — via Facebook Page Token
-- **App:** "Kellr App Business" (App ID: `951620470661905`) — 1Password Item: "Kellr Social Media API"
-- **System User:** "Kellr bot" — Token läuft nicht ab
-- **Scripts:** `kellr-daily-post.mjs` (alle 3 Kanäle), `kellr-engagement.mjs` (Comments/Likes/Mentions)
-
-## SC Basic Landing Page — Deployment
-- **WP Page (DE):** ID 2236, URL `https://au2mator.com/ma-sourcecontrol/` (slug: `ma-sourcecontrol`) *(neu erstellt 2026-03-15, war 2232)*
-- **WPML:** DE Page 2236 ↔ EN Page 2234 verknüpft ✅ (2026-03-15)
-- **WP Media (DE):** ID 2238, URL `https://au2mator.com/wp-content/uploads/2026/03/sc-landing-de.html`
-- **WP Page (EN):** ID 2234, URL `https://au2mator.com/ma-sourcecontrol-en/` (slug: `ma-sourcecontrol-en`)
-- **WP Media (EN):** ID 2239, URL `https://au2mator.com/wp-content/uploads/2026/03/sc-landing-en.html`
-- **Local source (DE):** `workspace/sc-landing-v1.html` (CTAs → `https://au2mator.com/ma-sourcecontrol/`)
-- **Local source (EN):** `workspace/sc-landing-en.html` (via `scripts/translate-sc-en.js` + `translate-sc-en-fix.js`)
-- **Deploy-Pattern:** HTML bearbeiten → DELETE altes Media → POST neues → Page bleibt → PURGE
-- **WPML:** DE↔EN noch nicht verknüpft (manuell in WP Backend erledigen)
-
-## Freie Schule Kremstal Website
-- URL: http://fsk.m-seidl.com/ (WordPress, live!)
-- **Rechtliches (erledigt 2026-03-05):**
-  - Impressum (ID 103): ZVR 527942996, Bildungswerkstatt Kremstal, Obmann Harald Zehetner, Kassier Dietmar Amon, BH Kirchdorf, §5 ECG
-  - Datenschutzerklärung (ID 113, /datenschutz/): DSGVO-konform, YouTube-Consent-Hinweis, DSB-Beschwerde-Recht
-  - Footer-Menü (ID 3): Impressum (105) + Datenschutz (116) ✅
-  - YouTube Click-to-Play Consent: fsk-yt-consent widget auf Startseite, lädt youtube-nocookie.com erst nach Klick
-  - CSS-Klassen: `.fsk-yt-consent` (YouTube-Overlay) + `.fsk-legal-wrap` (Legal-Seiten-Typography) in fsk-dropdown.css
-- Theme: Hello Elementor, Plugin: Elementor 3.35.6 + The Events Calendar
-- 2 Design-Mockups lokal: workspace/fsk-mockups/
-- **WP Custom CSS sanitisiert `>` zu `&gt;`** → Dropdown-CSS immer als MU-Plugin!
-- **wp_update_nav_menu_item** immer mit vollständigen Parametern (url+object+type) → sonst URLs weg!
-- MU-Plugins: fsk-dropdown-plugin.php, fsk-events-hero.php
-- Seiten: Startseite=9, Unsere Schule=10, Pädagogik=11, Team=12, Aktuelles=13, Kontakt=14, Der Verein=86, Aufnahmeverfahren=96, Unterstützer=101
-- Nav: Über Uns (ID 88, parent) → Team, Der Verein, Aufnahmeverfahren, Unterstützer
-- Menüpunkt "Termine" (war Aktuelles) → /events/
-- Transparentes Logo: Freie_Schule_Kremstal-Logo_trans.png (im fsk-mockups Ordner)
-- 18 Schulfotos (IDs 64-81) mit Gaussian Blur σ=12 verarbeitet
+- **Reading Reminder:** So 19:00 alle 2 Wochen (Job: 30724787)
+- **Kellr Daily Post (X + FB + IG):** täglich 10:00 Wien (Job: a4f0881c) — failureAlert + gpt-4o Fallback
+- **Kellr Engagement (X + FB + IG):** 12:00 + 18:00 Wien (Job: 423d5650) — failureAlert aktiv
+- **Kellr X Weekly Report:** Mo 09:00 Wien → WhatsApp (Job: 2eafa616)
+- **Morning Dream Briefing:** täglich 06:00 Wien → WhatsApp an Michael (Job: be62eafb) — failureAlert aktiv
 
 ## Kellr App — Wichtige Learnings
-- **COMMIT-REGEL (kritisch):** NIEMALS ohne explizites OK von Michael committen/pushen. Lösung zeigen → warten → erst auf "ok"/"commit" pushen.
-- **BUILD-REGEL (kritisch):** TestFlight hat ein tägliches Build-Limit (~90/Tag über ALLE Apps). JEDEN Commit mit `[skip ci]` pushen. Builds NUR manuell triggern wenn Michael sagt "Build" oder "TestFlight". NIEMALS automatische Builds durch normalen Push. Mehrere Fixes IMMER in EINEM Commit bündeln. Diese Regel wurde 8 Tage in Folge gebrochen — NIE WIEDER.
-- **project.pbxproj**: Neue Swift-Dateien via GitHub API brauchen manuellen Eintrag in pbxproj (sonst "cannot find in scope")
-- **pbxproj Dateinamen mit `+`**: MÜSSEN gequotet werden: `path = "SupabaseService+Auth.swift";` (unquoted = Parse Error)
-- **pbxproj BOM**: Immer vom git-Baseline holen (nicht lokal cachen). PowerShell `Set-Content -Encoding UTF8` fügt BOM hinzu → Xcode Parse Error. Fix: `[System.Text.UTF8Encoding]::new($false)` + `.TrimStart([char]0xFEFF)`
-- **pbxproj Baseline**: Für Patches immer `?ref=<commit-sha>` vom letzten bekannt-guten Commit holen
-- **Build Race Condition**: Mehrere Commits schnell hintereinander → parallele Builds → TestFlight kriegt ältere Version. Immer Commits bündeln.
-- **Sub-Agent Encoding**: Sub-Agents machen IMMER Encoding-Fehler bei Umlauten in Swift. Lieber selbst direkt machen.
-- **macos-26 Runner**: Apple Silicon GitHub Actions Runner kann stundenlang queued sein. `workflow_dispatch` Trigger zum manuellen Auslösen hinzufügen.
-- **Compositing**: Schwarzer Hintergrund PNG/JPEG → einfach zu ersetzen (keine AA-Probleme). Weiß → schwierig.
-- **App Icon**: AppIcon-1024.png = Michael's K-Regal-Design auf Forest Green #1B5E35. Alle 13 Größen in AppIcon.appiconset/
+- **COMMIT-REGEL:** NIEMALS ohne explizites OK von Michael committen/pushen.
+- **ASC SUBMIT-REGEL:** Vor dem Submit immer in ASC prüfen welcher Build die korrekte Marketing Version hat. Build-Nummer ≠ Marketing Version! Nie blind nach Build-Nummer submitten.
+- **BUILD-REGEL:** IMMER `[skip ci]` in Commit-Message. Build NUR wenn Michael explizit "Build" sagt. Mehrere Fixes in EINEM Commit bündeln.
+- **pbxproj:** Neue Swift-Dateien brauchen manuellen Eintrag. Dateinamen mit `+` müssen gequotet werden. BOM-Problem mit PowerShell → `[System.Text.UTF8Encoding]::new($false)`.
+- **Sub-Agent Encoding:** Sub-Agents machen Encoding-Fehler bei Umlauten in Swift → lieber selbst machen.
+- **macos-26 Runner:** Kann stundenlang queued sein.
 
-## Kellr pbxproj — ID-Vergabe (KRITISCH, kein Subagent darf das ignorieren!)
-Beim Hinzufügen neuer Swift-Dateien via GitHub API IMMER die nächste freie ID verwenden.
-**Belegte IDs (Stand 2026-03-26):**
-- A100.../A200...0001–0021: Kern-Views/Models
-- A100.../A200...0030–0037: Services, Auth, Onboarding etc.
-- A100.../A200...0040, 0042: Kellr.entitlements, ExpiryDateScannerView
-- A100.../A200...0049: ProductReadOnlyView
-- **A100.../A200...0050: Config.swift** ← BELEGT! Nicht nochmal vergeben!
-- **A100.../A200...0051: KeychainHelper.swift**
-- A100.../A200...0060: ChangePasswordView (neu, 2026-03-26)
+## Kellr pbxproj — ID-Vergabe (KRITISCH)
+**Belegte IDs (Stand 2026-03-27):**
+- A1.../A2...0001–0021, 0030–0037, 0040, 0042, 0049–0051, 0060–0061
 - BB.../DD...: ProductGroup, ProductCategory, PendingStockOp, KellrModelContainer, SyncEngine, SupabaseModels, SupabaseService+*
-- **Nächste freie ID: A200...0061 / A100...0061**
+- **Nächste freie ID: A200...0062 / A100...0062**
+- Vor neuem File → pbxproj vom aktuellen Commit holen und letzte ID prüfen!
 
-**Regel:** Vor jedem neuen File → pbxproj vom aktuellen Commit holen, grep nach letzter ID, erst dann neue vergeben. NIE blind hochzählen ohne Check.
+## Kellr Social Media — Release Posts
+- Bei Release-Posts: **Bild muss zur Version passen!** Nie ein altes Release-Bild recyceln.
+- Workflow: Neues Bild generieren (Imagen/DALL-E) mit korrekter Versionsnummer → Upload zu kellr-blog → dann posten
+- Bild-Format: Dark green (#1B5E35), weiß bold Versionsnummer + "Now Live", Kellr K-Logo
+- Release-Bild Naming: `kellr-vX.X.X-release.jpg` in `assets/social/`
 
 ## Kellr App — Konventionen
-- **KEINE lokalen Files** für Kellr-Content. Alles entweder in **GitHub** (Doku, Code) oder **Notion** (Tasks, Orga).
-- Notion = To-dos + organisatorischer Kontext. GitHub = Code + Dokumentation (`docs/`).
-- Wenn ein Notion-Task Infos braucht → in den Task schreiben oder auf GitHub verlinken.
-- `docs/` im Repo: appstore-listing.md, media-kit.md (+ brand-guidelines.md, privacy-policy.md geplant)
+- **KRITISCH: [skip ci] bei JEDEM Kellr Commit!**
+- **BUILD-REGEL ERWEITERT:** Immer sammeln, dann auf explizites "OK bauen" von Michael warten — NIEMALS automatisch bauen/deployen ohne Freigabe!
+- Notion = Orga/Tasks, GitHub = Code/Doku (`docs/`)
+- **TOOLS.md** für kritische Details: Supabase-URL, Bundle ID, Signing etc.
 
-## Kellr App (Projekt)
-
-### Infrastruktur
+## Kellr App (Infrastruktur)
 - **GitHub Org:** `0000-kellr` (repos: kellr, kellr-blog)
-- **Website:** https://kellr.app (GitHub Pages, live ✅)
-- **E-Mail:** noreply@kellr.app via Resend (SMTP in Supabase konfiguriert, Domain verified ✅)
-- **Kontakt:** contact@kellr.app via O365 ✅
-- **WhatsApp Community:** https://chat.whatsapp.com/GLYnFf0Orue5seSZevmP1h
-- **Architektur-Doku:** ARCHITECTURE.md in `kellr-internal` (privat!) + lokal in workspace/kellr-architecture.md — NICHT in kellr-blog (public)
+- **Website:** https://kellr.app | **Bundle ID:** com.au2mator.kellr
+- **Supabase:** bflxydqsutvpjzrevjlh.supabase.co (Frankfurt)
+- **TestFlight:** https://testflight.apple.com/join/NGG31k6t (Internal: "Familie")
+- **Distribution Cert:** MT8Z7MGMFU (läuft bis 2027-03-02)
+- **App Icon:** K-Regal auf Forest Green #1B5E35 (Michaels Design)
+- **Haushalt:** "Seidl-Hofmeister" | Jasmine Apple ID: Jasmine1@gmx.at
 
-### Signing
-- Distribution Cert: MT8Z7MGMFU (iOS Distribution: Michael Seidl, läuft bis 2027-03-02)
-- Private Key: secrets/dist_private_key.pem, P12: secrets/dist_signing.p12 (Passwort: kellr2026)
-- GitHub Secrets: DIST_P12_BASE64 + DIST_P12_PASSWORD
-
-### Resend
-- Admin API Key: secrets/resend_admin_api_key.txt
-- Send API Key: secrets/resend_api_key.txt
-- Domain ID: 136da6c9-daef-48a3-a48b-a02f2988a73a ✅ verified (2026-03-05)
-
-### Cron Jobs aktiv
-- keine aktiven Kellr-spezifischen Crons (TestFlight Retry war einmalig, erledigt)
-
-### App Details
-- **Was:** Vorratskammer-Tracker iOS App mit Supabase Backend
-- **Repo:** https://github.com/0000-kellr/kellr (Org: 0000-kellr — umgezogen von 0000-au2mator)
-- **Tech:** SwiftUI + Supabase (Frankfurt) + GitHub Actions → TestFlight
-- **Bundle ID:** com.au2mator.kellr
-- **Supabase:** bflxydqsutvpjzrevjlh.supabase.co
-- **TestFlight:** Internal Gruppe "Familie", Public Link: https://testflight.apple.com/join/NGG31k6t
-- **Amazon Affiliate:** kellr-21
-- **Haushalt:** "Seidl-Hofmeister" (Michael + Jasmine)
-- **Jasmine Apple ID:** Jasmine1@gmx.at
-- **Status:** Live im App Store ✅ (approved nach Submit 8. März 2026)
-- **App Icon:** K-Regal auf Forest Green #1B5E35 (Michael's eigenes Design)
-- **Neue Features Tag 5:** #7 SupabaseService Split, #10 Actor Isolation, #24 Local-First Images, #18 NSCache, alle P2 fixes
-- **Open Issues:** #3 Onboarding Tour (P3), #14-#20 P3 — alle P2 Issues ✅ erledigt
+## Freie Schule Kremstal
+- URL: http://fsk.m-seidl.com/ — WordPress, live ✅
+- MU-Plugins: fsk-dropdown-plugin.php, fsk-events-hero.php
+- WP Custom CSS sanitisiert `>` zu `&gt;` → Dropdown-CSS immer als MU-Plugin!
+- Seiten: Startseite=9, Unsere Schule=10, Pädagogik=11, Team=12, Aktuelles=13, Kontakt=14
 
 ---
 
-_Letzte Aktualisierung: 2026-03-01_
+_Letzte Aktualisierung: 2026-04-09_
+
+## Promoted From Short-Term Memory (2026-04-17)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-03-10.md:1:28 -->
+- # 2026-03-10 — KELLR GOLIVE + LPR v1.8.16 ## 🎉 KELLR IST IM APP STORE LIVE! - **App Store Link:** https://apps.apple.com/app/kellr/id6759869739 - **App Store ID:** id6759869739 - Apple Review bestanden, "1.0 Bereit für Vertrieb" - Homepage kellr.app updated mit echtem App Store Link (war id0000000000 Platzhalter) - EU Händlerstatus: Michael hat Privatperson-Daten in App Store Connect eingetragen (EU Digital Markets Act Pflicht, auch für kostenlose Apps) - Developer Account: Privat (nicht GmbH) ## LPR v1.8.16 - **Endpoint Path Normalization:** GUIDs → `{id}`, volle URLs → relative Pfade - **Endpoint Grouping:** Gleiche Patterns zusammengefasst mit Call-Count statt einzelne Zeilen - **Header Fix:** Category + Calls Spalten hinzugefügt - Release v1.8.16 erstellt + an alle 3 Kunden synced - **Kunden-Repo-Namen (korrekt!):** - au2mator: `au2mator/a2m-PROD-LeastPriviligedReport` - Polytec: `485-Polytec-Holding-AG/485-a2m-PROD-LeastPriviligedReport` - Wintersteiger: `764-WINTERSTEIGER-Holding-AG/764-a2m-PROD-LeastPriviligedReport` - Leerer Commit für Sync-Workflow-Trigger - Script heißt jetzt `Invoke-LeastPrivilegedReport.ps1` (umbenannt) ## LPR OnePager - OnePager im au2mator PIM-Design erstellt (Montserrat, Nexa Bold, #2d2d2d/#96c15c) - Vorlage: `workspace/onepager/pim-feature-comparison.html` - Mehrere Iterationen: weniger Tabellen, mehr Cards, alles auf eine Seite - Feature Cards, Risk Category Cards (Optimal/Excessive/Unmatched/No Activity), Benefit Cards - Prerequisites: Azure Automation, Entra ID P1/P2, Log Analytics [score=0.841 recalls=5 avg=0.399 source=memory/2026-03-10.md:1-28]
