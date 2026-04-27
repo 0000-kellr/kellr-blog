@@ -251,11 +251,30 @@ Stelle sicher, dass der Post eindeutig dieser Zielgruppe zugeordnet werden kann 
   try {
     parsed = JSON.parse(jsonMatch[0]);
   } catch (e) {
-    const cleaned = jsonMatch[0]
+    // Stufe 1: Kontrollzeichen + trailing commas
+    let cleaned = jsonMatch[0]
       .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, ' ')
       .replace(/,\s*}/g, '}')
       .replace(/,\s*]/g, ']');
-    parsed = JSON.parse(cleaned);
+    try {
+      parsed = JSON.parse(cleaned);
+    } catch (e2) {
+      // Stufe 2: Felder einzeln extrahieren via Regex (Fallback)
+      const extract = (key) => {
+        // Matcht "key": "value" wobei value escaped quotes enthalten kann
+        const m = cleaned.match(new RegExp(`"${key}"\\s*:\\s*"((?:[^"\\\\]|\\\\.)*)"`, 's'));
+        return m ? m[1].replace(/\\n/g, '\n').replace(/\\t/g, '\t').replace(/\\"/g, '"') : '';
+      };
+      const useScrMatch = cleaned.match(/"use_screen"\s*:\s*(true|false)/);
+      parsed = {
+        x_text:    extract('x_text'),
+        ig_caption: extract('ig_caption'),
+        img_prompt: extract('img_prompt'),
+        use_screen: useScrMatch ? useScrMatch[1] === 'true' : true,
+        format:    extract('format'),
+      };
+      if (!parsed.x_text) throw new Error(`JSON Fallback-Extraktion fehlgeschlagen. Raw:\n${rawText.slice(0, 300)}`);
+    }
   }
   return parsed;
 }
@@ -279,12 +298,30 @@ async function generateImage(prompt) {
     instances: [{ prompt }],
     parameters: { sampleCount: 1, aspectRatio: '1:1' }
   });
-  const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${geminiKey}`, {
-    method: 'POST', body, headers: { 'Content-Type': 'application/json' }
-  });
-  const data = await resp.json();
-  if (data.error) throw new Error(data.error.message);
-  return `data:image/png;base64,${data.predictions[0].bytesBase64Encoded}`;
+
+  // Timeout nach 45s + Fallback auf App-Screenshot
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 45000);
+
+  try {
+    const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${geminiKey}`, {
+      method: 'POST', body, headers: { 'Content-Type': 'application/json' }, signal: controller.signal
+    });
+    clearTimeout(timeout);
+    const data = await resp.json();
+    if (data.error) throw new Error(data.error.message);
+    if (!data.predictions?.[0]?.bytesBase64Encoded) throw new Error('No image data in response');
+    return `data:image/png;base64,${data.predictions[0].bytesBase64Encoded}`;
+  } catch (e) {
+    clearTimeout(timeout);
+    console.warn(`  ⚠️ Imagen fehlgeschlagen (${e.message}) → Fallback: App Screenshot`);
+    // Fallback: zufälligen App-Screenshot verwenden
+    const fallbackUrl = SCREEN_BASE + APP_SCREENS[Math.floor(Math.random() * APP_SCREENS.length)];
+    const imgResp = await fetch(fallbackUrl);
+    if (!imgResp.ok) throw new Error('Fallback screenshot fetch failed');
+    const buf = await imgResp.arrayBuffer();
+    return `data:image/png;base64,${Buffer.from(buf).toString('base64')}`;
+  }
 }
 
 async function addKellrBranding(imageBuffer) {
