@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Kellr Daily Post – X + Facebook + Instagram
  * - Postet täglich auf allen 3 Kanälen
  * - Di + Fr: Veo 2 Video (Reel auf IG, Video auf FB, Foto auf X)
@@ -310,8 +310,13 @@ async function generateImage(prompt) {
     clearTimeout(timeout);
     const data = await resp.json();
     if (data.error) throw new Error(data.error.message);
-    if (!data.predictions?.[0]?.bytesBase64Encoded) throw new Error('No image data in response');
-    return `data:image/png;base64,${data.predictions[0].bytesBase64Encoded}`;
+    const b64 = data.predictions?.[0]?.bytesBase64Encoded;
+    if (!b64) throw new Error(`No image data in response: ${JSON.stringify(data).slice(0, 300)}`);
+    // Sanity check: must be valid base64 image data (not JSON/text)
+    if (b64.length < 1000 || !/^[A-Za-z0-9+/]+=*$/.test(b64.slice(0, 100))) {
+      throw new Error(`Imagen returned invalid base64 data (likely error metadata): ${b64.slice(0, 200)}`);
+    }
+    return `data:image/png;base64,${b64}`;
   } catch (e) {
     clearTimeout(timeout);
     console.warn(`  ⚠️ Imagen fehlgeschlagen (${e.message}) → Fallback: App Screenshot`);
@@ -460,13 +465,13 @@ async function brandVideo(videoBuffer, tagline) {
   try {
     const info = JSON.parse(probeResult.stdout?.toString() || '{}');
     const vs = info.streams?.find(s => s.codec_type === 'video');
-    if (vs) { w = vs.width; h = vs.height; }
+    if (vs) { /* use fixed 1080x1920 for branding since ffmpeg scales to that */ }
   } catch { /* use defaults */ }
 
   const { default: sharp } = await import('sharp');
   const appIconBuf = readFileSync('C:\\Users\\Micha\\.openclaw\\workspace\\kellr-appicon.png');
-  const iconSize = Math.round(w * 0.14);
-  const padding  = Math.round(w * 0.04);
+  const iconSize = Math.round(w * 0.12);
+  const padding  = Math.round(w * 0.05);
   const pillH    = Math.round(iconSize * 0.36);
   const pillW    = Math.round(w * 0.22);
   const pillX    = padding + iconSize + Math.round(w * 0.015);
@@ -482,7 +487,7 @@ async function brandVideo(videoBuffer, tagline) {
     <defs>
       <linearGradient id="shadow" x1="0%" y1="0%" x2="0%" y2="100%">
         <stop offset="0%" style="stop-color:#000;stop-opacity:0"/>
-        <stop offset="100%" style="stop-color:#000;stop-opacity:0.4"/>
+        <stop offset="100%" style="stop-color:#000;stop-opacity:0.15"/>
       </linearGradient>
     </defs>
     <rect width="${w}" height="${h}" fill="url(#shadow)"/>
@@ -499,7 +504,7 @@ async function brandVideo(videoBuffer, tagline) {
 
   const cleanText = tagline.replace(/[^\x00-\x7FäöüÄÖÜß .,!?:\-–]/g, '').replace(/"/g, "'").trim();
   const fontSize  = Math.round(w * 0.052);
-  const textY     = Math.round(h * 0.10);
+  const textY     = Math.round(h * 0.08);
   const boxPad    = Math.round(fontSize * 0.4);
 
   const drawtextFilter = `drawtext=text='${cleanText}':fontsize=${fontSize}:fontcolor=white:x=(w-text_w)/2:y=${textY}:font=Arial Bold:box=1:boxcolor=#1B5E35@0.85:boxborderw=${boxPad}`;
