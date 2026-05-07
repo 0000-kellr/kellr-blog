@@ -1,16 +1,5 @@
 [
   {
-    "number": 93,
-    "title": "feat: improve ProductGroupsView + ProductCategoriesView - plus button style (like StorageLocationsView)",
-    "labels": [
-      "enhancement"
-    ],
-    "created_at": "2026-05-07T12:35:09Z",
-    "updated_at": "2026-05-07T12:35:09Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/93",
-    "state": "open"
-  },
-  {
     "number": 89,
     "title": "feat: show email address in FamilyView member list",
     "labels": [
