@@ -1,5 +1,16 @@
 [
   {
+    "number": 95,
+    "title": "feat: Sub-App products view-only in Kellr (source badge)",
+    "labels": [
+      "enhancement"
+    ],
+    "created_at": "2026-05-15T10:42:38Z",
+    "updated_at": "2026-05-15T10:42:38Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/95",
+    "state": "open"
+  },
+  {
     "number": 89,
     "title": "feat: show email address in FamilyView member list",
     "labels": [
