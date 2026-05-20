@@ -1,5 +1,16 @@
 [
   {
+    "number": 96,
+    "title": "Fix: Duplicate push notifications due to multiple push tokens per device",
+    "labels": [
+      "bug"
+    ],
+    "created_at": "2026-05-20T12:41:24Z",
+    "updated_at": "2026-05-20T12:41:24Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/96",
+    "state": "open"
+  },
+  {
     "number": 89,
     "title": "feat: show email address in FamilyView member list",
     "labels": [
