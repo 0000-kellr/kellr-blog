@@ -1,8 +1,31 @@
 {
-  "updated": "2026-05-21T07:26:14.498Z",
-  "website": null,
+  "updated": "2026-05-22T07:22:24.748Z",
+  "website": {
+    "visitors_7d": 15,
+    "visitors_30d": 53,
+    "pageviews_7d": 15,
+    "pageviews_30d": 53,
+    "top_pages": [
+      {
+        "path": "/",
+        "visitors": 36
+      },
+      {
+        "path": "/changelog.html",
+        "visitors": 14
+      },
+      {
+        "path": "/roadmap.html",
+        "visitors": 2
+      },
+      {
+        "path": "/changelog",
+        "visitors": 1
+      }
+    ]
+  },
   "appstore": {
-    "downloads_7d": 10,
+    "downloads_7d": 7,
     "downloads_30d": 48,
     "rating": 5,
     "rating_count": 2,
@@ -12,10 +35,10 @@
   "app": {
     "households_total": 68,
     "users_total": 93,
-    "new_users_7d": 5,
-    "new_households_7d": 5,
-    "products_total": 882,
-    "transactions_total": 1341,
+    "new_users_7d": 3,
+    "new_households_7d": 3,
+    "products_total": 888,
+    "transactions_total": 1346,
     "price_products_total": 104620,
     "price_shops_total": 25
   }
