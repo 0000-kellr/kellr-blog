@@ -1,5 +1,19 @@
 [
   {
+    "number": 101,
+    "title": "Bug: price_products Image-Import — gleiches Bild für alle Flavour-Varianten",
+    "labels": [
+      "bug",
+      "data-quality",
+      "importer",
+      "priority-medium"
+    ],
+    "created_at": "2026-06-04T19:56:30Z",
+    "updated_at": "2026-06-04T19:56:30Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/101",
+    "state": "open"
+  },
+  {
     "number": 100,
     "title": "Edge Function: modernisiere imports (Deno.serve + jsr:@std)",
     "labels": [
