@@ -1,5 +1,18 @@
 [
   {
+    "number": 104,
+    "title": "Bug: discount_current — niedrigerer Rabatt überschreibt höheren (last-write-wins)",
+    "labels": [
+      "bug",
+      "importer",
+      "priority-medium"
+    ],
+    "created_at": "2026-06-07T10:18:10Z",
+    "updated_at": "2026-06-07T10:18:10Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/104",
+    "state": "open"
+  },
+  {
     "number": 100,
     "title": "Edge Function: modernisiere imports (Deno.serve + jsr:@std)",
     "labels": [
