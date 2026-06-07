@@ -1,5 +1,17 @@
 [
   {
+    "number": 106,
+    "title": "feat: Push Notification Infrastruktur (Edge Function + APNs Helper + Cron Runner)",
+    "labels": [
+      "enhancement",
+      "kellr-app"
+    ],
+    "created_at": "2026-06-07T14:12:43Z",
+    "updated_at": "2026-06-07T14:12:43Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/106",
+    "state": "open"
+  },
+  {
     "number": 105,
     "title": "feat: Push Notification wenn Einkaufslisten-Rabatt morgen abläuft",
     "labels": [
@@ -7,7 +19,7 @@
       "kellr-app"
     ],
     "created_at": "2026-06-07T14:05:06Z",
-    "updated_at": "2026-06-07T14:05:06Z",
+    "updated_at": "2026-06-07T14:12:44Z",
     "url": "https://github.com/0000-kellr/kellr/issues/105",
     "state": "open"
   },
