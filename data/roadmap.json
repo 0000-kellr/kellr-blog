@@ -1,17 +1,16 @@
 [
   {
-    "number": 102,
-    "title": "Bug: price_products Image-Import — gleiches Bild für alle More Nutrition Varianten",
+    "number": 103,
+    "title": "Bug: discount-campaigns ignoriert markets-Filter — falsche Rabatte für Influencer-Codes",
     "labels": [
       "bug",
-      "data-quality",
       "importer",
       "priority-medium"
     ],
-    "created_at": "2026-06-07T09:40:33Z",
-    "updated_at": "2026-06-07T09:47:20Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/102",
-    "state": "closed"
+    "created_at": "2026-06-07T10:11:41Z",
+    "updated_at": "2026-06-07T10:11:41Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/103",
+    "state": "open"
   },
   {
     "number": 100,
