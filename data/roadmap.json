@@ -1,5 +1,23 @@
 [
   {
+    "number": 111,
+    "title": "feat: App-Info Detail-Sheet pro Integration in Einstellungen",
+    "labels": [],
+    "created_at": "2026-06-22T14:16:00Z",
+    "updated_at": "2026-06-22T14:16:00Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/111",
+    "state": "open"
+  },
+  {
+    "number": 110,
+    "title": "feat: App-Integrationen in Einstellungen — Toggle Fremd-Items anzeigen",
+    "labels": [],
+    "created_at": "2026-06-22T14:16:00Z",
+    "updated_at": "2026-06-22T14:16:00Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/110",
+    "state": "open"
+  },
+  {
     "number": 108,
     "title": "feat: Add localization support (DE/EN) — currently hardcoded strings",
     "labels": [
