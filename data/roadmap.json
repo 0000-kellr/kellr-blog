@@ -1,5 +1,14 @@
 [
   {
+    "number": 112,
+    "title": "fix: Stackr-Items zeigen Location/Kategorie korrekt via location_id/category_id",
+    "labels": [],
+    "created_at": "2026-06-22T20:34:38Z",
+    "updated_at": "2026-06-22T20:34:38Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/112",
+    "state": "open"
+  },
+  {
     "number": 111,
     "title": "feat: App-Info Detail-Sheet pro Integration in Einstellungen",
     "labels": [],
