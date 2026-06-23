@@ -1,5 +1,49 @@
 [
   {
+    "number": 126,
+    "title": "refactor: AppIntegration-Filter 4× dupliziert — isSourceVisible() verwenden",
+    "labels": [
+      "refactor"
+    ],
+    "created_at": "2026-06-23T08:50:34Z",
+    "updated_at": "2026-06-23T08:50:34Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/126",
+    "state": "open"
+  },
+  {
+    "number": 125,
+    "title": "fix: kellrWarning/kellrOk in Theme.swift ohne Dark-Mode-Adaptation",
+    "labels": [
+      "bug"
+    ],
+    "created_at": "2026-06-23T08:50:34Z",
+    "updated_at": "2026-06-23T08:50:34Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/125",
+    "state": "open"
+  },
+  {
+    "number": 124,
+    "title": "fix: SubscriptionManager Task.detached ohne [weak self] und kein deinit cancel",
+    "labels": [
+      "bug"
+    ],
+    "created_at": "2026-06-23T08:50:33Z",
+    "updated_at": "2026-06-23T08:50:33Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/124",
+    "state": "open"
+  },
+  {
+    "number": 123,
+    "title": "fix: SyncEngine/ProductDetailView nutzen URLSession.shared — kein automatischer Token-Refresh",
+    "labels": [
+      "bug"
+    ],
+    "created_at": "2026-06-23T08:50:32Z",
+    "updated_at": "2026-06-23T08:50:32Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/123",
+    "state": "open"
+  },
+  {
     "number": 122,
     "title": "fix: SyncEngine subscribeToShoppingList — Observer ohne Deduplizierung, Task-Leak bei Re-Login",
     "labels": [
