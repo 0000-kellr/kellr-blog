@@ -77,17 +77,6 @@
     "state": "open"
   },
   {
-    "number": 119,
-    "title": "fix: addShipment optimistic insert hat nil carrier_id/household_id — zeigt sofort falschen Carrier",
-    "labels": [
-      "bug"
-    ],
-    "created_at": "2026-06-23T08:50:30Z",
-    "updated_at": "2026-06-23T08:50:30Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/119",
-    "state": "open"
-  },
-  {
     "number": 114,
     "title": "fix: Shipment Status Labels zeigen rohe Keys statt lokalisierten Text",
     "labels": [
