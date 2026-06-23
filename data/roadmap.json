@@ -99,29 +99,6 @@
     "state": "open"
   },
   {
-    "number": 117,
-    "title": "fix: fatalError in Apple Sign-In Nonce-Generierung — App-Crash möglich",
-    "labels": [
-      "bug"
-    ],
-    "created_at": "2026-06-23T08:50:29Z",
-    "updated_at": "2026-06-23T08:50:29Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/117",
-    "state": "open"
-  },
-  {
-    "number": 116,
-    "title": "fix: APNs device token wird im Klartext geloggt",
-    "labels": [
-      "bug",
-      "security"
-    ],
-    "created_at": "2026-06-23T08:50:28Z",
-    "updated_at": "2026-06-23T08:50:28Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/116",
-    "state": "open"
-  },
-  {
     "number": 114,
     "title": "fix: Shipment Status Labels zeigen rohe Keys statt lokalisierten Text",
     "labels": [
