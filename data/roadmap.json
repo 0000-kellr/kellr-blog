@@ -88,17 +88,6 @@
     "state": "open"
   },
   {
-    "number": 118,
-    "title": "fix: Hardcodierte Debug-Household-UUID in SettingsView ohne #if DEBUG Guard",
-    "labels": [
-      "bug"
-    ],
-    "created_at": "2026-06-23T08:50:29Z",
-    "updated_at": "2026-06-23T08:50:29Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/118",
-    "state": "open"
-  },
-  {
     "number": 114,
     "title": "fix: Shipment Status Labels zeigen rohe Keys statt lokalisierten Text",
     "labels": [
