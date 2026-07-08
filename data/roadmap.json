@@ -1,5 +1,18 @@
 [
   {
+    "number": 128,
+    "title": "fix: Pro-Check für Pakete auf StoreKit umstellen (Family Sharing)",
+    "labels": [
+      "bug",
+      "pro",
+      "shipments"
+    ],
+    "created_at": "2026-07-08T08:57:31Z",
+    "updated_at": "2026-07-08T08:57:31Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/128",
+    "state": "open"
+  },
+  {
     "number": 126,
     "title": "refactor: AppIntegration-Filter 4× dupliziert — isSourceVisible() verwenden",
     "labels": [
