@@ -1,14 +1,5 @@
 [
   {
-    "number": 132,
-    "title": "Shipment-Erfassung/Courier-Update kaputt: kaputter Unique-Index blockiert Carrier-Update fuer 2. App",
-    "labels": [],
-    "created_at": "2026-07-27T21:20:17Z",
-    "updated_at": "2026-07-27T21:20:17Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/132",
-    "state": "open"
-  },
-  {
     "number": 130,
     "title": "fix: Apple Sign-In ohne Nonce — Token-Replay Risiko",
     "labels": [
