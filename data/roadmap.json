@@ -1,14 +1,5 @@
 [
   {
-    "number": 133,
-    "title": "Bug: Paket hinzufügen schlägt fehl (Decode-Crash durch NULL tracking_number)",
-    "labels": [],
-    "created_at": "2026-07-28T05:28:18Z",
-    "updated_at": "2026-07-28T05:28:18Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/133",
-    "state": "open"
-  },
-  {
     "number": 130,
     "title": "fix: Apple Sign-In ohne Nonce — Token-Replay Risiko",
     "labels": [
