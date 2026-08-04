@@ -1,5 +1,14 @@
 [
   {
+    "number": 137,
+    "title": "feat: Owner-Konzept + Mitglied entfernen/Haushalt verlassen (aus Trackr uebernehmen)",
+    "labels": [],
+    "created_at": "2026-08-04T20:19:44Z",
+    "updated_at": "2026-08-04T20:19:44Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/137",
+    "state": "open"
+  },
+  {
     "number": 136,
     "title": "security: Pro-Subscription clientseitig manipulierbar (analog Trackr #69)",
     "labels": [],
