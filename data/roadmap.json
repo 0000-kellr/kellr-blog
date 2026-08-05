@@ -1,5 +1,14 @@
 [
   {
+    "number": 139,
+    "title": "Bug: get_household_shipments filtert is_private nicht -- private Sendungen aus Trackr/Stackr in Kellr sichtbar",
+    "labels": [],
+    "created_at": "2026-08-05T10:26:54Z",
+    "updated_at": "2026-08-05T10:26:54Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/139",
+    "state": "open"
+  },
+  {
     "number": 137,
     "title": "feat: Owner-Konzept + Mitglied entfernen/Haushalt verlassen (aus Trackr uebernehmen)",
     "labels": [],
