@@ -1,5 +1,17 @@
 [
   {
+    "number": 140,
+    "title": "bug: verwaiste push_tokens nach remove_household_member -- entfernter User bekommt weiter Notifications fuer alten Haushalt",
+    "labels": [
+      "bug",
+      "privacy"
+    ],
+    "created_at": "2026-08-05T12:13:14Z",
+    "updated_at": "2026-08-05T12:13:14Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/140",
+    "state": "open"
+  },
+  {
     "number": 137,
     "title": "feat: Owner-Konzept + Mitglied entfernen/Haushalt verlassen (aus Trackr uebernehmen)",
     "labels": [],
