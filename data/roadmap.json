@@ -1,16 +1,5 @@
 [
   {
-    "number": 142,
-    "title": "Household-Invite-Mail: einheitlicher Absender noreply@thercompany.app + TheRCompany-Footer + Resend-Key aus Secrets statt hardcoded",
-    "labels": [
-      "enhancement"
-    ],
-    "created_at": "2026-08-08T12:56:05Z",
-    "updated_at": "2026-08-08T12:56:05Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/142",
-    "state": "open"
-  },
-  {
     "number": 141,
     "title": "Haushalts-Einladungsmail: Absender + Footer auf TheRCompany-Familie umstellen",
     "labels": [
