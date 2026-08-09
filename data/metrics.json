@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-08T06:18:14.666Z",
+  "updated": "2026-08-09T06:18:46.232Z",
   "website": null,
   "appstore": {
-    "downloads_7d": 12,
+    "downloads_7d": 10,
     "downloads_30d": 42,
     "rating": 5,
     "rating_count": 2,
@@ -12,8 +12,8 @@
   "app": {
     "households_total": 121,
     "users_total": 159,
-    "new_users_7d": 8,
-    "new_households_7d": 7,
+    "new_users_7d": 6,
+    "new_households_7d": 5,
     "products_total": 2189,
     "transactions_total": 3236,
     "price_products_total": 104675,
