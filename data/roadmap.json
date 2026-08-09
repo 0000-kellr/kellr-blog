@@ -1,14 +1,5 @@
 [
   {
-    "number": 144,
-    "title": "Storage UX: Quick-Add Presets + Auto-Icon + Inline Icon-Grid für Floor/Room/Location",
-    "labels": [],
-    "created_at": "2026-08-09T13:54:12Z",
-    "updated_at": "2026-08-09T13:54:39Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/144",
-    "state": "closed"
-  },
-  {
     "number": 141,
     "title": "Haushalts-Einladungsmail: Absender + Footer auf TheRCompany-Familie umstellen",
     "labels": [
