@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T06:33:26.920Z",
+  "updated": "2026-08-13T06:35:08.012Z",
   "website": null,
   "appstore": {
     "downloads_7d": 5,
@@ -10,12 +10,12 @@
     "auth_ok": true
   },
   "app": {
-    "households_total": 124,
-    "users_total": 162,
+    "households_total": 125,
+    "users_total": 163,
     "new_users_7d": 4,
     "new_households_7d": 4,
-    "products_total": 2346,
-    "transactions_total": 3460,
+    "products_total": 2359,
+    "transactions_total": 3476,
     "price_products_total": 104675,
     "price_shops_total": 26
   }
