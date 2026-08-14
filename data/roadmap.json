@@ -1,5 +1,14 @@
 [
   {
+    "number": 149,
+    "title": "GLS/Ship24: Haushalts-PLZ für präziseres Lieferzeitfenster (Backend)",
+    "labels": [],
+    "created_at": "2026-08-14T15:28:50Z",
+    "updated_at": "2026-08-14T15:28:50Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/149",
+    "state": "open"
+  },
+  {
     "number": 141,
     "title": "Haushalts-Einladungsmail: Absender + Footer auf TheRCompany-Familie umstellen",
     "labels": [
