@@ -1,14 +1,5 @@
 [
   {
-    "number": 148,
-    "title": "Ablaufdatum: 5. Ampelstufe (8-14 Tage) + Gruppierung in Warnungen-Ansicht",
-    "labels": [],
-    "created_at": "2026-08-14T05:02:49Z",
-    "updated_at": "2026-08-14T05:02:49Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/148",
-    "state": "open"
-  },
-  {
     "number": 141,
     "title": "Haushalts-Einladungsmail: Absender + Footer auf TheRCompany-Familie umstellen",
     "labels": [
