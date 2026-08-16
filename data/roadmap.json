@@ -1,5 +1,14 @@
 [
   {
+    "number": 150,
+    "title": "Kellr Pro Monthly-Abo hinzufügen (2,99 €) + Yearly-Preisanpassung Support",
+    "labels": [],
+    "created_at": "2026-08-16T17:53:31Z",
+    "updated_at": "2026-08-16T17:53:31Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/150",
+    "state": "open"
+  },
+  {
     "number": 141,
     "title": "Haushalts-Einladungsmail: Absender + Footer auf TheRCompany-Familie umstellen",
     "labels": [
