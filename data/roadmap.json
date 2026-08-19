@@ -1,14 +1,5 @@
 [
   {
-    "number": 155,
-    "title": "Auto-Cleanup (cleanup_old_shipments) unsubscribed Ship24-Tracker nicht",
-    "labels": [],
-    "created_at": "2026-08-19T06:17:29Z",
-    "updated_at": "2026-08-19T06:17:29Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/155",
-    "state": "open"
-  },
-  {
     "number": 141,
     "title": "Haushalts-Einladungsmail: Absender + Footer auf TheRCompany-Familie umstellen",
     "labels": [
