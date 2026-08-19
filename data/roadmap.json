@@ -1,14 +1,5 @@
 [
   {
-    "number": 152,
-    "title": "Regression: get_unregistered_shipments() registriert wieder Amazon-Sendungen bei Ship24",
-    "labels": [],
-    "created_at": "2026-08-19T04:28:12Z",
-    "updated_at": "2026-08-19T04:28:12Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/152",
-    "state": "open"
-  },
-  {
     "number": 141,
     "title": "Haushalts-Einladungsmail: Absender + Footer auf TheRCompany-Familie umstellen",
     "labels": [
