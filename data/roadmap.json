@@ -1,5 +1,14 @@
 [
   {
+    "number": 158,
+    "title": "Push-Cross-Contamination: send-parcel-notifications filtert nicht nach source, sendet Kellr-Push für Trackr-Pakete",
+    "labels": [],
+    "created_at": "2026-08-23T16:45:28Z",
+    "updated_at": "2026-08-23T16:45:28Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/158",
+    "state": "open"
+  },
+  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
