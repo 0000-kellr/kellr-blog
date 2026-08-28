@@ -1,14 +1,5 @@
 [
   {
-    "number": 163,
-    "title": "NFC-Lagerplatz-Sheet: Bestand-Änderung erzeugt keinen Log/Activity-Eintrag",
-    "labels": [],
-    "created_at": "2026-08-28T18:08:05Z",
-    "updated_at": "2026-08-28T18:08:05Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/163",
-    "state": "open"
-  },
-  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
