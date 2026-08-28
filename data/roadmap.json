@@ -1,10 +1,19 @@
 [
   {
+    "number": 160,
+    "title": "Stackr Cross-Promo-Link fehlt in AppIntegrationManager (noch TODO/nil)",
+    "labels": [],
+    "created_at": "2026-08-28T10:03:31Z",
+    "updated_at": "2026-08-28T10:03:31Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/160",
+    "state": "open"
+  },
+  {
     "number": 159,
     "title": "NFC-Tags fuer Lagerplaetze (Pro-Feature, v1: Lagerplatz-Anzeige)",
     "labels": [],
     "created_at": "2026-08-23T19:28:02Z",
-    "updated_at": "2026-08-23T19:28:02Z",
+    "updated_at": "2026-08-23T20:35:30Z",
     "url": "https://github.com/0000-kellr/kellr/issues/159",
     "state": "open"
   },
