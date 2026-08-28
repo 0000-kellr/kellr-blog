@@ -1,5 +1,17 @@
 [
   {
+    "number": 166,
+    "title": "NFC-Chip-Design-System: Batch/Design-Tracking + automatische Bild-Anzeige beim Kunden-Scan",
+    "labels": [
+      "feature",
+      "nfc"
+    ],
+    "created_at": "2026-08-28T20:10:29Z",
+    "updated_at": "2026-08-28T20:10:29Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/166",
+    "state": "open"
+  },
+  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
