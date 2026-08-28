@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kellr</title>
+    <meta name="robots" content="noindex, nofollow">
+    <!--
+      GitHub Pages hat kein echtes Server-Routing -- /nfc/<uid> (NFC-Lagerplatz-Tags,
+      Issue #159) ist keine physische Datei. GH Pages liefert bei unbekannten Pfaden
+      diese 404.html aus (HTTP-Status 404, aber der Browser rendert den Inhalt ganz
+      normal). Wenn iOS die Universal-Link-Assoziation fuer kellr.app (noch) nicht
+      validiert hat, landet der Scan hier statt in der App -- dann zeigen wir einen
+      freundlichen Hinweis + Smart App Banner statt der rohen GitHub-404-Seite.
+      Analog zur Trackr-Implementierung (trackr-web/404.html, Issue #119/#120/#121).
+    -->
+    <meta name="apple-itunes-app" content="app-id=6759869739">
+    <link rel="icon" href="/assets/branding/kellr-appicon.png">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #F5F5F0;
+            color: #1B1B1B;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px 28px;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        .icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1B5E35;
+        }
+        p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #4A4A4A;
+            margin-bottom: 24px;
+        }
+        .app-store-badge img {
+            height: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img class="icon" src="/assets/branding/kellr-appicon.png" alt="Kellr" onerror="this.style.display='none'">
+        <h1 data-de="NFC-Chip erkannt" data-en="NFC tag detected">NFC-Chip erkannt</h1>
+        <p data-de="Öffne die Kellr App, um deinen Lagerplatz zu sehen. Falls die App nicht automatisch startet, lade sie hier herunter."
+           data-en="Open the Kellr app to see your storage location. If the app doesn't launch automatically, download it here.">
+            Öffne die Kellr App, um deinen Lagerplatz zu sehen. Falls die App nicht automatisch startet, lade sie hier herunter.
+        </p>
+        <a href="https://apps.apple.com/app/kellr/id6759869739" class="app-store-badge" target="_blank">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+        </a>
+    </div>
+    <script>
+        (function () {
+            var lang = (navigator.language || "de").toLowerCase().startsWith("en") ? "en" : "de";
+            document.documentElement.setAttribute("data-lang", lang);
+            document.querySelectorAll("[data-" + lang + "]").forEach(function (el) {
+                el.textContent = el.getAttribute("data-" + lang);
+            });
+        })();
+    </script>
+</body>
+</html>
