@@ -1,5 +1,16 @@
 [
   {
+    "number": 161,
+    "title": "NFC-Chip speichern zeigt Decoding-Fehler, obwohl Speichern erfolgreich war",
+    "labels": [
+      "bug"
+    ],
+    "created_at": "2026-08-28T13:14:23Z",
+    "updated_at": "2026-08-28T13:14:23Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/161",
+    "state": "open"
+  },
+  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
