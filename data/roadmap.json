@@ -1,5 +1,14 @@
 [
   {
+    "number": 169,
+    "title": "NFC: Chip-Scan soll bei unbekanntem Tag direkt Anlern-Sheet öffnen statt nur Fehlermeldung",
+    "labels": [],
+    "created_at": "2026-08-29T12:38:18Z",
+    "updated_at": "2026-08-29T12:38:18Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/169",
+    "state": "open"
+  },
+  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
