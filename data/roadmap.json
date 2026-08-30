@@ -1,5 +1,14 @@
 [
   {
+    "number": 172,
+    "title": "NFC Batch-Write: Ziel-App-Auswahl (fuer Stackr-Chips)",
+    "labels": [],
+    "created_at": "2026-08-30T13:45:47Z",
+    "updated_at": "2026-08-30T13:45:47Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/172",
+    "state": "open"
+  },
+  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
