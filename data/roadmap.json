@@ -1,5 +1,16 @@
 [
   {
+    "number": 175,
+    "title": "NFC-Chip-UID war Zufalls-UUID statt physischer Hardware-ID -- Duplikate in preprogrammed_tags",
+    "labels": [
+      "bug"
+    ],
+    "created_at": "2026-09-02T19:05:15Z",
+    "updated_at": "2026-09-02T19:05:15Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/175",
+    "state": "open"
+  },
+  {
     "number": 173,
     "title": "NFC-Chip Schreibschutz (Passwort) fuer Batch-Write",
     "labels": [],
