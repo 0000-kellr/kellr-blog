@@ -1,5 +1,14 @@
 [
   {
+    "number": 176,
+    "title": "NFC Batch-Write: Hardware-ID nicht lesbar bei allen 8 Chips (Diagnose)",
+    "labels": [],
+    "created_at": "2026-09-02T20:33:51Z",
+    "updated_at": "2026-09-02T20:33:51Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/176",
+    "state": "open"
+  },
+  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
