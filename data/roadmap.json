@@ -1,16 +1,5 @@
 [
   {
-    "number": 174,
-    "title": "NFC Batch-Verwaltung: Status-Feld + Batch-Auswahl im Admin-Screen statt freiem Stepper",
-    "labels": [
-      "enhancement"
-    ],
-    "created_at": "2026-09-02T16:55:33Z",
-    "updated_at": "2026-09-02T16:55:33Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/174",
-    "state": "open"
-  },
-  {
     "number": 173,
     "title": "NFC-Chip Schreibschutz (Passwort) fuer Batch-Write",
     "labels": [],
