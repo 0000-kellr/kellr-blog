@@ -1,5 +1,16 @@
 [
   {
+    "number": 180,
+    "title": "NFC Vorprogrammierung: geschriebene NDEF-URL nicht in DB persistiert",
+    "labels": [
+      "bug"
+    ],
+    "created_at": "2026-09-03T06:24:00Z",
+    "updated_at": "2026-09-03T06:24:00Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/180",
+    "state": "open"
+  },
+  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
