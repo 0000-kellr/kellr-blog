@@ -1,17 +1,5 @@
 [
   {
-    "number": 178,
-    "title": "NFC-Schreibschutz uebersprungen fuer Type-1-Chips (Charge 26080001 + 1000er Nachbestellung) statt Abbruch",
-    "labels": [
-      "bug",
-      "nfc"
-    ],
-    "created_at": "2026-09-03T03:46:36Z",
-    "updated_at": "2026-09-03T03:46:36Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/178",
-    "state": "open"
-  },
-  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
