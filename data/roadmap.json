@@ -1,5 +1,14 @@
 [
   {
+    "number": 179,
+    "title": "NFC Batch-Schreiben: App haengt scheinbar nach 10-15 Chips (60s Session-Timeout)",
+    "labels": [],
+    "created_at": "2026-09-03T05:41:41Z",
+    "updated_at": "2026-09-03T05:41:41Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/179",
+    "state": "open"
+  },
+  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
