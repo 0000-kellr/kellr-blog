@@ -1,5 +1,16 @@
 [
   {
+    "number": 182,
+    "title": "NFC Admin: 'Charge abschliessen' zeigt Fehler 'Die Daten konnten nicht gelesen werden, da sie fehlen'",
+    "labels": [
+      "bug"
+    ],
+    "created_at": "2026-09-03T11:57:40Z",
+    "updated_at": "2026-09-03T11:57:40Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/182",
+    "state": "open"
+  },
+  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
