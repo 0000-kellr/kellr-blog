@@ -1,14 +1,5 @@
 [
   {
-    "number": 177,
-    "title": "NFC Batch-Write: Duplikat-Schutz fuer Chips ohne lesbare Hardware-ID (Type-1/Charge 26080001)",
-    "labels": [],
-    "created_at": "2026-09-03T03:14:02Z",
-    "updated_at": "2026-09-03T03:14:02Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/177",
-    "state": "open"
-  },
-  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
