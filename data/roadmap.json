@@ -1,5 +1,16 @@
 [
   {
+    "number": 181,
+    "title": "NFC Batch: System-Sheet haengt nach automatischem Session-Neustart (App-Neustart noetig)",
+    "labels": [
+      "bug"
+    ],
+    "created_at": "2026-09-03T11:30:44Z",
+    "updated_at": "2026-09-03T11:30:44Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/181",
+    "state": "open"
+  },
+  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
