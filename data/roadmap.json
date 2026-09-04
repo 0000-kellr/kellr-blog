@@ -1,5 +1,16 @@
 [
   {
+    "number": 183,
+    "title": "NFC Chip-Design-Katalog: Befestigungsart (Type: Sticker/Hook/GelSticker) fehlt",
+    "labels": [
+      "enhancement"
+    ],
+    "created_at": "2026-09-04T04:15:37Z",
+    "updated_at": "2026-09-04T04:15:37Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/183",
+    "state": "open"
+  },
+  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
