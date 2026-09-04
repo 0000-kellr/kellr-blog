@@ -1,16 +1,5 @@
 [
   {
-    "number": 184,
-    "title": "Bug: Geloeschter, vorprogrammierter NFC-Chip verliert Design/Batch-Info dauerhaft beim Neuanlegen",
-    "labels": [
-      "bug"
-    ],
-    "created_at": "2026-09-04T05:38:19Z",
-    "updated_at": "2026-09-04T05:38:19Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/184",
-    "state": "open"
-  },
-  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
