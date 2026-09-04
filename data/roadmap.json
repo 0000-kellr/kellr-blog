@@ -1,16 +1,5 @@
 [
   {
-    "number": 186,
-    "title": "Feature: SKU-Spalte in nfc.chip_designs + Hook-Designs anlegen",
-    "labels": [
-      "enhancement"
-    ],
-    "created_at": "2026-09-04T06:25:41Z",
-    "updated_at": "2026-09-04T06:25:47Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/186",
-    "state": "closed"
-  },
-  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
