@@ -1,16 +1,5 @@
 [
   {
-    "number": 187,
-    "title": "UI: Design-Bild im Batch-Schreiben-Screen zur Sichtkontrolle anzeigen",
-    "labels": [
-      "enhancement"
-    ],
-    "created_at": "2026-09-04T08:13:00Z",
-    "updated_at": "2026-09-04T08:13:07Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/187",
-    "state": "closed"
-  },
-  {
     "number": 156,
     "title": "Ship24 manuellen Refresh ermoeglichen (Pull-to-Refresh + Pro-Paket-Button)",
     "labels": [],
