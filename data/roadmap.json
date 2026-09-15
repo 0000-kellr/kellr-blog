@@ -1,14 +1,5 @@
 [
   {
-    "number": 194,
-    "title": "Settings: vollstaendige Lokalisierung des Settings-Screens",
-    "labels": [],
-    "created_at": "2026-09-15T14:27:03Z",
-    "updated_at": "2026-09-15T14:27:14Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/194",
-    "state": "closed"
-  },
-  {
     "number": 192,
     "title": "Settings: Profil-Sektion nutzt hartcodierte deutsche Strings statt Lokalisierung",
     "labels": [],
