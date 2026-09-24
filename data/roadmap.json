@@ -1,5 +1,14 @@
 [
   {
+    "number": 197,
+    "title": "Notification Center (Bell-Icon + In-App-Feed) nachgezogen, analog Stackr/Trackr",
+    "labels": [],
+    "created_at": "2026-09-24T08:33:46Z",
+    "updated_at": "2026-09-24T08:33:46Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/197",
+    "state": "open"
+  },
+  {
     "number": 196,
     "title": "Haushalt-Setup-Struktur an Stackr/Trackr angleichen (getrennte Views statt Modus-Switch)",
     "labels": [],
