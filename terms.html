@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kellr &mdash; Nutzungsbedingungen / Terms of Service</title>
+    <meta name="description" content="Nutzungsbedingungen f&uuml;r die Kellr App">
+    <link rel="icon" href="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy { max-width: var(--max-w); margin: 0 auto; padding: 140px 20px 80px; }
+        .privacy h1 { font-size: 2rem; margin-bottom: 8px; }
+        .privacy .subtitle { color: var(--text2); margin-bottom: 40px; }
+        .privacy h2 { font-size: 1.3rem; margin-top: 36px; margin-bottom: 12px; color: var(--green); }
+        .privacy h3 { font-size: 1.1rem; margin-top: 24px; margin-bottom: 8px; }
+        .privacy p, .privacy li { color: var(--text2); line-height: 1.8; margin-bottom: 12px; }
+        .privacy ul { margin-left: 20px; margin-bottom: 16px; }
+        .privacy li { margin-bottom: 6px; }
+        .privacy a { color: var(--green); }
+        .privacy .lang-section { display: none; }
+        .privacy .lang-section.active { display: block; }
+        .privacy-lang-toggle {
+            display: inline-flex; gap: 0; margin-bottom: 32px;
+            border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+        }
+        .privacy-lang-toggle button {
+            background: var(--bg3); border: none; color: var(--text2);
+            padding: 8px 20px; cursor: pointer; font-size: 0.9rem; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .privacy-lang-toggle button.active {
+            background: var(--green); color: #000;
+        }
+        .privacy .highlight {
+            background: color-mix(in srgb, var(--green) 8%, transparent);
+            border: 1px solid color-mix(in srgb, var(--green) 20%, transparent);
+            border-radius: 12px; padding: 20px 24px; margin: 20px 0;
+        }
+    </style>
+    <script data-goatcounter="https://kellr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <nav class="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
+            <span>Kellr</span>
+        </a>
+        <div class="nav-links">
+            <a href="/#features" data-de="Features" data-en="Features">Features</a>
+            <a href="/#pricing" data-de="Preise" data-en="Pricing">Preise</a>
+            <a href="/stats/" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
+            <a href="/roadmap.html" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
+            <a href="/changelog.html" data-de="Changelog" data-en="Changelog">Changelog</a>
+            <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+                <span class="lang-flag">&#127468;&#127463;</span>
+            </button>
+        </div>
+        <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+        <a href="/#features" onclick="toggleMenu()" data-de="Features" data-en="Features">Features</a>
+        <a href="/#pricing" onclick="toggleMenu()" data-de="Preise" data-en="Pricing">Preise</a>
+        <a href="/stats/" onclick="toggleMenu()" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
+        <a href="/roadmap.html" onclick="toggleMenu()" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
+        <a href="/changelog.html" onclick="toggleMenu()" data-de="Changelog" data-en="Changelog">Changelog</a>
+        <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+            <span class="lang-flag">&#127468;&#127463;</span>
+        </button>
+    </div>
+</nav>
+
+    <div class="privacy">
+        <h1 data-de="Nutzungsbedingungen" data-en="Terms of Service">Nutzungsbedingungen</h1>
+        <p class="subtitle" data-de="Zuletzt aktualisiert: 24. September 2026" data-en="Last updated: September 24, 2026">Zuletzt aktualisiert: 24. September 2026</p>
+
+        <div class="privacy-lang-toggle">
+            <button id="btn-de" class="active" onclick="switchTermsLang('de')">Deutsch</button>
+            <button id="btn-en" onclick="switchTermsLang('en')">English</button>
+        </div>
+
+        <!-- DEUTSCH -->
+        <div id="terms-de" class="lang-section active">
+            <p>Willkommen bei Kellr. Durch die Nutzung der Kellr App und der Website kellr.app stimmst du diesen Nutzungsbedingungen zu. Bitte lies sie sorgf&auml;ltig durch.</p>
+
+            <h2>1. Anbieter</h2>
+            <p><strong>Michael Seidl</strong> (The R Company)<br>&Ouml;sterreich<br>E-Mail: <a href="mailto:contact@kellr.app">contact@kellr.app</a></p>
+
+            <h2>2. Leistungsbeschreibung</h2>
+            <p>Kellr ist eine iOS-App zur Verwaltung deiner Vorratskammer. Die App bietet folgende Funktionen:</p>
+            <ul>
+                <li>Erfassung und Verwaltung von Vorratsartikeln (Barcode-Scan, manuell)</li>
+                <li>Ablaufdatum-Tracking und Benachrichtigungen</li>
+                <li>Lagerort-Verwaltung (Kategorien, Etagen, R&auml;ume, Standorte)</li>
+                <li>Haushalt-Synchronisierung (geteilte Vorratskammer mit Haushaltsmitgliedern)</li>
+                <li>NFC-Chip-Integration f&uuml;r Lagerpl&auml;tze (Kellr Pro)</li>
+                <li>Paket- und Sendungsverfolgung</li>
+                <li>Push-Benachrichtigungen f&uuml;r Ablaufdaten und Lieferungen</li>
+                <li>Pro-Features (kostenpflichtig, via In-App-Kauf)</li>
+            </ul>
+
+            <h2>3. Produktdaten und Barcode-Scan</h2>
+            <div class="highlight">
+                <strong>Wichtiger Hinweis:</strong> Kellr bezieht Produktinformationen (Name, Kategorie, Bild) beim Barcode-Scan von der Open-Food-Facts-Datenbank. Diese Daten werden von der Community gepflegt und k&ouml;nnen unvollst&auml;ndig, veraltet oder fehlerhaft sein. Kellr &uuml;bernimmt <strong>keine Garantie</strong> f&uuml;r die Richtigkeit oder Vollst&auml;ndigkeit der angezeigten Produktinformationen.
+            </div>
+
+            <h2>4. Amazon Affiliate Links</h2>
+            <p>Kellr kann Amazon-Affiliate-Links anzeigen. Als Amazon-Partner erhalten wir bei qualifizierten K&auml;ufen &uuml;ber diese Links eine kleine Provision. Dir entstehen dadurch keine zus&auml;tzlichen Kosten.</p>
+
+            <h2>5. Pro-Subscription</h2>
+            <p>Kellr Pro ist ein kostenpflichtiges Abonnement, das &uuml;ber den Apple App Store abgewickelt wird. Es gelten die Zahlungs- und Stornierungsbedingungen von Apple.</p>
+            <ul>
+                <li>Die Abrechnung erfolgt &uuml;ber deinen Apple-Account</li>
+                <li>Das Abonnement verl&auml;ngert sich automatisch, sofern es nicht mindestens 24 Stunden vor Ende der Laufzeit gek&uuml;ndigt wird</li>
+                <li>K&uuml;ndigung in den iOS-Einstellungen unter Abonnements</li>
+                <li>Bereits bezahlte Zeitr&auml;ume werden nicht erstattet</li>
+            </ul>
+
+            <h2>6. Nutzungsvoraussetzungen</h2>
+            <ul>
+                <li>Die App erfordert iOS 17.0 oder neuer</li>
+                <li>F&uuml;r die Nutzung einiger Funktionen ist eine Internetverbindung erforderlich</li>
+                <li>Du musst mindestens 13 Jahre alt sein</li>
+            </ul>
+
+            <h2>7. Verbotene Nutzung</h2>
+            <p>Folgende Nutzungen sind untersagt:</p>
+            <ul>
+                <li>Missbrauch der App oder der Infrastruktur</li>
+                <li>Automatisierter Zugriff (Scraping, Bots) auf die App oder API</li>
+                <li>Reverse Engineering oder Dekompilierung der App</li>
+                <li>Weitergabe von Account-Zugangsdaten an Dritte (au&szlig;er Haushalt-Funktion)</li>
+            </ul>
+
+            <h2>8. Haftungsausschluss</h2>
+            <p>Kellr wird &bdquo;wie besehen&ldquo; bereitgestellt. Wir &uuml;bernehmen keine Haftung f&uuml;r:</p>
+            <ul>
+                <li>Fehlerhafte oder veraltete Produktinformationen von Open Food Facts</li>
+                <li>Unterbrechungen oder Ausf&auml;lle der App</li>
+                <li>Datenverlust durch technische Probleme</li>
+                <li>Verderb oder Fehlkonsum von Lebensmitteln aufgrund fehlerhafter oder versp&auml;teter Ablaufdatum-Benachrichtigungen &mdash; die Verantwortung f&uuml;r die eigene Vorratskontrolle bleibt beim Nutzer</li>
+            </ul>
+            <p>Die Haftung ist im gesetzlich zul&auml;ssigen Rahmen auf Vorsatz und grobe Fahrl&auml;ssigkeit beschr&auml;nkt.</p>
+
+            <h2>9. Geistiges Eigentum</h2>
+            <p>Alle Rechte an der App, dem Design, dem Logo und den Inhalten liegen bei Michael Seidl (The R Company). Die Nutzung von Markennamen Dritter (Amazon, Open Food Facts etc.) erfolgt ausschlie&szlig;lich zur Identifikation und stellt keine Partnerschaft dar.</p>
+
+            <h2>10. &Auml;nderungen der Nutzungsbedingungen</h2>
+            <p>Wir behalten uns vor, diese Nutzungsbedingungen anzupassen. Wesentliche &Auml;nderungen werden in der App kommuniziert. Die fortgesetzte Nutzung nach einer &Auml;nderung gilt als Zustimmung.</p>
+
+            <h2>11. Anwendbares Recht</h2>
+            <p>Es gilt &ouml;sterreichisches Recht. Gerichtsstand ist Wien, &Ouml;sterreich.</p>
+
+            <h2>12. Kontakt</h2>
+            <p>Michael Seidl<br>E-Mail: <a href="mailto:contact@kellr.app">contact@kellr.app</a><br>Website: <a href="https://kellr.app">https://kellr.app</a></p>
+        </div>
+
+        <!-- ENGLISH -->
+        <div id="terms-en" class="lang-section">
+            <p>Welcome to Kellr. By using the Kellr app and the website kellr.app, you agree to these terms of service. Please read them carefully.</p>
+
+            <h2>1. Provider</h2>
+            <p><strong>Michael Seidl</strong> (The R Company)<br>Austria<br>Email: <a href="mailto:contact@kellr.app">contact@kellr.app</a></p>
+
+            <h2>2. Service Description</h2>
+            <p>Kellr is an iOS app for managing your pantry. The app offers the following features:</p>
+            <ul>
+                <li>Tracking and management of pantry items (barcode scan, manual entry)</li>
+                <li>Expiry date tracking and notifications</li>
+                <li>Storage location management (categories, floors, rooms, locations)</li>
+                <li>Household synchronization (shared pantry with household members)</li>
+                <li>NFC chip integration for storage locations (Kellr Pro)</li>
+                <li>Package and shipment tracking</li>
+                <li>Push notifications for expiry dates and deliveries</li>
+                <li>Pro features (paid, via in-app purchase)</li>
+            </ul>
+
+            <h2>3. Product Data and Barcode Scanning</h2>
+            <div class="highlight">
+                <strong>Important notice:</strong> When scanning a barcode, Kellr retrieves product information (name, category, image) from the Open Food Facts database. This data is maintained by the community and may be incomplete, outdated, or incorrect. Kellr provides <strong>no guarantee</strong> for the accuracy or completeness of the displayed product information.
+            </div>
+
+            <h2>4. Amazon Affiliate Links</h2>
+            <p>Kellr may display Amazon affiliate links. As an Amazon Associate, we earn a small commission on qualifying purchases made through these links, at no additional cost to you.</p>
+
+            <h2>5. Pro Subscription</h2>
+            <p>Kellr Pro is a paid subscription processed via the Apple App Store. Apple's payment and cancellation terms apply.</p>
+            <ul>
+                <li>Billing is handled through your Apple account</li>
+                <li>The subscription renews automatically unless cancelled at least 24 hours before the end of the current period</li>
+                <li>Cancel in iOS Settings under Subscriptions</li>
+                <li>Already-paid periods are non-refundable</li>
+            </ul>
+
+            <h2>6. Requirements</h2>
+            <ul>
+                <li>The app requires iOS 17.0 or later</li>
+                <li>An internet connection is required for some features</li>
+                <li>You must be at least 13 years old</li>
+            </ul>
+
+            <h2>7. Prohibited Use</h2>
+            <p>The following uses are prohibited:</p>
+            <ul>
+                <li>Abuse of the app or its infrastructure</li>
+                <li>Automated access (scraping, bots) to the app or API</li>
+                <li>Reverse engineering or decompiling the app</li>
+                <li>Sharing account credentials with third parties (except via the household feature)</li>
+            </ul>
+
+            <h2>8. Disclaimer</h2>
+            <p>Kellr is provided "as is". We assume no liability for:</p>
+            <ul>
+                <li>Incorrect or outdated product information from Open Food Facts</li>
+                <li>Interruptions or outages of the app</li>
+                <li>Data loss due to technical issues</li>
+                <li>Food spoilage or consumption issues resulting from incorrect or delayed expiry notifications &mdash; responsibility for your own pantry monitoring remains with the user</li>
+            </ul>
+            <p>Liability is limited to intent and gross negligence to the extent permitted by law.</p>
+
+            <h2>9. Intellectual Property</h2>
+            <p>All rights to the app, its design, logo, and content belong to Michael Seidl (The R Company). Use of third-party trademarks (Amazon, Open Food Facts, etc.) is solely for identification purposes and does not imply any partnership.</p>
+
+            <h2>10. Changes to These Terms</h2>
+            <p>We reserve the right to update these terms of service. Material changes will be communicated within the app. Continued use after a change constitutes acceptance.</p>
+
+            <h2>11. Governing Law</h2>
+            <p>Austrian law applies. The place of jurisdiction is Vienna, Austria.</p>
+
+            <h2>12. Contact</h2>
+            <p>Michael Seidl<br>Email: <a href="mailto:contact@kellr.app">contact@kellr.app</a><br>Website: <a href="https://kellr.app">https://kellr.app</a></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Michael Seidl &mdash; Kellr</p>
+    </footer>
+
+    <script>
+        function switchTermsLang(lang) {
+            document.getElementById('terms-de').classList.toggle('active', lang === 'de');
+            document.getElementById('terms-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+            document.documentElement.setAttribute('data-lang', lang);
+            document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+        }
+    </script>
+</body>
+</html>
