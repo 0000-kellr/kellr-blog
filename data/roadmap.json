@@ -1,14 +1,5 @@
 [
   {
-    "number": 200,
-    "title": "Settings Feinschliff: Benachrichtigungen eigene Section, Community/Sync verschoben, Affiliate ans Ende, Debug-Toggle raus",
-    "labels": [],
-    "created_at": "2026-09-24T10:08:00Z",
-    "updated_at": "2026-09-24T10:08:00Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/200",
-    "state": "open"
-  },
-  {
     "number": 197,
     "title": "Notification Center (Bell-Icon + In-App-Feed) nachgezogen, analog Stackr/Trackr",
     "labels": [],
