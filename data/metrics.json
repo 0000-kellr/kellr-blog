@@ -1,24 +1,9 @@
 {
-  "updated": "2026-10-02T06:25:02.751Z",
-  "website": {
-    "visitors_7d": 10,
-    "visitors_30d": 32,
-    "pageviews_7d": 10,
-    "pageviews_30d": 32,
-    "top_pages": [
-      {
-        "path": "/",
-        "visitors": 31
-      },
-      {
-        "path": "/changelog.html",
-        "visitors": 1
-      }
-    ]
-  },
+  "updated": "2026-10-03T06:25:17.292Z",
+  "website": null,
   "appstore": {
     "downloads_7d": 13,
-    "downloads_30d": 44,
+    "downloads_30d": 46,
     "rating": 5,
     "rating_count": 2,
     "new_reviews_7d": 0,
