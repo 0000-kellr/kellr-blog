@@ -84,30 +84,6 @@
     "state": "open"
   },
   {
-    "number": 114,
-    "title": "fix: Shipment Status Labels zeigen rohe Keys statt lokalisierten Text",
-    "labels": [
-      "bug",
-      "i18n"
-    ],
-    "created_at": "2026-06-23T06:43:31Z",
-    "updated_at": "2026-10-04T18:51:37Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/114",
-    "state": "closed"
-  },
-  {
-    "number": 113,
-    "title": "fix: Shipment Status Labels zeigen rohe Keys statt lokalisierten Text",
-    "labels": [
-      "bug",
-      "i18n"
-    ],
-    "created_at": "2026-06-23T06:43:12Z",
-    "updated_at": "2026-10-04T18:51:39Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/113",
-    "state": "closed"
-  },
-  {
     "number": 111,
     "title": "feat: App-Info Detail-Sheet pro Integration in Einstellungen",
     "labels": [],
@@ -115,17 +91,6 @@
     "updated_at": "2026-06-22T14:16:00Z",
     "url": "https://github.com/0000-kellr/kellr/issues/111",
     "state": "open"
-  },
-  {
-    "number": 108,
-    "title": "feat: Add localization support (DE/EN) — currently hardcoded strings",
-    "labels": [
-      "enhancement"
-    ],
-    "created_at": "2026-06-20T15:14:41Z",
-    "updated_at": "2026-10-04T18:51:41Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/108",
-    "state": "closed"
   },
   {
     "number": 106,
@@ -182,9 +147,9 @@
       "enhancement"
     ],
     "created_at": "2026-05-07T05:25:44Z",
-    "updated_at": "2026-05-07T05:25:44Z",
+    "updated_at": "2026-10-04T18:51:45Z",
     "url": "https://github.com/0000-kellr/kellr/issues/89",
-    "state": "open"
+    "state": "closed"
   },
   {
     "number": 88,
