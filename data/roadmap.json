@@ -9,49 +9,22 @@
     "state": "open"
   },
   {
-    "number": 201,
-    "title": "CI: Markenfarbe im Code weicht vom App-Icon-Logo ab",
-    "labels": [],
-    "created_at": "2026-09-24T14:43:55Z",
-    "updated_at": "2026-10-04T18:51:16Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/201",
-    "state": "closed"
-  },
-  {
-    "number": 197,
-    "title": "Notification Center (Bell-Icon + In-App-Feed) nachgezogen, analog Stackr/Trackr",
-    "labels": [],
-    "created_at": "2026-09-24T08:33:46Z",
-    "updated_at": "2026-10-04T18:51:18Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/197",
-    "state": "closed"
-  },
-  {
-    "number": 196,
-    "title": "Haushalt-Setup-Struktur an Stackr/Trackr angleichen (getrennte Views statt Modus-Switch)",
-    "labels": [],
-    "created_at": "2026-09-24T07:22:18Z",
-    "updated_at": "2026-10-04T18:51:20Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/196",
-    "state": "closed"
-  },
-  {
     "number": 195,
     "title": "Login-Screen-Struktur an Stackr/Trackr angleichen (getrennte Views statt Toggle)",
     "labels": [],
     "created_at": "2026-09-24T07:22:16Z",
-    "updated_at": "2026-09-24T07:22:16Z",
+    "updated_at": "2026-10-04T18:51:22Z",
     "url": "https://github.com/0000-kellr/kellr/issues/195",
-    "state": "open"
+    "state": "closed"
   },
   {
     "number": 192,
     "title": "Settings: Profil-Sektion nutzt hartcodierte deutsche Strings statt Lokalisierung",
     "labels": [],
     "created_at": "2026-09-14T07:01:53Z",
-    "updated_at": "2026-09-14T07:01:53Z",
+    "updated_at": "2026-10-04T18:51:25Z",
     "url": "https://github.com/0000-kellr/kellr/issues/192",
-    "state": "open"
+    "state": "closed"
   },
   {
     "number": 156,
