@@ -29,17 +29,6 @@
     "state": "open"
   },
   {
-    "number": 124,
-    "title": "fix: SubscriptionManager Task.detached ohne [weak self] und kein deinit cancel",
-    "labels": [
-      "bug"
-    ],
-    "created_at": "2026-06-23T08:50:33Z",
-    "updated_at": "2026-10-04T19:06:26Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/124",
-    "state": "closed"
-  },
-  {
     "number": 123,
     "title": "fix: SyncEngine/ProductDetailView nutzen URLSession.shared — kein automatischer Token-Refresh",
     "labels": [
@@ -57,19 +46,8 @@
       "bug"
     ],
     "created_at": "2026-06-23T08:50:32Z",
-    "updated_at": "2026-06-23T08:50:32Z",
+    "updated_at": "2026-10-04T19:12:39Z",
     "url": "https://github.com/0000-kellr/kellr/issues/122",
-    "state": "open"
-  },
-  {
-    "number": 121,
-    "title": "fix: Shipment-Delete schluckt Fehler — kein User-Feedback bei Netzwerkfehler",
-    "labels": [
-      "bug"
-    ],
-    "created_at": "2026-06-23T08:50:31Z",
-    "updated_at": "2026-06-23T08:50:31Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/121",
     "state": "open"
   },
   {
