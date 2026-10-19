@@ -1,5 +1,23 @@
 [
   {
+    "number": 207,
+    "title": "Land-Auswahl in Haushalt-Einstellungen + Sendungs-Override",
+    "labels": [],
+    "created_at": "2026-10-19T05:20:13Z",
+    "updated_at": "2026-10-19T05:20:13Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/207",
+    "state": "open"
+  },
+  {
+    "number": 206,
+    "title": "Ship24: Ziel-Land pro Sendung speichern + an Ship24 übergeben (Backend, shared)",
+    "labels": [],
+    "created_at": "2026-10-19T05:20:12Z",
+    "updated_at": "2026-10-19T05:20:12Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/206",
+    "state": "open"
+  },
+  {
     "number": 205,
     "title": "Feature: Bring!-Integration für Nachbestell-Liste",
     "labels": [],
