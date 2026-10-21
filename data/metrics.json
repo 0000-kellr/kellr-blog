@@ -1,17 +1,6 @@
 {
-  "updated": "2026-10-20T06:23:06.783Z",
-  "website": {
-    "visitors_7d": 16,
-    "visitors_30d": 39,
-    "pageviews_7d": 16,
-    "pageviews_30d": 39,
-    "top_pages": [
-      {
-        "path": "/",
-        "visitors": 39
-      }
-    ]
-  },
+  "updated": "2026-10-21T06:23:33.014Z",
+  "website": null,
   "appstore": {
     "downloads_7d": 10,
     "downloads_30d": 63,
