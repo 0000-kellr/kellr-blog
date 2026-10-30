@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFC Buttons &mdash; Dein Vorrat. Ein Scan entfernt. | Kellr</title>
+    <meta name="description" content="So funktionieren die NFC-Buttons von Kellr &amp; Stackr: bereits vorprovisioniert, einfach ankleben und scannen &mdash; f&uuml;r Lagerplatz oder einzelne Produkte.">
+    <link rel="icon" href="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png">
+    <link rel="stylesheet" href="../style.css">
+    <script data-goatcounter="https://kellr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <style>
+        .video-wrap { max-width: 420px; margin: 2rem auto 0; border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+        .video-wrap video { width: 100%; display: block; background: #000; }
+        .mode-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+        .mode-card { background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.8rem; text-align: left; }
+        .mode-card .mode-icon { font-size: 2.2rem; margin-bottom: 0.6rem; }
+        .mode-card h3 { margin-bottom: 0.5rem; font-size: 1.15rem; }
+        .mode-card p { color: var(--text2); font-size: 0.95rem; }
+        .mode-card .mode-example { margin-top: 0.8rem; font-size: 0.85rem; color: var(--green); font-weight: 600; }
+        .usecase-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 2rem; }
+        .usecase-pill { background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; padding: 10px 18px; font-size: 0.95rem; font-weight: 600; }
+        .faq-item { background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 14px; text-align: left; }
+        .faq-item h3 { font-size: 1rem; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .faq-item p { color: var(--text2); font-size: 0.92rem; }
+        .provision-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(52,199,89,0.1); border: 1px solid rgba(52,199,89,0.3); border-radius: var(--radius); padding: 16px 22px; margin-top: 1.5rem; text-align: left; }
+        .provision-badge .check { width: 32px; height: 32px; border-radius: 50%; background: var(--green); color: #000; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; }
+        .dual-store { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+        @media (max-width: 640px) {
+            .mode-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
+            <span>Kellr</span>
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/#pricing">Preise</a>
+            <a href="/roadmap.html">Roadmap</a>
+            <a href="/changelog.html">Changelog</a>
+        </div>
+        <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Preise</a>
+        <a href="/roadmap.html">Roadmap</a>
+        <a href="/changelog.html">Changelog</a>
+    </div>
+</nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner" style="flex-direction:column;">
+            <div class="hero-badge">&#128246; NFC Buttons</div>
+            <h1>Dein Vorrat.<br>Ein Scan entfernt.</h1>
+            <p class="hero-sub">Kleben, scannen, fertig. Deine NFC-Buttons sind bereits vorprovisioniert &mdash; einfach platzieren und sofort loslegen, egal ob K&uuml;che, Sportschrank oder Vorratskammer.</p>
+            <div class="video-wrap">
+                <video controls playsinline poster="">
+                    <source src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/nfc-buttons-anleitung.mp4" type="video/mp4">
+                    Dein Browser unterst&uuml;tzt dieses Video leider nicht.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- So funktioniert's -->
+    <section class="section section-alt">
+        <div class="container" style="text-align:center;">
+            <h2>So funktioniert's</h2>
+            <p class="section-sub">Kein Pairing, keine komplizierte Einrichtung &mdash; in drei Schritten einsatzbereit.</p>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Platzieren</h3>
+                    <p>Button am Regal, Schrank oder direkt am Produkt ankleben.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Scannen</h3>
+                    <p>Handy dranhalten &mdash; kein Entsperren oder App-Start n&ouml;tig.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Fertig</h3>
+                    <p>Die App &ouml;ffnet sich automatisch und f&uuml;hrt die Aktion direkt aus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vorprovisioniert -->
+    <section class="section">
+        <div class="container" style="text-align:center; max-width:700px;">
+            <h2>Bereits vorprovisioniert</h2>
+            <p class="section-sub">Keine technische Ersteinrichtung &mdash; deine NFC-Buttons kommen fertig konfiguriert bei dir an.</p>
+            <div class="provision-badge">
+                <div class="check">&#10003;</div>
+                <div>
+                    <strong>Sofort einsatzbereit.</strong>
+                    <p style="color:var(--text2); font-size:0.9rem; margin-top:4px;">Jeder Button hat bereits eine eindeutige, fertig hinterlegte ID. Du musst ihn in der App nur noch einem Lagerplatz oder Produkt zuordnen &mdash; kein manuelles Pairing, kein Entwickler-Modus, kein Reset n&ouml;tig.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zwei Modi -->
+    <section class="section section-alt">
+        <div class="container" style="text-align:center;">
+            <h2>Zwei Modi, ein Button</h2>
+            <p class="section-sub">Du entscheidest, wof&uuml;r dein NFC-Button zust&auml;ndig ist.</p>
+            <div class="mode-grid">
+                <div class="mode-card">
+                    <div class="mode-icon">&#128230;</div>
+                    <h3>Lagerplatz-Modus</h3>
+                    <p>Der Button h&auml;ngt am Regal oder Schrank und zeigt dir beim Scannen sofort, was dort gelagert ist &mdash; inklusive schnellem Zugriff zum Ein- und Auslagern.</p>
+                    <div class="mode-example">Beispiel: "K&uuml;hlschrank", "Sportschrank"</div>
+                </div>
+                <div class="mode-card">
+                    <div class="mode-icon">&#127991;</div>
+                    <h3>Item-Modus</h3>
+                    <p>Der Button klebt direkt am Produkt. Ein Scan entfernt genau dieses eine Item aus deinem Bestand &mdash; ganz ohne Suchen oder Tippen.</p>
+                    <div class="mode-example">Beispiel: "Proteinpulver", "Vitamin D"</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutzungsbeispiele -->
+    <section class="section">
+        <div class="container" style="text-align:center;">
+            <h2>&Uuml;berall einsetzbar</h2>
+            <p class="section-sub">Wo auch immer du den &Uuml;berblick behalten willst.</p>
+            <div class="usecase-grid">
+                <span class="usecase-pill">&#127859; K&uuml;che</span>
+                <span class="usecase-pill">&#127940; Sportschrank</span>
+                <span class="usecase-pill">&#129519; Vorratskammer</span>
+                <span class="usecase-pill">&#128705; Badezimmer</span>
+                <span class="usecase-pill">&#128663; Garage</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt">
+        <div class="container" style="max-width:700px;">
+            <h2 style="text-align:center;">H&auml;ufige Fragen</h2>
+            <div style="margin-top:2rem;">
+                <div class="faq-item">
+                    <h3>&#128267; Braucht der Button eine Batterie?</h3>
+                    <p>Nein. NFC-Buttons sind komplett passiv &mdash; sie beziehen ihre Energie aus dem Scan deines Smartphones. Kein Aufladen, kein Batteriewechsel.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>&#128246; Brauche ich WLAN oder Bluetooth?</h3>
+                    <p>Nein. Zum Scannen reicht NFC &mdash; dein Handy muss den Button nur ber&uuml;hren oder sehr nah dran sein. F&uuml;r die anschlie&szlig;ende Synchronisation braucht die App einmalig Internet.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>&#128260; Kann ich einen Button neu zuordnen?</h3>
+                    <p>Ja, jederzeit &uuml;ber die App &mdash; z.&nbsp;B. wenn du ihn an einem anderen Ort oder f&uuml;r ein anderes Produkt einsetzen willst.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apps -->
+    <section class="section">
+        <div class="container" style="text-align:center; max-width:700px;">
+            <h2>Funktioniert mit Kellr &amp; Stackr</h2>
+            <p class="section-sub">Nutze deine NFC-Buttons in der App, die zu deinem Vorrat passt.</p>
+            <div class="dual-store">
+                <a href="https://apps.apple.com/app/kellr/id6759869739" target="_blank" class="app-store-badge">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Kellr im App Store" height="48">
+                </a>
+                <a href="https://stackr.info" target="_blank" class="btn btn-outline" style="align-self:center;">Stackr entdecken &rarr;</a>
+            </div>
+            <p style="margin-top:1.5rem; font-size:0.9rem;"><a href="https://shop.thercompany.app" target="_blank">Weitere NFC-Buttons nachbestellen &rarr;</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made in Austria &#127462;&#127481; &mdash; The R Company</p>
+        <div style="margin-top:20px;display:flex;justify-content:center;gap:20px;align-items:center;">
+            <a href="https://www.instagram.com/kellr_app" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:none;">@kellr_app</a>
+            <a href="https://www.instagram.com/stackr_app_" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:none;">@stackr_app_</a>
+        </div>
+        <div style="margin-top:16px;font-size:0.85rem;">
+            <a href="/impressum.html" style="color:var(--text2);margin-right:16px;">Impressum</a>
+            <a href="/privacy.html" style="color:var(--text2);">Datenschutz</a>
+        </div>
+    </footer>
+</body>
+</html>
