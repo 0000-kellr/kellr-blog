@@ -1,5 +1,23 @@
 [
   {
+    "number": 213,
+    "title": "Community-Preise: iOS-Fixes aus Opus-Review (Land, IDs, Voting-UX, Trust-Badge, Lokalisierung)",
+    "labels": [],
+    "created_at": "2026-11-06T12:33:09Z",
+    "updated_at": "2026-11-06T12:33:09Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/213",
+    "state": "open"
+  },
+  {
+    "number": 212,
+    "title": "Community-Preise: DB-Härtung (Voting, match_source, RLS, RPCs) nach Opus-Review",
+    "labels": [],
+    "created_at": "2026-11-06T12:33:08Z",
+    "updated_at": "2026-11-06T12:33:08Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/212",
+    "state": "open"
+  },
+  {
     "number": 211,
     "title": "Lokalisierung: hardcoded deutsche Strings statt Localizable.xcstrings",
     "labels": [
