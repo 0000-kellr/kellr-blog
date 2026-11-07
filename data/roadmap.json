@@ -1,14 +1,5 @@
 [
   {
-    "number": 216,
-    "title": "Startseite: Aktivitätskarte (tippbar, 'Alle anzeigen') + Community-Block (fehlende Preise, Statistik, Meilensteine)",
-    "labels": [],
-    "created_at": "2026-11-07T09:33:51Z",
-    "updated_at": "2026-11-07T09:33:55Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/216",
-    "state": "closed"
-  },
-  {
     "number": 211,
     "title": "Lokalisierung: hardcoded deutsche Strings statt Localizable.xcstrings",
     "labels": [
