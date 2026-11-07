@@ -1,14 +1,5 @@
 [
   {
-    "number": 225,
-    "title": "Community-Block: doppelte Inhalte zwischen Hero und Meilenstein-Karte entfernen",
-    "labels": [],
-    "created_at": "2026-11-07T16:17:36Z",
-    "updated_at": "2026-11-07T16:17:36Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/225",
-    "state": "open"
-  },
-  {
     "number": 219,
     "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
     "labels": [],
