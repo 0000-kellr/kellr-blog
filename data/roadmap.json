@@ -1,5 +1,14 @@
 [
   {
+    "number": 215,
+    "title": "Community-Preise: Schutz vor falschen Verknüpfungen (Marken-/Mengen-Check, Ungeprüft-Hinweis, auffällige Preise)",
+    "labels": [],
+    "created_at": "2026-11-07T09:17:07Z",
+    "updated_at": "2026-11-07T09:17:12Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/215",
+    "state": "closed"
+  },
+  {
     "number": 211,
     "title": "Lokalisierung: hardcoded deutsche Strings statt Localizable.xcstrings",
     "labels": [
