@@ -1,5 +1,14 @@
 [
   {
+    "number": 223,
+    "title": "Startseite oberer Teil im neuen Glas-Design + Community ohne Karte-in-Karte",
+    "labels": [],
+    "created_at": "2026-11-07T12:28:16Z",
+    "updated_at": "2026-11-07T12:28:16Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/223",
+    "state": "open"
+  },
+  {
     "number": 219,
     "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
     "labels": [],
