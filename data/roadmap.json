@@ -1,5 +1,32 @@
 [
   {
+    "number": 219,
+    "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
+    "labels": [],
+    "created_at": "2026-11-07T10:00:09Z",
+    "updated_at": "2026-11-07T10:00:09Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/219",
+    "state": "open"
+  },
+  {
+    "number": 218,
+    "title": "Reward-Hardening: Meilenstein-Zaehler manipulationssicher machen (Blocker vor Rabatt-Codes)",
+    "labels": [],
+    "created_at": "2026-11-07T10:00:08Z",
+    "updated_at": "2026-11-07T10:00:08Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/218",
+    "state": "open"
+  },
+  {
+    "number": 217,
+    "title": "Review-Findings Release-relevant: Krone zaehlt halbe Stimmen, Mengen-/Marken-Check, DSGVO-Log, Performance Startseite",
+    "labels": [],
+    "created_at": "2026-11-07T10:00:07Z",
+    "updated_at": "2026-11-07T10:00:07Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/217",
+    "state": "open"
+  },
+  {
     "number": 211,
     "title": "Lokalisierung: hardcoded deutsche Strings statt Localizable.xcstrings",
     "labels": [
