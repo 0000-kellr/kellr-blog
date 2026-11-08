@@ -1,5 +1,14 @@
 [
   {
+    "number": 228,
+    "title": "Fehlende Preise: Artikel pro Haushalt ausblenden + Artikel mit eigener Stimme nicht mehr listen",
+    "labels": [],
+    "created_at": "2026-11-08T08:02:16Z",
+    "updated_at": "2026-11-08T08:02:16Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/228",
+    "state": "open"
+  },
+  {
     "number": 219,
     "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
     "labels": [],
