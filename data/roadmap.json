@@ -1,14 +1,5 @@
 [
   {
-    "number": 237,
-    "title": "Release-Qualitaet (Opus-Review 2.1.116..2.1.146): anon-Grants, Einkaufsliste N+1, Fehlerzustand Startseite, BOM, Konto-Loeschung",
-    "labels": [],
-    "created_at": "2026-11-10T14:39:42Z",
-    "updated_at": "2026-11-10T14:39:42Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/237",
-    "state": "open"
-  },
-  {
     "number": 219,
     "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
     "labels": [],
