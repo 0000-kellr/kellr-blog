@@ -1,5 +1,23 @@
 [
   {
+    "number": 235,
+    "title": "Release-Haertung 2.1.147: Privacy Manifest, NFC-Usage-Text, fehlender en-String, geratene Marke ohne Halbstimme, Produkt-Tags-Parameter",
+    "labels": [],
+    "created_at": "2026-11-10T09:28:51Z",
+    "updated_at": "2026-11-10T09:28:51Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/235",
+    "state": "open"
+  },
+  {
+    "number": 234,
+    "title": "Security: NFC-RPCs ohne Haushaltspruefung und fuer anon aufrufbar (nfc_tags_list, nfc_resolve, nfc_resolve_location)",
+    "labels": [],
+    "created_at": "2026-11-10T09:28:50Z",
+    "updated_at": "2026-11-10T09:28:50Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/234",
+    "state": "open"
+  },
+  {
     "number": 219,
     "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
     "labels": [],
