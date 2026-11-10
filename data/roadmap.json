@@ -1,5 +1,14 @@
 [
   {
+    "number": 233,
+    "title": "Marke am Haushaltsprodukt: OFF-Marke speichern, Server-Markencheck fixen, Marken-Badge in der UI",
+    "labels": [],
+    "created_at": "2026-11-10T08:35:30Z",
+    "updated_at": "2026-11-10T08:35:30Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/233",
+    "state": "open"
+  },
+  {
     "number": 219,
     "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
     "labels": [],
