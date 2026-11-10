@@ -1,5 +1,14 @@
 [
   {
+    "number": 232,
+    "title": "Fehlende Preise: Preise aelter als 90 Tage nicht als sichtbaren Preis werten",
+    "labels": [],
+    "created_at": "2026-11-10T04:19:06Z",
+    "updated_at": "2026-11-10T04:19:06Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/232",
+    "state": "open"
+  },
+  {
     "number": 231,
     "title": "Tab-Badge 'Ablaufend' (warningCount) zaehlt ohne Integrations-Filter",
     "labels": [],
