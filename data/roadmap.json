@@ -1,14 +1,5 @@
 [
   {
-    "number": 236,
-    "title": "Produkt-finden: 'Einem anderen Barcode zugeordnet' bei unsicheren OFF-Kandidaten-EANs",
-    "labels": [],
-    "created_at": "2026-11-10T09:48:34Z",
-    "updated_at": "2026-11-10T09:48:39Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/236",
-    "state": "closed"
-  },
-  {
     "number": 219,
     "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
     "labels": [],
