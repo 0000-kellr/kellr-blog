@@ -1,14 +1,5 @@
 [
   {
-    "number": 238,
-    "title": "Produkt finden: verstaendliche Meldung 'Bereits verknuepft mit: <Produkt> · automatisch/Community'",
-    "labels": [],
-    "created_at": "2026-11-10T15:19:11Z",
-    "updated_at": "2026-11-10T15:19:11Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/238",
-    "state": "open"
-  },
-  {
     "number": 219,
     "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
     "labels": [],
