@@ -85,7 +85,9 @@
             <h2>3. Welche Daten wir erheben</h2>
             <h3>3.1 Kontodaten</h3>
             <ul>
-                <li><strong>E-Mail-Adresse:</strong> Wird f&uuml;r die Registrierung und Anmeldung per Magic Link ben&ouml;tigt.</li>
+                <li><strong>E-Mail-Adresse:</strong> Wird f&uuml;r Registrierung und Anmeldung ben&ouml;tigt. Bei der Anmeldung mit Apple erhalten wir die von Apple freigegebene E-Mail-Adresse (das kann eine Apple-Relay-Adresse sein).</li>
+                <li><strong>Passwort:</strong> Bei der Anmeldung mit E-Mail wird dein Passwort ausschlie&szlig;lich als Hash (nicht im Klartext) gespeichert. Bei der Anmeldung mit Apple gibt es kein Passwort.</li>
+                <li><strong>Anzeigename:</strong> Der von dir gew&auml;hlte Name, der z.&nbsp;B. in Haushalts-Einladungen und in der Haushaltsansicht erscheint.</li>
             </ul>
             <h3>3.2 Nutzungsdaten</h3>
             <ul>
@@ -93,11 +95,16 @@
                 <li><strong>Produktdaten:</strong> Produktnamen, Kategorien, Mengen, Ablaufdaten, Lagerorte, Notizen und optionale Produktbilder.</li>
                 <li><strong>Aktivit&auml;tsprotokolle:</strong> Protokollierung von Bestands&auml;nderungen innerhalb deines Haushalts.</li>
                 <li><strong>Abo-Status:</strong> Ob Kellr Pro aktiv ist sowie das Ablaufdatum des Abonnements (gespeichert in unserem Backend zur Funktionssteuerung).</li>
+                <li><strong>Produktbilder:</strong> Von dir hochgeladene Produktfotos werden in Supabase Storage gespeichert und &uuml;ber eine &ouml;ffentliche Adresse (URL) bereitgestellt. Wer diese Adresse kennt, kann das Bild abrufen. Lade deshalb keine Fotos mit pers&ouml;nlichen Inhalten hoch.</li>
+                <li><strong>Sendungen:</strong> Wenn du Pakete anlegst, speichern wir Tracking-Nummer, Paketdienst, optional eine Bezeichnung sowie Postleitzahl und Land (Haushalts-Standard oder pro Sendung). Sendungen k&ouml;nnen als privat markiert werden und sind dann nur f&uuml;r dich sichtbar. Zugestellte oder stornierte Sendungen werden nach der im Haushalt eingestellten Frist automatisch gel&ouml;scht.</li>
+                <li><strong>Push-Mitteilungen:</strong> F&uuml;r die Zustellung speichern wir pro Ger&auml;t einen Push-Token, eine Ger&auml;te-ID und die Plattform. Mitteilungen kannst du in der App und in den iOS-Einstellungen abschalten.</li>
+                <li><strong>Community-Preise:</strong> Wenn du Produkte mit Barcodes verkn&uuml;pfst, speichern wir deine Nutzer-ID, die best&auml;tigte Zuordnung und den Zeitpunkt. Eine Zuordnung wird anderen Nutzern erst sichtbar, wenn mehrere Personen sie best&auml;tigt haben. Dein Name wird dabei nicht angezeigt, es gibt keine &ouml;ffentliche Bestenliste. Die Verkn&uuml;pfungen deines Haushalts werden als Zahl gez&auml;hlt.</li>
+                <li><strong>Kamera:</strong> Barcode- und Datum-Scan laufen auf deinem Ger&auml;t. Kamerabilder werden nicht &uuml;bertragen, nur der erkannte Barcode bzw. das erkannte Datum wird verarbeitet.</li>
             </ul>
             <h3>3.3 Daten, die wir NICHT erheben</h3>
             <ul>
                 <li>Keine Standortdaten</li>
-                <li>Keine Ger&auml;te-IDs oder Tracking-Daten</li>
+                <li>Keine Tracking-Daten</li>
                 <li>Keine Werbe-IDs</li>
                 <li>Keine Analyse-/Analytics-Daten durch Drittanbieter</li>
             </ul>
@@ -106,16 +113,18 @@
             <p>Wir verarbeiten deine Daten ausschlie&szlig;lich f&uuml;r folgende Zwecke:</p>
             <ul>
                 <li>Bereitstellung und Betrieb der App (Art. 6 Abs. 1 lit. b DSGVO &mdash; Vertragserf&uuml;llung)</li>
-                <li>Benutzerauthentifizierung per Magic Link</li>
+                <li>Benutzerauthentifizierung (E-Mail und Passwort bzw. Anmeldung mit Apple)</li>
+                <li>Zustellung von Push-Mitteilungen und Abfrage des Sendungsstatus</li>
+                <li>Community-Preise: Zuordnung von Produkten zu Barcodes</li>
                 <li>Synchronisierung deiner Vorratsdaten &uuml;ber Ger&auml;te und Haushaltsmitglieder</li>
             </ul>
 
             <h2>5. Hosting und Datenverarbeitung</h2>
-            <p>Unser Backend wird &uuml;ber <strong>Supabase</strong> betrieben. Die Server befinden sich in <strong>Frankfurt am Main, Deutschland (EU)</strong>. Supabase fungiert als Auftragsverarbeiter gem&auml;&szlig; Art. 28 DSGVO. Deine Daten verlassen den Europ&auml;ischen Wirtschaftsraum (EWR) nicht.</p>
+            <p>Unser Backend wird &uuml;ber <strong>Supabase</strong> betrieben. Die Server befinden sich in <strong>Frankfurt am Main, Deutschland (EU)</strong>. Supabase fungiert als Auftragsverarbeiter gem&auml;&szlig; Art. 28 DSGVO. Die bei Supabase gespeicherten Daten verlassen den Europ&auml;ischen Wirtschaftsraum (EWR) nicht. Zu den &uuml;brigen Dienstleistern siehe Abschnitt 9.</p>
             <p>Supabase Privacy Policy: <a href="https://supabase.com/privacy" target="_blank">https://supabase.com/privacy</a></p>
 
             <h2>6. Authentifizierung</h2>
-            <p>Wir verwenden Supabase Email Auth mit Magic Links. Es werden keine Passw&ouml;rter gespeichert. Du erh&auml;ltst einen Anmeldelink per E-Mail, der einen zeitlich begrenzten Token enth&auml;lt.</p>
+            <p>Wir verwenden Supabase Auth. Du kannst dich mit E-Mail und Passwort oder mit Apple anmelden. Passw&ouml;rter werden nur als Hash gespeichert. Zur Anmeldung und Best&auml;tigung k&ouml;nnen zeitlich begrenzte Links per E-Mail versendet werden. Die Sitzung wird &uuml;ber Tokens gesteuert, die im Schl&uuml;sselbund (Keychain) deines Ger&auml;ts liegen.</p>
 
             <h2>7. Amazon Affiliate Links</h2>
             <p>In bestimmten Produktkategorien k&ouml;nnen Amazon Affiliate Links angezeigt werden. Wenn du auf einen solchen Link klickst und einen Kauf t&auml;tigst, erhalten wir eine kleine Provision. Der Klick auf einen Affiliate Link &uuml;bertr&auml;gt dich auf die Amazon-Website, deren eigene Datenschutzrichtlinie gilt. Wir erhalten von Amazon keine personenbezogenen Daten &uuml;ber dich.</p>
@@ -124,12 +133,15 @@
             <p>Kellr enth&auml;lt <strong>keine Werbung</strong> und verwendet <strong>keine Drittanbieter-Analytics-Tools</strong>. Es werden keine Tracking-SDKs oder Analyse-Bibliotheken eingesetzt.</p>
 
             <h2>9. Datenweitergabe an Dritte</h2>
-            <p>Deine Daten werden nicht an Dritte verkauft oder zu Werbezwecken weitergegeben. Eine Weitergabe erfolgt ausschlie&szlig;lich an unseren Hosting-Anbieter (Supabase) zur Bereitstellung des Dienstes.</p>
+            <p>Deine Daten werden nicht an Dritte verkauft oder zu Werbezwecken weitergegeben. Eine Weitergabe erfolgt ausschlie&szlig;lich an unseren Hosting-Anbieter (Supabase) und an die unten genannten Dienste, soweit sie f&uuml;r die jeweilige Funktion n&ouml;tig sind.</p>
+            <p><strong>Ship24 (Sendungsverfolgung):</strong> Wenn du Sendungen verfolgst, &uuml;bermitteln wir Tracking-Nummer, Postleitzahl und Zielland an den Tracking-Dienstleister Ship24 (ship24.com), um den Sendungsstatus abzufragen. Es werden keine Namen oder E-Mail-Adressen &uuml;bermittelt.</p>
+            <p><strong>Apple Push Notification Service:</strong> Push-Mitteilungen werden &uuml;ber den Apple Push Notification Service zugestellt. Dazu wird der Push-Token deines Ger&auml;ts an Apple &uuml;bermittelt.</p>
             <p><strong>Apple / In-App-K&auml;ufe:</strong> Kostenpflichtige Funktionen (Kellr Pro) werden &uuml;ber den Apple App Store als In-App-Kauf abgewickelt. Die Zahlungsabwicklung erfolgt ausschlie&szlig;lich durch <strong>Apple Inc.</strong> Wir erhalten dabei keine Zahlungsdaten (z.&nbsp;B. Kreditkartendaten). Apple verarbeitet Kaufdaten gem&auml;&szlig; der eigenen Datenschutzrichtlinie: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></p>
-            <p><strong>Open Food Facts:</strong> Beim Scannen eines Barcodes wird dieser an die Open-Food-Facts-Datenbanken (openfoodfacts.org) &uuml;bermittelt, um Produktinformationen wie Name, Kategorie und Bild abzurufen. Open Food Facts ist eine gemeinn&uuml;tzige Organisation (Open Food Facts ASBL, Paris). Es werden dabei keine personenbezogenen Daten &uuml;bertragen &ndash; lediglich der Barcode selbst. Open Food Facts Privacy Policy: <a href=&quot;https://world.openfoodfacts.org/privacy&quot;>https://world.openfoodfacts.org/privacy</a></p>
+            <p><strong>Open Food Facts:</strong> Beim Scannen eines Barcodes wird dieser an die Open-Food-Facts-Datenbanken (openfoodfacts.org) &uuml;bermittelt, um Produktinformationen wie Name, Kategorie und Bild abzurufen. Open Food Facts ist eine gemeinn&uuml;tzige Organisation (Open Food Facts ASBL, Paris). Es werden dabei keine personenbezogenen Daten &uuml;bertragen &ndash; lediglich der Barcode selbst. Open Food Facts Privacy Policy: <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">https://world.openfoodfacts.org/privacy</a></p>
 
             <h2>10. Speicherdauer</h2>
             <p>Deine Daten werden gespeichert, solange dein Konto aktiv ist. Nach L&ouml;schung deines Kontos werden alle zugeordneten Daten innerhalb von 30 Tagen gel&ouml;scht.</p>
+            <p><strong>Konto l&ouml;schen:</strong> Du kannst dein Konto jederzeit in der App in den Einstellungen l&ouml;schen. Dabei werden dein Konto und deine pers&ouml;nlichen Daten entfernt. Bist du das letzte Mitglied deines Haushalts, wird der Haushalt samt seinen Daten gel&ouml;scht. Andernfalls bleiben die Haushaltsdaten f&uuml;r die &uuml;brigen Mitglieder erhalten.</p>
 
             <h2>11. Deine Rechte</h2>
             <p>Gem&auml;&szlig; DSGVO hast du folgende Rechte:</p>
@@ -165,7 +177,9 @@
             <h2>3. Data We Collect</h2>
             <h3>3.1 Account Data</h3>
             <ul>
-                <li><strong>Email address:</strong> Required for registration and login via Magic Link.</li>
+                <li><strong>Email address:</strong> Required for registration and login. When you sign in with Apple, we receive the email address you allow Apple to share (this may be an Apple relay address).</li>
+                <li><strong>Password:</strong> If you sign in with email, your password is stored only as a hash (never in plain text). There is no password when you sign in with Apple.</li>
+                <li><strong>Display name:</strong> The name you choose, shown for example in household invitations and in the household view.</li>
             </ul>
             <h3>3.2 Usage Data</h3>
             <ul>
@@ -173,11 +187,16 @@
                 <li><strong>Product data:</strong> Product names, categories, quantities, expiry dates, storage locations, notes, and optional product images.</li>
                 <li><strong>Activity logs:</strong> Logging of inventory changes within your household.</li>
                 <li><strong>Subscription status:</strong> Whether Kellr Pro is active and the subscription expiry date (stored in our backend for feature management).</li>
+                <li><strong>Product images:</strong> Product photos you upload are stored in Supabase Storage and served via a public address (URL). Anyone who knows the address can retrieve the image, so please do not upload photos with personal content.</li>
+                <li><strong>Shipments:</strong> If you add parcels, we store the tracking number, carrier, an optional label, and postal code and country (household default or per shipment). Shipments can be marked private and are then visible only to you. Delivered or cancelled shipments are deleted automatically after the period set in your household.</li>
+                <li><strong>Push notifications:</strong> To deliver notifications, we store a push token, a device ID and the platform for each device. You can turn notifications off in the app and in iOS settings.</li>
+                <li><strong>Community prices:</strong> When you link products to barcodes, we store your user ID, the confirmed match and the time. A match only becomes visible to other users once several people have confirmed it. Your name is not shown, and there is no public leaderboard. Your household's links are counted as a number.</li>
+                <li><strong>Camera:</strong> Barcode and date scanning run on your device. Camera images are not transmitted; only the detected barcode or date is processed.</li>
             </ul>
             <h3>3.3 Data We Do NOT Collect</h3>
             <ul>
                 <li>No location data</li>
-                <li>No device IDs or tracking data</li>
+                <li>No tracking data</li>
                 <li>No advertising IDs</li>
                 <li>No third-party analytics data</li>
             </ul>
@@ -186,16 +205,18 @@
             <p>We process your data exclusively for the following purposes:</p>
             <ul>
                 <li>Provision and operation of the app (Art. 6(1)(b) GDPR &mdash; contract performance)</li>
-                <li>User authentication via Magic Link</li>
+                <li>User authentication (email and password, or Sign in with Apple)</li>
+                <li>Delivery of push notifications and retrieval of shipment status</li>
+                <li>Community prices: matching products to barcodes</li>
                 <li>Synchronization of your pantry data across devices and household members</li>
             </ul>
 
             <h2>5. Hosting and Data Processing</h2>
-            <p>Our backend is operated via <strong>Supabase</strong>. The servers are located in <strong>Frankfurt am Main, Germany (EU)</strong>. Supabase acts as a data processor pursuant to Art. 28 GDPR. Your data does not leave the European Economic Area (EEA).</p>
+            <p>Our backend is operated via <strong>Supabase</strong>. The servers are located in <strong>Frankfurt am Main, Germany (EU)</strong>. Supabase acts as a data processor pursuant to Art. 28 GDPR. Data stored with Supabase does not leave the European Economic Area (EEA). For other service providers, see section 9.</p>
             <p>Supabase Privacy Policy: <a href="https://supabase.com/privacy" target="_blank">https://supabase.com/privacy</a></p>
 
             <h2>6. Authentication</h2>
-            <p>We use Supabase Email Auth with Magic Links. No passwords are stored. You receive a login link via email containing a time-limited token.</p>
+            <p>We use Supabase Auth. You can sign in with email and password or with Apple. Passwords are stored only as a hash. Time-limited links may be sent by email for sign-in and confirmation. Your session is controlled by tokens kept in the Keychain of your device.</p>
 
             <h2>7. Amazon Affiliate Links</h2>
             <p>In certain product categories, Amazon Affiliate links may be displayed. If you click on such a link and make a purchase, we receive a small commission. Clicking an affiliate link takes you to the Amazon website, which has its own privacy policy. We do not receive any personal data about you from Amazon.</p>
@@ -204,12 +225,15 @@
             <p>Kellr contains <strong>no advertising</strong> and uses <strong>no third-party analytics tools</strong>. No tracking SDKs or analytics libraries are used.</p>
 
             <h2>9. Data Sharing with Third Parties</h2>
-            <p>Your data is not sold or shared with third parties for advertising purposes. Data is shared exclusively with our hosting provider (Supabase) for service provision.</p>
+            <p>Your data is not sold or shared with third parties for advertising purposes. Data is shared exclusively with our hosting provider (Supabase) and with the services named below, as far as needed for the respective feature.</p>
+            <p><strong>Ship24 (shipment tracking):</strong> When you track shipments, we send the tracking number, postal code and destination country to the tracking provider Ship24 (ship24.com) to retrieve the shipment status. No names or email addresses are transmitted.</p>
+            <p><strong>Apple Push Notification Service:</strong> Push notifications are delivered through the Apple Push Notification Service. For this, your device's push token is transmitted to Apple.</p>
             <p><strong>Apple / In-App Purchases:</strong> Paid features (Kellr Pro) are processed via the Apple App Store as in-app purchases. Payment processing is handled exclusively by <strong>Apple Inc.</strong> We do not receive any payment data (e.g. credit card details). Apple processes purchase data in accordance with its own privacy policy: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></p>
-            <p><strong>Open Food Facts:</strong> When scanning a barcode, it is transmitted to the Open Food Facts databases (openfoodfacts.org) to retrieve product information such as name, category, and image. Open Food Facts is a non-profit organisation (Open Food Facts ASBL, Paris). No personal data is transmitted &ndash; only the barcode itself. Open Food Facts Privacy Policy: <a href=&quot;https://world.openfoodfacts.org/privacy&quot;>https://world.openfoodfacts.org/privacy</a></p>
+            <p><strong>Open Food Facts:</strong> When scanning a barcode, it is transmitted to the Open Food Facts databases (openfoodfacts.org) to retrieve product information such as name, category, and image. Open Food Facts is a non-profit organisation (Open Food Facts ASBL, Paris). No personal data is transmitted &ndash; only the barcode itself. Open Food Facts Privacy Policy: <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">https://world.openfoodfacts.org/privacy</a></p>
 
             <h2>10. Data Retention</h2>
             <p>Your data is stored as long as your account is active. After account deletion, all associated data will be deleted within 30 days.</p>
+            <p><strong>Delete account:</strong> You can delete your account at any time in the app settings. Your account and personal data are removed. If you are the last member of a household, the household and its data are deleted. Otherwise the household data remains for the other members.</p>
 
             <h2>11. Your Rights</h2>
             <p>Under the GDPR, you have the following rights:</p>
