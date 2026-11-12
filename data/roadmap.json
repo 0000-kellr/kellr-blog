@@ -1,23 +1,5 @@
 [
   {
-    "number": 240,
-    "title": "Feature: Splash/Ladescreen zeigt aktuellen Ladeschritt (wie Stackr)",
-    "labels": [],
-    "created_at": "2026-11-12T15:36:50Z",
-    "updated_at": "2026-11-12T15:36:50Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/240",
-    "state": "open"
-  },
-  {
-    "number": 239,
-    "title": "Bug: CachedRemoteImage zeigt bei fehlgeschlagenem Laden das vorherige Bild (Zuletzt verknuepft)",
-    "labels": [],
-    "created_at": "2026-11-12T15:36:50Z",
-    "updated_at": "2026-11-12T15:36:50Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/239",
-    "state": "open"
-  },
-  {
     "number": 219,
     "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
     "labels": [],
