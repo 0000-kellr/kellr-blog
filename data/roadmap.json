@@ -1,14 +1,5 @@
 [
   {
-    "number": 244,
-    "title": "Monatsabo wird serverseitig abgelehnt: pro.monthly fehlt in ALLOWED_PRODUCT_IDS (kellr-verify-purchase)",
-    "labels": [],
-    "created_at": "2026-11-15T19:22:26Z",
-    "updated_at": "2026-11-15T19:22:26Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/244",
-    "state": "open"
-  },
-  {
     "number": 219,
     "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
     "labels": [],
