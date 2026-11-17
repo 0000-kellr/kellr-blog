@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.au2mator.kellr",
+      "sha256_cert_fingerprints": [
+        "35:BF:F1:11:79:1D:91:C4:34:DA:66:92:A4:0B:E4:CB:AF:D0:5D:1D:23:7E:8A:67:4A:A7:BF:73:CF:99:79:47",
+        "13:FF:9B:24:F5:B6:10:5E:7F:E0:56:FE:EB:59:4F:8C:5D:7F:DB:84:F0:0E:15:62:2A:6F:BA:D7:64:A2:14:1E"
+      ]
+    }
+  }
+]
