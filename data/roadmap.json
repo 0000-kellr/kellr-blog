@@ -1,18 +1,5 @@
 [
   {
-    "number": 246,
-    "title": "Google-Login in der iOS-App (natives GoogleSignIn-SDK)",
-    "labels": [
-      "enhancement",
-      "auth",
-      "ios"
-    ],
-    "created_at": "2026-11-19T20:03:33Z",
-    "updated_at": "2026-11-19T20:03:33Z",
-    "url": "https://github.com/0000-kellr/kellr/issues/246",
-    "state": "open"
-  },
-  {
     "number": 219,
     "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
     "labels": [],
