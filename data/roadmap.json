@@ -1,5 +1,14 @@
 [
   {
+    "number": 247,
+    "title": "Verbundene Apps: Todr-Schalter, Einkaufsliste nur Hauptliste",
+    "labels": [],
+    "created_at": "2026-11-20T15:22:59Z",
+    "updated_at": "2026-11-20T15:22:59Z",
+    "url": "https://github.com/0000-kellr/kellr/issues/247",
+    "state": "open"
+  },
+  {
     "number": 219,
     "title": "Mehrstueck-Angebote (Tray/6er/12er) als eigener Preistyp",
     "labels": [],
