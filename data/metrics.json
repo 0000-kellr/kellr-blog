@@ -1,36 +1,9 @@
 {
-  "updated": "2026-11-22T06:13:36.396Z",
-  "website": {
-    "visitors_7d": 16,
-    "visitors_30d": 64,
-    "pageviews_7d": 16,
-    "pageviews_30d": 64,
-    "top_pages": [
-      {
-        "path": "/",
-        "visitors": 50
-      },
-      {
-        "path": "/NFC_Button",
-        "visitors": 6
-      },
-      {
-        "path": "/roadmap.html",
-        "visitors": 3
-      },
-      {
-        "path": "/impressum.html",
-        "visitors": 2
-      },
-      {
-        "path": "/?error=invalid_request&error_code=bad_oauth_state&error_description=OAuth+state+has+expired",
-        "visitors": 1
-      }
-    ]
-  },
+  "updated": "2026-11-23T06:21:38.713Z",
+  "website": null,
   "appstore": {
-    "downloads_7d": 14,
-    "downloads_30d": 66,
+    "downloads_7d": 17,
+    "downloads_30d": 69,
     "rating": 5,
     "rating_count": 2,
     "new_reviews_7d": 0,
