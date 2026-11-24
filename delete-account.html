@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kellr &mdash; Account l&ouml;schen / Delete account</title>
+    <meta name="description" content="So l&ouml;schst du dein Kellr-Konto und deine Daten / How to delete your Kellr account and data">
+    <link rel="icon" href="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy { max-width: var(--max-w); margin: 0 auto; padding: 140px 20px 80px; }
+        .privacy h1 { font-size: 2rem; margin-bottom: 8px; }
+        .privacy .subtitle { color: var(--text2); margin-bottom: 40px; }
+        .privacy h2 { font-size: 1.3rem; margin-top: 36px; margin-bottom: 12px; color: var(--green); }
+        .privacy h3 { font-size: 1.1rem; margin-top: 24px; margin-bottom: 8px; }
+        .privacy p, .privacy li { color: var(--text2); line-height: 1.8; margin-bottom: 12px; }
+        .privacy ul { margin-left: 20px; margin-bottom: 16px; }
+        .privacy li { margin-bottom: 6px; }
+        .privacy a { color: var(--green); }
+        .privacy .lang-section { display: none; }
+        .privacy .lang-section.active { display: block; }
+        .privacy-lang-toggle {
+            display: inline-flex; gap: 0; margin-bottom: 32px;
+            border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+        }
+        .privacy-lang-toggle button {
+            background: var(--bg3); border: none; color: var(--text2);
+            padding: 8px 20px; cursor: pointer; font-size: 0.9rem; font-weight: 600;
+            transition: all 0.2s;
+        }
+        .privacy-lang-toggle button.active {
+            background: var(--green); color: #000;
+        }
+    </style>
+    <script data-goatcounter="https://kellr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    <nav class="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <img src="https://bflxydqsutvpjzrevjlh.supabase.co/storage/v1/object/public/public-assets/kellr-logo.png" alt="Kellr" class="nav-icon">
+            <span>Kellr</span>
+        </a>
+        <div class="nav-links">
+            <a href="/#features" data-de="Features" data-en="Features">Features</a>
+            <a href="/#pricing" data-de="Preise" data-en="Pricing">Preise</a>
+            <a href="/stats/" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
+            <a href="/roadmap.html" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
+            <a href="/changelog.html" data-de="Changelog" data-en="Changelog">Changelog</a>
+            <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+                <span class="lang-flag">&#127468;&#127463;</span>
+            </button>
+        </div>
+        <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+        <a href="/#features" onclick="toggleMenu()" data-de="Features" data-en="Features">Features</a>
+        <a href="/#pricing" onclick="toggleMenu()" data-de="Preise" data-en="Pricing">Preise</a>
+        <a href="/stats/" onclick="toggleMenu()" data-de="Dashboard" data-en="Dashboard">Dashboard</a>
+        <a href="/roadmap.html" onclick="toggleMenu()" data-de="Roadmap" data-en="Roadmap">Roadmap</a>
+        <a href="/changelog.html" onclick="toggleMenu()" data-de="Changelog" data-en="Changelog">Changelog</a>
+        <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+            <span class="lang-flag">&#127468;&#127463;</span>
+        </button>
+    </div>
+</nav>
+
+    <div class="privacy">
+        <h1 data-de="Account l&ouml;schen" data-en="Delete account">Account l&ouml;schen</h1>
+        <p class="subtitle" data-de="Zuletzt aktualisiert: 24. November 2026" data-en="Last updated: November 24, 2026">Zuletzt aktualisiert: 24. November 2026</p>
+
+        <div class="privacy-lang-toggle">
+            <button id="btn-de" class="active" onclick="switchPrivacyLang('de')">Deutsch</button>
+            <button id="btn-en" onclick="switchPrivacyLang('en')">English</button>
+        </div>
+
+        <!-- DEUTSCH -->
+        <div id="privacy-de" class="lang-section active">
+            <h2>Account in der App l&ouml;schen</h2>
+            <p>Du kannst dein Kellr-Konto jederzeit selbst l&ouml;schen &mdash; in der iOS- und in der Android-App:</p>
+            <ol>
+                <li>Kellr &ouml;ffnen und <strong>Einstellungen</strong> aufrufen.</li>
+                <li>Auf <strong>Account l&ouml;schen</strong> tippen.</li>
+                <li>Den Hinweis lesen und die L&ouml;schung zweimal best&auml;tigen.</li>
+            </ol>
+            <p>Danach werden dein Account und die zugeh&ouml;rigen Daten unwiderruflich gel&ouml;scht. Das kann nicht r&uuml;ckg&auml;ngig gemacht werden.</p>
+
+            <h2>Was passiert mit deinen Daten?</h2>
+            <ul>
+                <li><strong>Gel&ouml;scht:</strong> dein Konto (E-Mail-Adresse, Anzeigename, Anmeldung) und die zugeh&ouml;rigen Daten.</li>
+                <li><strong>Haushalt:</strong> Bist du Eigent&uuml;mer eines Haushalts, wird der gesamte Haushalt aufgel&ouml;st. Die geteilten Haushaltsdaten gehen dann f&uuml;r alle Mitglieder verloren, in allen Apps von The R Company. Die anderen Mitglieder behalten ihr eigenes Konto und k&ouml;nnen einen neuen Haushalt erstellen oder einem anderen beitreten.</li>
+                <li><strong>K&auml;ufe und Abos:</strong> Zahlungen und Abos laufen &uuml;ber Apple bzw. Google. Ein aktives Abo wird durch die L&ouml;schung des Kontos <strong>nicht</strong> automatisch beendet. K&uuml;ndige es bitte vorher in den iOS-Einstellungen (Abonnements) bzw. in Google Play (Zahlungen &amp; Abos). Kaufdaten bei Apple bzw. Google unterliegen deren eigenen Richtlinien.</li>
+            </ul>
+
+            <h2>Du kommst nicht mehr in die App?</h2>
+            <p>Schreib uns von der E-Mail-Adresse, mit der du dich registriert hast, an <a href="mailto:support@todr.app">support@todr.app</a> mit dem Betreff &bdquo;Account l&ouml;schen&ldquo;. Wir best&auml;tigen dir die L&ouml;schung per E-Mail.</p>
+
+            <h2>Mehr Informationen</h2>
+            <p>Welche Daten wir verarbeiten, steht in der <a href="/privacy.html">Datenschutzerkl&auml;rung</a>.</p>
+        </div>
+
+        <!-- ENGLISH -->
+        <div id="privacy-en" class="lang-section">
+            <h2>Delete your account in the app</h2>
+            <p>You can delete your Kellr account yourself at any time &mdash; in both the iOS and the Android app:</p>
+            <ol>
+                <li>Open Kellr and go to <strong>Settings</strong>.</li>
+                <li>Tap <strong>Delete account</strong>.</li>
+                <li>Read the notice and confirm the deletion twice.</li>
+            </ol>
+            <p>Your account and the data belonging to it are then deleted permanently. This cannot be undone.</p>
+
+            <h2>What happens to your data?</h2>
+            <ul>
+                <li><strong>Deleted:</strong> your account (email address, display name, sign-in) and the data belonging to it.</li>
+                <li><strong>Household:</strong> If you own a household, the entire household is dissolved. The shared household data is then lost for all members, in all apps by The R Company. The other members keep their own accounts and can create a new household or join another one.</li>
+                <li><strong>Purchases and subscriptions:</strong> Payments and subscriptions are handled by Apple or Google. Deleting your account does <strong>not</strong> end an active subscription automatically. Please cancel it first in iOS Settings (Subscriptions) or in Google Play (Payments &amp; subscriptions). Purchase data held by Apple or Google is subject to their own policies.</li>
+            </ul>
+
+            <h2>Cannot access the app any more?</h2>
+            <p>Email us from the address you registered with at <a href="mailto:support@todr.app">support@todr.app</a> with the subject &ldquo;Delete account&rdquo;. We will confirm the deletion by email.</p>
+
+            <h2>More information</h2>
+            <p>What data we process is described in the <a href="/privacy.html">privacy policy</a>.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Michael Seidl &mdash; Kellr</p>
+    </footer>
+
+    <script>
+        function switchPrivacyLang(lang) {
+            document.getElementById('privacy-de').classList.toggle('active', lang === 'de');
+            document.getElementById('privacy-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+            document.documentElement.setAttribute('data-lang', lang);
+            // Update elements with data-de/data-en
+            document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+        }
+    </script>
+</body>
+</html>
