@@ -1,9 +1,36 @@
 {
-  "updated": "2026-11-27T06:15:59.254Z",
-  "website": null,
+  "updated": "2026-11-28T06:13:50.933Z",
+  "website": {
+    "visitors_7d": 14,
+    "visitors_30d": 63,
+    "pageviews_7d": 14,
+    "pageviews_30d": 63,
+    "top_pages": [
+      {
+        "path": "/",
+        "visitors": 49
+      },
+      {
+        "path": "/NFC_Button",
+        "visitors": 6
+      },
+      {
+        "path": "/roadmap.html",
+        "visitors": 2
+      },
+      {
+        "path": "/impressum.html",
+        "visitors": 2
+      },
+      {
+        "path": "/delete-account",
+        "visitors": 1
+      }
+    ]
+  },
   "appstore": {
-    "downloads_7d": 18,
-    "downloads_30d": 71,
+    "downloads_7d": 16,
+    "downloads_30d": 68,
     "rating": 5,
     "rating_count": 2,
     "new_reviews_7d": 0,
